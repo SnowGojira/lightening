@@ -51,13 +51,33 @@ body,html{
     width: 100%;
     height: 100%;
     position: absolute;
-
 }
-
+/*pageLoad 页面布局*/
 .pageLoad{
     background: url(../images/pageload.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
+}
+.absolute{
+    position: absolute;
+}
+.flicker{
+    width: 91vw;
+    height: 109vw;
+    top:21vw;
+    left: 4.5vw;
+}
+.board{
+    width: 44vw;
+    height: 52vw;
+    top:50.5vw;
+    left: 28vw;
+}
+.upArrow{
+    width: 8vw;
+    height: 16.6vw;
+    bottom:5.1vw;
+    left: 46.1vw;
 }
 
 .pageStart{

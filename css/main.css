@@ -114,4 +114,64 @@ body,html{
 
 /*iphone X的布局*/
 
+@media only screen and (device-width: 375px) and (min-device-height:690px) and (-webkit-device-pixel-ratio:3) {
+    .pageLoad{
+        background: url(../images/xpageload.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+    }
+
+    .pageStart{
+        background: url(../images/xpagestart.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 10;
+    }
+
+    .pageOne{
+        background: url(../images/xpage1.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 20;
+    }
+    .pageTwo{
+        background: url(../images/xpage2.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 30;
+    }
+    .pageThree{
+        background: #00FF00 url(../images/xpage3.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 40;
+    }
+    .pageFour{
+        background: #00FF00 url(../images/xpage4.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 50;
+    }
+    .pageFive{
+        background: #00FF00 url(../images/xpage5.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+        z-index: 60;
+
+    }
+
+    .pageInput{
+        background: #00FF00 url(../images/xpageinput.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 70;
+    }
+}
+
 

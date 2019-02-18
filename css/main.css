@@ -389,13 +389,17 @@ body,html{
     text-align: center;
 }
 
+.top_two{
+    width: 63.8vw;
+    left: 18vw;
+    top: -2.2vw;
+}
 
 
 
 
 
-
-
+/*page3 iphone 4'7''*/
 .pageThree{
     background: #00FF00 url(../images/page3.jpg) no-repeat fixed top;
     background-position: center center;
@@ -543,6 +547,13 @@ body,html{
         margin: 10.8vw auto 0 auto;
         text-align: center;
     }
+    .top_two{
+        width: 70.5vw;
+        left: 15vw;
+        top: 0;
+    }
+
+
 
     /*page3 iphone X*/
     .pageThree{

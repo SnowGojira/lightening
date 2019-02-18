@@ -195,14 +195,67 @@ body,html{
 }
 
 /*pageStart-7 页面布局*/
-.pageStart{
-    background: url(../images/pagestart.jpg) no-repeat fixed top;
-    background-position: center center;
-    background-size: cover;
-
-    z-index: 10;
+/*.pageStart{*/
+    /*background: url(../images/pagestart.jpg) no-repeat fixed top;*/
+    /*background-position: center center;*/
+    /*background-size: cover;*/
+    /*z-index: 10;*/
+/*}*/
+.g_bg{
+    top: 22vw;
+    left: 9.2vw;
+    width: 82vw;
 }
 
+.ps_decorate{
+    top: 32.8vw;
+    left: 13.5vw;
+    width: 75.4vw;
+}
+
+.ps_title{
+    top: 59.8vw;
+    left: 28.5vw;
+    width: 43.4vw;
+}
+.ps_heartParent{
+    top: 109vw;
+    left: 29vw;
+    width: 43vw;
+    position: absolute;
+    /*z-index: 11;*/
+}
+.ps_heartParent:before {
+    content: "";
+    display: block;
+    padding-top: 37.1%;
+}
+
+.ps_heart {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background:  url('../images/ps_heart.png') no-repeat 0 0;
+    background-size: 100%;
+    animation: heartSprite 1.2s steps(2) infinite;
+}
+
+@keyframes heartSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+@-webkit-keyframes heartSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+@-moz-keyframes heartSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+
+/*pageOne iphone 4'7'' 布局*/
 .pageOne{
     background: url(../images/page1.jpg) no-repeat fixed top;
     background-position: center center;
@@ -268,6 +321,11 @@ body,html{
 
         z-index: 10;
     }
+
+    .g_board{
+        margin-top: 14vw;
+    }
+
 
     .pageOne{
         background: url(../images/xpage1.jpg) no-repeat fixed top;

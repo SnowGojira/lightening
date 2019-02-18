@@ -57,6 +57,11 @@ body,html{
     height: 100%;
     position: absolute;
 }
+.quiz{
+    width: 100%;
+    height: 90%;
+    position: absolute;
+}
 /*pageLoad-7 页面布局*/
 /*.pageLoad{
     background: url(../images/pageload.jpg) no-repeat fixed top;
@@ -267,6 +272,72 @@ body,html{
 
     z-index: 20;
 }
+.quiz_board{
+    top: 23.5vw;
+    left: 7.5vw;
+    width: 85.4vw;
+}
+
+.indicator{
+    bottom: 7.4vw;
+    left: 29.4vw;
+    width: 40.9vw;
+    z-index: 65;
+}
+.top_one{
+    width: 70vw;
+    left: 15vw;
+    top: -2vw;
+}
+.content{
+    width: 100%;
+    height: 85%;
+    margin-top: 25%;
+}
+.question{
+    font-size: 0.98rem;
+    letter-spacing: 0.22rem;
+    line-height: 1.57rem;
+}
+.quiz_one{
+    width: 71vw;
+    padding-left: 1.5vw;
+    margin: 11vw auto 0 auto;
+    text-align: center;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.q1_option{
+    width: 100%;
+    height: auto;
+}
+.option_btn{
+    width: 8vw;
+}
+.q1_a{
+    margin: 14.8vw 0 0 14.4vw;
+}
+
+.q1_a_p{
+    margin: 2vw 0 0 18vw;
+    width: 37vw;
+    height: 26.5vw;
+}
+
+.q1_b{
+    margin: 3.8vw 0 0 14.4vw;
+}
+.q1_b_p{
+    margin: 2.7vw 0 0 18vw;
+    width: 37vw;
+    height: 25vw;
+}
+
+
+/*page2 iphone 4'7''*/
 .pageTwo{
     background: url(../images/page2.jpg) no-repeat fixed top;
     background-position: center center;
@@ -338,6 +409,63 @@ body,html{
 
         z-index: 20;
     }
+    .quiz_board{
+        top: 28.5vw;
+        left: 2.5vw;
+        width: 95.7vw;
+    }
+
+    .indicator{
+        bottom: 9.4vw;
+    }
+
+    .top_one{
+        width: 79vw;
+        left: 10.2vw;
+        top:0;
+    }
+
+    .content {
+        margin-top: 32%;
+    }
+
+    .quiz_one {
+        width: 79vw;
+        padding-left: 1vw;
+    }
+
+    .question {
+        font-size: 1.1rem;
+        letter-spacing: 0.24rem;
+        line-height: 1.75rem;
+    }
+
+    .option_btn {
+        width: 9vw;
+    }
+
+    .q1_a {
+        margin: 15.8vw 0 0 10.4vw;
+    }
+
+    .q1_a_p {
+        margin: 3vw 0 0 19vw;
+        width: 42vw;
+        height: 29.5vw;
+    }
+
+    .q1_b {
+        margin: 3.8vw 0 0 10.4vw;
+    }
+
+    .q1_b_p {
+        margin: 2.7vw 0 0 19vw;
+        width: 43vw;
+        height: 29vw;
+    }
+
+
+
     .pageTwo{
         background: url(../images/xpage2.jpg) no-repeat fixed top;
         background-position: center center;

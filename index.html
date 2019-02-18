@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    <title>发光Lady</title>
+    <title>测测你是哪种发光体质？</title>
     <link rel="stylesheet" href="css/normalize.css" type="text/css">
     <link rel="stylesheet" href="css/main.css" type="text/css">
 </head>
@@ -46,21 +46,48 @@
             </div>
         </div>
     </div>
-    <!--page1-->
-    <div  class="page pageOne none" >
+    <!--答题页面-->
+    <div class="page quizPage">
+        <!--page1-->
+        <div  class="quiz pageOne" >
+            <img class="quiz_board absolute" src="images/quiz_board.png" alt="quiz_board"/>
+            <img class="absolute top_one" src="images/top1.png" alt="top1"/>
+            <div></div>
+            <div class="content absolute">
+                <p class="WrtType quiz_one question">晚上9点,加完班后,你突然收到一个神秘人的派对邀请,你会希望派对在哪个房间举办？</p>
+                <!--选项A-->
+                <div class="q1_option q1_a flex" data-value="10" >
+                    <div class="q1_btn_a">
+                        <img class="option_btn absolute" id="q1_a_btn" src="images/q1_a.png" alt="q1_a"/>
+                        <img class="option_btn absolute none" id="q1_a1_btn" src="images/q1_a1.png" alt="q1_a"/>
+                    </div>
+                    <img class="q1_a_p" src="images/q1_ap.png" alt="q1_a_p"/>
+                </div>
+                <!--选项B-->
+                <div class="q1_option q1_b flex" data-value="10" >
+                    <div class="q1_btn_b">
+                        <img class="option_btn absolute" id="q1_b_btn" src="images/q1_b.png" alt="q1_b"/>
+                        <img class="option_btn absolute none" id="q1_b1_btn" src="images/q1_b1.png" alt="q1_b"/>
+                    </div>
+                    <img class="q1_b_p" src="images/q1_bp.png" alt="q1_b_p"/>
+                </div>
+            </div>
+        </div>
+        <!--page2-->
+        <div  class="quiz pageTwo none" >
+        </div>
+        <!--page3-->
+        <div  class="quiz pageThree none" >
+        </div>
+        <!--page4-->
+        <div  class="quiz pageFour none" >
+        </div>
+        <!--page5-->
+        <div  class="quiz pageFive none" >
+        </div>
+        <img class="indicator absolute" src="images/indicator.gif" alt="indicator"/>
     </div>
-    <!--page2-->
-    <div  class="page pageTwo none" >
-    </div>
-    <!--page3-->
-    <div  class="page pageThree none" >
-    </div>
-    <!--page4-->
-    <div  class="page pageFour none" >
-    </div>
-    <!--page5-->
-    <div  class="page pageFive none" >
-    </div>
+
     <!--pageInput-->
     <div  class="page pageInput none" >
         <div class="g_board absolute">

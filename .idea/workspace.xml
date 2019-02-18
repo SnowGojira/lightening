@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
+    <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="add the optional audio resource">
+      <change afterPath="$PROJECT_DIR$/assets/audio/A.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/B.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/P1.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/P3.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/P4_step.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/P4_watch.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/P7.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/bgm.mp3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/click.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/pageload.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/xpageload.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -30,15 +35,15 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="1020" />
-          <entry key="html" value="816" />
-          <entry key="txt" value="289" />
+          <entry key="html" value="822" />
+          <entry key="txt" value="342" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="1020" />
-          <entry key="HTML" value="816" />
-          <entry key="PLAIN_TEXT" value="289" />
+          <entry key="HTML" value="822" />
+          <entry key="PLAIN_TEXT" value="342" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -60,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="149" column="14" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="14" />
+            <state relative-caret-position="39">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
             </state>
           </provider>
         </entry>
@@ -69,8 +74,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="78">
-              <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+            <state relative-caret-position="351">
+              <caret line="19" selection-start-line="19" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -152,6 +157,11 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\audio" />
+    </key>
+  </component>
   <component name="RunDashboard">
     <option name="ruleStates">
       <list>
@@ -231,13 +241,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20849000" />
+    <option name="totallyTimeSpent" value="21139000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1555" height="883" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="0" width="1554" height="882" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13965744" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13974951" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -251,7 +260,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32977304" />
+      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.32977304" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -271,20 +280,21 @@
     <MESSAGE value="add the bg reference to iphone X" />
     <MESSAGE value="arrange the static pageLoad style" />
     <MESSAGE value="complete preload page 4'7'' animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="complete preload page 4'7'' animation" />
+    <MESSAGE value="add the optional audio resource" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the optional audio resource" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="149" column="14" selection-start-line="149" selection-start-column="14" selection-end-line="149" selection-end-column="14" />
+        <state relative-caret-position="39">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="78">
-          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+        <state relative-caret-position="351">
+          <caret line="19" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>

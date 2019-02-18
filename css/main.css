@@ -22,15 +22,20 @@ img{vertical-align:middle}
     /* Legacy iOS */
 }
 
-/*.NumType{
-    font-family: Timing_Font,Arial,sans-serif;
-}*/
 .WrtType{
+     font-family: Writing_Font,Arial,sans-serif;
+     color:#fff;
+     text-shadow:-0.12rem -0.06rem 0 #881574;
+     letter-spacing: 0.25rem;
+ }
+
+.NumType{
     font-family: Writing_Font,Arial,sans-serif;
     color:#fff;
-    text-shadow:-0.12rem -0.06rem 0 #881574;
     letter-spacing: 0.25rem;
+    font-weight: lighter;
 }
+
 .none{
     display: none;
 }
@@ -54,30 +59,153 @@ body,html{
 }
 /*pageLoad 页面布局*/
 .pageLoad{
-    background: url(../images/pageload.jpg) no-repeat fixed top;
+    /*background: url(../images/pageload.jpg) no-repeat fixed top;*/
     background-position: center center;
     background-size: cover;
 }
 .absolute{
     position: absolute;
 }
-.flicker{
+.pl_flicker{
     width: 91vw;
     height: 109vw;
     top:21vw;
     left: 4.5vw;
+    animation: flicker 5s infinite alternate;
 }
-.board{
+@keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes flicker {
+    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+        opacity: 1;
+    }
+    20%, 24%, 55% {
+        opacity: 0;
+    }
+}
+
+.pl_board{
     width: 44vw;
     height: 52vw;
     top:50.5vw;
     left: 28vw;
 }
-.upArrow{
+
+.pl_fontParent{
+    top: 86vw;
+    left: 37vw;
+    width: 26vw;
+}
+.pl_fontParent:before {
+    content: "";
+    display: block;
+    padding-top: 38.5%;
+}
+
+.pl_font {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background:  url('../images/pl_title.png') no-repeat 0 0;
+    background-size: 100%;
+    animation: fontSprite 0.5s steps(2) infinite;
+}
+
+@keyframes fontSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+@-webkit-keyframes fontSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+@-moz-keyframes fontSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+
+.indexLoad{
+    animation: indexLoad 3s steps(15) infinite;
+    -webkit-animation: indexLoad 3s steps(15) infinite;}
+@keyframes indexLoad {
+    0% { background-position: 0 0;}
+    100% { background-position: 0 -2250px;}
+}
+@-webkit-keyframes indexLoad {
+    0% { background-position: 0 0;}
+    100% {background-position: 0 -2250px;}
+}
+@-moz-keyframes indexLoad {
+    0% { background-position: 0 0;}
+    100% {background-position: 0 -2250px;}
+}
+
+.pl_percent{
+    font-size: 2rem;
+    bottom:12vw;
+    left: 46.1vw;
+}
+
+.pl_upArrow{
     width: 8vw;
     height: 16.6vw;
     bottom:5.1vw;
     left: 46.1vw;
+    animation: upDown 1s infinite;
+}
+
+@keyframes upDown {
+    0% {
+        bottom: 5.1vw;
+    }
+    50% {
+        bottom: 7vw;
+    }
+    100% {
+        bottom: 5.1vw;
+    }
+}
+
+@-webkit-keyframes upDown {
+    0% {
+        bottom: 5.1vw;
+    }
+    50% {
+        bottom: 7vw;
+    }
+    100% {
+        bottom: 5.1vw;
+    }
+}
+
+@-moz-keyframes upDown {
+    0% {
+        bottom: 5.1vw;
+    }
+    50% {
+        bottom: 7vw;
+    }
+    100% {
+        bottom: 5.1vw;
+    }
 }
 
 .pageStart{

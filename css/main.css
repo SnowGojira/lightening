@@ -218,6 +218,10 @@ body,html{
     left: 28.5vw;
     width: 43.4vw;
 }
+
+#startLight{
+    opacity: 0;
+}
 .ps_heartParent{
     top: 109vw;
     left: 29vw;
@@ -314,19 +318,19 @@ body,html{
     }
 
     /*pageStart—X 适配*/
-    .pageStart{
+    /*.pageStart{
         background: url(../images/xpagestart.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
         z-index: 10;
-    }
+    }*/
 
     .g_board{
         margin-top: 14vw;
     }
 
-
+    /*pageOne—X 适配*/
     .pageOne{
         background: url(../images/xpage1.jpg) no-repeat fixed top;
         background-position: center center;

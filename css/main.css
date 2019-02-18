@@ -265,13 +265,13 @@ body,html{
 }
 
 /*pageOne iphone 4'7'' 布局*/
-.pageOne{
+/*.pageOne{
     background: url(../images/page1.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
 
     z-index: 20;
-}
+}*/
 .quiz_board{
     top: 23.5vw;
     left: 7.5vw;
@@ -334,6 +334,43 @@ body,html{
     margin: 2.7vw 0 0 18vw;
     width: 37vw;
     height: 25vw;
+}
+
+.q1_lightParent{
+    top: 27.5vw;
+    left: 8vw;
+    width: 85.5vw;
+    position: absolute;
+    /*z-index: 11;*/
+}
+.q1_lightParent:before {
+    content: "";
+    display: block;
+    padding-top: 135.5%;
+}
+
+.q1_light {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background:  url('../images/light_board.png') no-repeat 0 0;
+    background-size: 100%;
+    animation: lightSprite 1.2s steps(2) infinite;
+}
+
+@keyframes lightSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+@-webkit-keyframes lightSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
+}
+@-moz-keyframes lightSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 100%; }
 }
 
 
@@ -402,13 +439,13 @@ body,html{
     }
 
     /*pageOne—X 适配*/
-    .pageOne{
+    /*.pageOne{
         background: url(../images/xpage1.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
         z-index: 20;
-    }
+    }*/
     .quiz_board{
         top: 28.5vw;
         left: 2.5vw;
@@ -462,6 +499,18 @@ body,html{
         margin: 2.7vw 0 0 19vw;
         width: 43vw;
         height: 29vw;
+    }
+    .q1_lightParent{
+        top: 33vw;
+        left: 3vw;
+        width: 96vw;
+        position: absolute;
+        /*z-index: 11;*/
+    }
+    .q1_lightParent:before {
+        content: "";
+        display: block;
+        padding-top: 135.5%;
     }
 
 

@@ -57,12 +57,13 @@ body,html{
     height: 100%;
     position: absolute;
 }
-/*pageLoad 页面布局*/
-.pageLoad{
-    /*background: url(../images/pageload.jpg) no-repeat fixed top;*/
+/*pageLoad-7 页面布局*/
+/*.pageLoad{
+    background: url(../images/pageload.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
-}
+}*/
+
 .absolute{
     position: absolute;
 }
@@ -142,26 +143,11 @@ body,html{
     to { background-position: 0 100%; }
 }
 
-.indexLoad{
-    animation: indexLoad 3s steps(15) infinite;
-    -webkit-animation: indexLoad 3s steps(15) infinite;}
-@keyframes indexLoad {
-    0% { background-position: 0 0;}
-    100% { background-position: 0 -2250px;}
-}
-@-webkit-keyframes indexLoad {
-    0% { background-position: 0 0;}
-    100% {background-position: 0 -2250px;}
-}
-@-moz-keyframes indexLoad {
-    0% { background-position: 0 0;}
-    100% {background-position: 0 -2250px;}
-}
 
 .pl_percent{
-    font-size: 2rem;
+    font-size: 1rem;
     bottom:12vw;
-    left: 46.1vw;
+    left: 45.5vw;
 }
 
 .pl_upArrow{
@@ -208,6 +194,7 @@ body,html{
     }
 }
 
+/*pageStart-7 页面布局*/
 .pageStart{
     background: url(../images/pagestart.jpg) no-repeat fixed top;
     background-position: center center;
@@ -262,13 +249,18 @@ body,html{
 
 /*iphone X的布局*/
 
-@media only screen and (device-width: 375px) and (min-device-height:690px) and (-webkit-device-pixel-ratio:3) {
-    .pageLoad{
-        background: url(../images/xpageload.jpg) no-repeat fixed top;
-        background-position: center center;
-        background-size: cover;
+@media only screen and (device-width: 375px) and (min-device-height:680px) {
+    /*pageLoad—X 适配*/
+    /*.pageLoad{*/
+        /*background: url(../images/xpageload.jpg) no-repeat fixed top;*/
+        /*background-position: center center;*/
+        /*background-size: cover;*/
+    /*}*/
+    .pl_lightenBox{
+        margin-top: 12vw;
     }
 
+    /*pageStart—X 适配*/
     .pageStart{
         background: url(../images/xpagestart.jpg) no-repeat fixed top;
         background-position: center center;

@@ -310,7 +310,7 @@ body,html{
     display: flex;
     flex-wrap: nowrap;
 }
-.q1_option{
+.q_optionContainer{
     width: 100%;
     height: auto;
 }
@@ -375,13 +375,13 @@ body,html{
 
 
 /*page2 iphone 4'7''*/
-.pageTwo{
+/*.pageTwo{
     background: url(../images/page2.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
 
     z-index: 30;
-}
+}*/
 .quiz_two{
     width: 71vw;
     padding-left: 1.5vw;
@@ -394,7 +394,26 @@ body,html{
     left: 18vw;
     top: -2.2vw;
 }
+.q2_watchContainer{
+    width: 100%;
+    text-align: center;
+    margin-top: 8vw;
+}
+.q2_watch{
+    width: 47vw;
+    padding-left: 3vw;
+}
+.option_btn_q2{
+    width: 48vw;
+}
 
+.q2_a{
+    margin: 4vw 0 0 26.4vw;
+}
+
+.q2_b{
+    margin: 14vw 0 0 26.4vw;
+}
 
 
 
@@ -533,13 +552,13 @@ body,html{
 
 
    /*page2 iphone X*/
-    .pageTwo{
+    /*.pageTwo{
         background: url(../images/xpage2.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
         z-index: 30;
-    }
+    }*/
 
     .quiz_two {
         width: 79vw;
@@ -552,6 +571,23 @@ body,html{
         left: 15vw;
         top: 0;
     }
+    .q2_watch {
+        width: 53vw;
+        padding-left: 3vw;
+    }
+
+    .option_btn_q2 {
+        width: 54vw;
+    }
+
+    .q2_a {
+        margin: 5vw 0 0 23.4vw;
+    }
+
+    .q2_b {
+        margin: 16vw 0 0 23.4vw;
+    }
+
 
 
 

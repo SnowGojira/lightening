@@ -382,6 +382,20 @@ body,html{
 
     z-index: 30;
 }
+.quiz_two{
+    width: 71vw;
+    padding-left: 1.5vw;
+    margin: 11vw auto 0 auto;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 .pageThree{
     background: #00FF00 url(../images/page3.jpg) no-repeat fixed top;
     background-position: center center;
@@ -514,7 +528,7 @@ body,html{
     }
 
 
-
+   /*page2 iphone X*/
     .pageTwo{
         background: url(../images/xpage2.jpg) no-repeat fixed top;
         background-position: center center;
@@ -522,6 +536,15 @@ body,html{
 
         z-index: 30;
     }
+
+    .quiz_two {
+        width: 79vw;
+        padding-left: 1.5vw;
+        margin: 10.8vw auto 0 auto;
+        text-align: center;
+    }
+
+    /*page3 iphone X*/
     .pageThree{
         background: #00FF00 url(../images/xpage3.jpg) no-repeat fixed top;
         background-position: center center;

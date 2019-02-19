@@ -13,18 +13,17 @@
 <body>
 
 <!--lock_screen-->
-<div class="lock none" >
+<div class="lock" >
     <div class="lock-bg"></div>
-    <p class="lock-txt">为了更好的体验，请使用竖屏锁屏浏览</p>
+    <p class="WrtType lock-txt">请在手机上看</p>
 </div>
 
-<div class="page pageBox">
+<div class="page pageBox ">
 
     <!--pageLoad-->
-    <div  class="page pageLoad none" >
-        <!--<button id="audioB1">音乐一</button>
-        <button id="audioB2">音乐二</button>-->
+    <div  class="page pageLoad" >
         <div class="pl_lightenBox absolute">
+            <img class="pl_logo absolute" src="images/logo.png" alt="logo"/>
             <img class="pl_flicker absolute" src="images/pl_flicker.png" alt="flicker"/>
             <img class="pl_board absolute" src="images/pl_board.png" alt="board"/>
             <!--发光体动画-->
@@ -32,8 +31,8 @@
                  <div class="pl_font"></div>
             </div>
         </div>
-        <p class="pl_percent NumType absolute none">10%</p>
-        <img class="pl_upArrow absolute" src="images/pl_up.png" alt="upArrow"/>
+        <p class="pl_percent NumType absolute" id="loadPercent">10%</p>
+        <img class="pl_upArrow absolute none" src="images/pl_up.png" alt="upArrow"/>
     </div>
     <!--pageStart-->
     <div  class="page pageStart none" >
@@ -214,7 +213,7 @@
                 </div>
             </div>
         </div>
-        <img class="indicator absolute" src="images/indicator.gif" alt="indicator"/>
+        <img class="indicator absolute none" src="images/indicator.gif" alt="indicator"/>
     </div>
 
     <!--输入姓名-->
@@ -244,6 +243,7 @@
 </div>
 
 <script src="libs/zepto.min.js"></script>
+<script src="libs/preloadjs-0.6.2.min.js"></script>
 <script src="libs/html2canvas.min.js"></script>
 <script src="js/main.js"></script>
 

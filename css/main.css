@@ -212,6 +212,10 @@ body,html{
     /*background-size: cover;*/
     /*z-index: 10;*/
 /*}*/
+
+.g_board{
+    top:200vw;
+}
 .g_bg{
     top: 22vw;
     left: 9.2vw;
@@ -665,10 +669,26 @@ body,html{
 
         z-index: 10;
     }*/
-
-    .g_board{
-        margin-top: 14vw;
+    .g_bg{
+        top: 36vw;
     }
+
+    .ps_decorate{
+        top: 46.8vw;
+    }
+
+    .ps_title{
+        top: 73.8vw;
+    }
+
+    .ps_heartParent{
+        top: 123vw;
+    }
+
+    /*.g_board{
+        margin-top: 14vw;
+    }*/
+
 
     /*pageOne—X 适配*/
     /*.pageOne{

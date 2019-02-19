@@ -2,12 +2,12 @@
 window.onload=function(){
     //预加载资源
     manifest = [
-        {src: 'asset/audio/out.mp3', id: 'sona2'},
+        /*{src: 'asset/audio/out.mp3', id: 'sona2'},
         {src: 'asset/audio/right.mp3', id: 'sona3'},
         {src: 'asset/audio/running.mp3', id: 'sona4'},
         {src: 'asset/audio/start.mp3', id: 'sona5'},
         {src: 'asset/audio/wrong.mp3', id: 'sona6'},
-        {src: 'asset/audio/bg.mp3', id: 'sona7'},
+        {src: 'asset/audio/bg.mp3', id: 'sona7'},*/
 
         {src: 'images/g_board.png', id: 'p13'},
         {src: 'images/crystal.gif', id: 'p12'},
@@ -105,8 +105,44 @@ function handleFileProgress(){//加载中函数
     var percent=loader.progress*100|0+'%';
     document.getElementById('loadPercent').innerHTML=percent+"%";
 }
+var upArrow = $('.pl_upArrow');
 
 function handleComplete(){
     $('#loadPercent').hide();
-    $('.pl_upArrow').show();
+    upArrow.show();
 }
+
+/*向上滑动*/
+
+var startY, moveY, moveSpace;
+var pageLoad=$(".pageLoad");
+var flickerBox=$(".pl_lightenBox");
+var pageStart=$(".pageStart");
+var startBoard=$(".g_board");
+
+pageLoad.on("touchstart", function(e) {
+    startY = e.originalEvent.touches[0].pageY;
+    return startY;
+});
+
+pageLoad.on("touchmove", function(e) {
+    moveY = e.originalEvent.touches[0].pageY;
+    moveSpace = startY - moveY;
+    if (moveSpace > 15) {
+        // console.log("上滑之后需要执行的代码片段");
+        $(".pl_logo").hide();
+        upArrow.hide();
+        flickerBox.animate(
+            {top:"-800px"},
+            1000,
+            function () {
+                // console.log("动画结束");
+                pageLoad.hide();
+                pageStart.show();
+                startBoard.animate({top:"0px"},800);
+            }
+        );
+    }
+});
+
+/*pageStart 点亮动画逻辑*/

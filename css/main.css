@@ -518,14 +518,56 @@ body,html{
 
 
 /*page5 iphone 4'7''*/
-.pageFive{
+/*.pageFive{
     background: #00FF00 url(../images/page5.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
     z-index: 60;
+}*/
 
+.transparent{
+    opacity: 0.7;
+}
+.top_five {
+    width: 34.9vw;
+    left: 31.5vw;
+    top: 2vw;
 }
 
+.quiz_five {
+    width: 78vw;
+    margin: 10.5vw auto 0 auto;
+}
+
+.option_btn_q5 {
+    width: 24.2vw;
+}
+.q5_a {
+    margin: 13.2vw 0 0 37.6vw;
+}
+.q5_b {
+    margin: 39.2vw 0 0 37.6vw;
+}
+
+.option_lipstick{
+    width: 34.9vw;
+}
+.pink{
+    margin:16vw 0 0 31.2vw;
+}
+
+.red{
+    margin:45vw 0 0 31.2vw;
+}
+.quiz_five {
+    width: 71vw;
+    padding-left: 1.5vw;
+    margin: 11vw auto 0 auto;
+    text-align: center;
+    letter-spacing: 0.26rem;
+}
+
+/*pageInput iphone 4'7''*/
 .pageInput{
     background: #00FF00 url(../images/pageinput.jpg) no-repeat fixed top;
     background-position: center center;
@@ -762,13 +804,49 @@ body,html{
     }
 
     /*page5 iphoneX*/
-    .pageFive{
+    /*.pageFive{
         background: #00FF00 url(../images/xpage5.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
         z-index: 60;
 
+    }*/
+
+    .top_five {
+        width: 43.9vw;
+        left: 26.8vw;
+        top: 4.5vw;
     }
+
+    .quiz_five {
+        width: 78vw;
+        margin: 10.6vw auto 0 auto;
+        letter-spacing: 0.3rem;
+    }
+
+    .option_btn_q5 {
+        width: 27.2vw;
+    }
+    .q5_a {
+        margin: 15.2vw 0 0 35.6vw;
+    }
+    .q5_b {
+        margin: 45.2vw 0 0 35.6vw;
+    }
+
+    .option_lipstick{
+        width: 39.2vw;
+    }
+
+    .pink{
+        margin: 18vw 0 0 28.2vw;
+    }
+
+    .red{
+        margin: 51vw 0 0 28.2vw;
+    }
+
+    /*pageInput iphone 4'7''*/
 
     .pageInput{
         background: #00FF00 url(../images/xpageinput.jpg) no-repeat fixed top;

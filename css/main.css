@@ -200,7 +200,7 @@ body,html{
     }
 }
 
-/*pageStart-7 页面布局*/
+/*pageStart 4'7'' 页面布局*/
 /*.pageStart{*/
     /*background: url(../images/pagestart.jpg) no-repeat fixed top;*/
     /*background-position: center center;*/
@@ -568,13 +568,72 @@ body,html{
 }
 
 /*pageInput iphone 4'7''*/
-.pageInput{
+/*.pageInput{
     background: #00FF00 url(../images/pageinput.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
 
     z-index: 70;
+}*/
+
+.input_board{
+    margin-top: 14vw;
 }
+
+.input_bg{
+    top: 8vw;
+    left: 0;
+    width: 100vw;
+}
+
+.input_title{
+    top: 60vw;
+    left: 24vw;
+    width: 51vw;
+}
+.input_box{
+    top: 83vw;
+    left: 27vw;
+    width: 45vw;
+}
+.input_btn{
+    top: 100vw;
+    left: 27vw;
+    width: 45vw;
+}
+
+.waitParent{
+    top: 67.5vw;
+    left: 25vw;
+    width: 54.5vw;
+    position: absolute;
+    /*z-index: 11;*/
+}
+.waitParent:before {
+    content: "";
+    display: block;
+    padding-top: 15.6%;
+
+}
+
+.wait {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background:  url('../images/wait.png') no-repeat 0 0;
+    background-size: 100%;
+    animation: waitSprite 3s steps(3) infinite;
+}
+
+@keyframes waitSprite {
+    from { background-position: 0 0; }
+    to { background-position: 0 150%; }
+}
+
+
+
 
 /*iphone X的布局*/
 
@@ -846,14 +905,36 @@ body,html{
         margin: 51vw 0 0 28.2vw;
     }
 
-    /*pageInput iphone 4'7''*/
-
-    .pageInput{
+    /*pageInput iphone X*/
+    /*.pageInput{
         background: #00FF00 url(../images/xpageinput.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
-
         z-index: 70;
+    }*/
+
+    .input_board {
+        margin-top: 28vw;
+    }
+
+    .waitParent {
+        top: 81.5vw;
+    }
+
+    .waitParent:before {
+        padding-top: 15.2%;
+    }
+
+    .input_btn {
+        top: 114vw;
+    }
+
+    .input_box {
+        top: 97vw;
+    }
+
+    .input_title {
+        top: 74vw;
     }
 }
 

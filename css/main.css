@@ -470,13 +470,13 @@ body,html{
 
 
 /*page4 iphone 4'7''*/
-.pageFour{
+/*.pageFour{
     background: #00FF00 url(../images/page4.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
 
     z-index: 50;
-}
+}*/
 .top_four{
     width: 42.8vw;
     left: 28vw;
@@ -722,13 +722,46 @@ body,html{
     }
 
     /*page4 iphoneX*/
-    .pageFour{
+    /*.pageFour{
         background: #00FF00 url(../images/xpage4.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
         z-index: 50;
+    }*/
+
+    .top_four {
+        width: 47.9vw;
+        left: 25.5vw;
+        top: 6.5vw;
     }
+
+    .quiz_four {
+        width: 78vw;
+        margin: 10.5vw auto 0 auto;
+    }
+
+    .option_btn_q4 {
+        width: 38.2vw;
+    }
+    .q4_a {
+        margin: 14.2vw 0 0 31.6vw;
+    }
+    .q4_b {
+        margin: 50.2vw 0 0 31.6vw;
+    }
+    .option_btn_musicA {
+        top: 62vw;
+        left: 44vw;
+        width: 12.2vw;
+    }
+    .option_btn_musicB {
+        top: 100.5vw;
+        left: 44vw;
+        width: 12.2vw;
+    }
+
+    /*page5 iphoneX*/
     .pageFive{
         background: #00FF00 url(../images/xpage5.jpg) no-repeat fixed top;
         background-position: center center;

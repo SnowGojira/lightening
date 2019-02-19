@@ -425,6 +425,19 @@ body,html{
     z-index: 40;
 }
 
+.quiz_three{
+    width: 71vw;
+    padding-left: 1.5vw;
+    margin: 11vw auto 0 auto;
+    text-align: center;
+}
+
+.top_three{
+    width: 34.8vw;
+    left: 33vw;
+    top: 4vw;
+}
+
 .q3_crystalContainer{
     width: 100%;
     text-align: center;
@@ -609,6 +622,12 @@ body,html{
         background-size: cover;
 
         z-index: 40;
+    }
+
+    .top_three {
+        width: 43.8vw;
+        left: 28vw;
+        top: 3vw;
     }
 
     .q3_crystalContainer{

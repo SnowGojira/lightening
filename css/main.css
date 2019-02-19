@@ -7,9 +7,10 @@ a,img{
     -webkit-tap-highlight-color:rgba(0,0,0,0);
     /*-moz-tap-highlight-color:rgba(0,0,0,0);*/
 }
-a{text-decoration: none}
-img{vertical-align:middle}
-.none{display: none}
+a{text-decoration: none;}
+img{vertical-align:middle;}
+.none{display: none;}
+.show{display: block;}
 
 /*引入自定义字体*/
 @font-face {
@@ -476,6 +477,47 @@ body,html{
 
     z-index: 50;
 }
+.top_four{
+    width: 42.8vw;
+    left: 28vw;
+    top: 3.5vw;
+}
+
+.quiz_four{
+    width: 71vw;
+    padding-left: 1.5vw;
+    margin: 11vw auto 0 auto;
+    text-align: center;
+}
+
+
+.option_btn_q4{
+    width: 33.2vw;
+}
+
+.option_btn_musicA{
+    top: 57vw;
+    left: 45vw;
+    width: 10.2vw;
+}
+.option_btn_musicB{
+    top: 91.5vw;
+    left: 45vw;
+    width: 10.2vw;
+}
+
+.q4_a{
+    margin: 12.2vw 0 0 33.6vw;
+}
+
+
+.q4_b{
+    margin: 45vw 0 0 33.6vw;
+}
+
+
+
+/*page5 iphone 4'7''*/
 .pageFive{
     background: #00FF00 url(../images/page5.jpg) no-repeat fixed top;
     background-position: center center;

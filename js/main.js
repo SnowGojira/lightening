@@ -182,14 +182,107 @@ function quizInScene(dom1,dom2,dom3,dom4) {
 
 }
 
+//调试使用之后关闭
+quizInScene(q1Board,topOne,quizOne,optionOne);
+
 var count=0;
-var q1_A=$(".q1_a");
-var q1_B=$(".q1_b");
 var btn=$(".q_optionContainer");
 
 //点击按钮的通识属性
 btn.on("click",function(){
+    hint.hide();
+    //计数
+    count+=parseInt($(this).attr('data-value'));
+    console.log("count:"+count);
+    //变色反馈
+    var id_str=$(this).attr('data-opt');
+    console.log("id:"+id_str);
+    $("#"+id_str).show();
+
+    //添加音频元素
 
 });
 
+/*page1即将结束，进入page2*/
+var pageTwo=$(".pageTwo");
+var q2Board=$(".q2_board");
+var topTwo=$(".top_two");
+var quizTwo=$(".quiz_two");
+var optionTwo=$(".q2_options");
 
+optionOne.on("click",function(){
+    pageOne.animate({opacity:"0"},500,function(){
+        /*转场音乐1*/
+
+        pageTwo.show();
+        q2Board.addClass("mainIn");
+        setTimeout(function () {
+            topTwo.show();
+            topTwo.animate({opacity:"1.0"},1000,function () {
+                /*转场音乐2*/
+
+                quizTwo.animate({opacity:"1.0"},500,function () {
+                    optionTwo.animate({opacity:"1.0"},500,function () {
+                        hint.show();
+                    });
+                });
+            });
+        },200);
+
+    });
+});
+
+/*page2即将结束，进入page3*/
+var pageThree=$(".pageThree");
+var q3Board=$(".q3_board");
+var topThree=$(".top_three");
+var quizThree=$(".quiz_three");
+var optionThree=$(".q3_options");
+
+optionTwo.on("click",function () {
+    pageTwo.animate({opacity:"0"},500,function(){
+        /*转场音乐*/
+
+        pageThree.show();
+        quizInScene(q3Board,topThree,quizThree,optionThree);
+
+    });
+});
+
+
+/*page3即将结束，进入page4*/
+var pageFour=$(".pageFour");
+var q4Board=$(".q4_board");
+var topFour=$(".top_four");
+var quizFour=$(".quiz_four");
+var optionFour=$(".q4_options");
+var musicOpt=$(".music");
+optionThree.on("click",function () {
+    pageThree.animate({opacity:"0"},500,function(){
+        /*转场音乐*/
+
+        pageFour.show();
+        quizInScene(q4Board,topFour,quizFour,optionFour);
+        setTimeout(function () {
+            musicOpt.animate({opacity:"1.0"},500)
+        },3000);
+    });
+});
+
+/*关于page4的音乐播放逻辑*/
+
+/*page4即将结束，进入page5*/
+var pageFive=$(".pageFive");
+var q5Board=$(".q5_board");
+var topFive=$(".top_five");
+var quizFive=$(".quiz_five");
+var optionFive=$(".q5_options");
+
+optionFour.on("click",function () {
+    pageFour.animate({opacity:"0"},500,function(){
+        /*转场音乐*/
+
+        pageFive.show();
+        quizInScene(q5Board,topFive,quizFive,optionFive);
+    });
+});

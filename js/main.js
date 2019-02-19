@@ -145,10 +145,51 @@ pageLoad.on("touchmove", function(e) {
 /*pageStart 点亮动画逻辑*/
 var heart=$(".ps_heartParent");
 var sparkTitle=$("#startLight");
+var quizPage=$(".quizPage");
+var pageOne=$(".pageOne");
+var q1Board=$(".q1_board");
+var topOne=$(".top_one");
+var quizOne=$(".quiz_one");
+var optionOne=$(".q1_options");
+var hint=$(".indicator");
 
 heart.on("click",function () {
     console.log("点击触发");
-    sparkTitle.animate({opacity:"1.0"},1500,function () {
+    sparkTitle.animate({opacity:"1.0"},800,function () {
+       pageStart.animate({left:"-600px"},800,function () {
+           quizPage.show();
+           pageOne.show();
+           quizInScene(q1Board,topOne,quizOne,optionOne);
 
+       })
     });
 });
+
+function quizInScene(dom1,dom2,dom3,dom4) {
+    dom1.addClass("mainIn");
+    setTimeout(function () {
+        dom2.show();
+        dom2.animate({opacity:"1.0"},1000,function () {
+            dom3.animate({opacity:"1.0"},500,function () {
+                dom4.animate({opacity:"1.0"},500,function () {
+                    hint.show();
+                });
+            });
+        });
+    },200);
+
+    //dom2.animate({top:"0"},1000);
+
+}
+
+var count=0;
+var q1_A=$(".q1_a");
+var q1_B=$(".q1_b");
+var btn=$(".q_optionContainer");
+
+//点击按钮的通识属性
+btn.on("click",function(){
+
+});
+
+

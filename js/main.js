@@ -132,10 +132,7 @@ pageLoad.on("touchmove", function(e) {
         // console.log("上滑之后需要执行的代码片段");
         $(".pl_logo").hide();
         upArrow.hide();
-        flickerBox.animate(
-            {top:"-800px"},
-            1000,
-            function () {
+        flickerBox.animate({top:"-800px"}, 1000, function () {
                 // console.log("动画结束");
                 pageLoad.hide();
                 pageStart.show();
@@ -146,3 +143,12 @@ pageLoad.on("touchmove", function(e) {
 });
 
 /*pageStart 点亮动画逻辑*/
+var heart=$(".ps_heartParent");
+var sparkTitle=$("#startLight");
+
+heart.on("click",function () {
+    console.log("点击触发");
+    sparkTitle.animate({opacity:"1.0"},1500,function () {
+
+    });
+});

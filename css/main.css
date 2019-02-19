@@ -441,7 +441,7 @@ body,html{
 .q3_crystalContainer{
     width: 100%;
     text-align: center;
-    margin-top: 10vw;
+    margin-top: 4vw;
 }
 .q3_crystal{
     width: 47vw;
@@ -630,8 +630,15 @@ body,html{
         top: 3vw;
     }
 
+    .quiz_three {
+        width: 79vw;
+        padding-left: 1.5vw;
+        margin: 10.8vw auto 0 auto;
+        text-align: center;
+    }
+
     .q3_crystalContainer{
-        margin-top: 12vw;
+        margin-top: 4vw;
     }
     .q3_crystal{
         width: 52vw;

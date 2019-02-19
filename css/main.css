@@ -404,18 +404,16 @@ body,html{
     padding-left: 3vw;
 }
 .option_btn_q2{
-    width: 48vw;
+    width: 49vw;
 }
 
 .q2_a{
-    margin: 4vw 0 0 26.4vw;
+    margin: 3vw 0 0 25.4vw;
 }
 
 .q2_b{
-    margin: 14vw 0 0 26.4vw;
+    margin: 13vw 0 0 25.4vw;
 }
-
-
 
 
 /*page3 iphone 4'7''*/
@@ -426,6 +424,19 @@ body,html{
 
     z-index: 40;
 }
+
+.q3_crystalContainer{
+    width: 100%;
+    text-align: center;
+    margin-top: 10vw;
+}
+.q3_crystal{
+    width: 47vw;
+    padding-left: 3vw;
+}
+
+
+/*page4 iphone 4'7''*/
 .pageFour{
     background: #00FF00 url(../images/page4.jpg) no-repeat fixed top;
     background-position: center center;
@@ -552,7 +563,7 @@ body,html{
 
 
    /*page2 iphone X*/
-    /*.pageTwo{
+   /* .pageTwo{
         background: url(../images/xpage2.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
@@ -577,15 +588,15 @@ body,html{
     }
 
     .option_btn_q2 {
-        width: 54vw;
+        width: 55vw;
     }
 
     .q2_a {
-        margin: 5vw 0 0 23.4vw;
+        margin: 4vw 0 0 22.4vw;
     }
 
     .q2_b {
-        margin: 16vw 0 0 23.4vw;
+        margin: 15vw 0 0 22.4vw;
     }
 
 
@@ -599,6 +610,15 @@ body,html{
 
         z-index: 40;
     }
+
+    .q3_crystalContainer{
+        margin-top: 12vw;
+    }
+    .q3_crystal{
+        width: 52vw;
+    }
+
+    /*page4 iphoneX*/
     .pageFour{
         background: #00FF00 url(../images/xpage4.jpg) no-repeat fixed top;
         background-position: center center;

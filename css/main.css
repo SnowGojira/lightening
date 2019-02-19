@@ -314,6 +314,9 @@ body,html{
     width: 100%;
     height: auto;
 }
+.alignCenter{
+    text-align: center;
+}
 .option_btn{
     width: 8vw;
 }
@@ -417,13 +420,13 @@ body,html{
 
 
 /*page3 iphone 4'7''*/
-.pageThree{
+/*.pageThree{
     background: #00FF00 url(../images/page3.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
 
     z-index: 40;
-}
+}*/
 
 .quiz_three{
     width: 71vw;
@@ -446,6 +449,22 @@ body,html{
 .q3_crystal{
     width: 47vw;
     padding-left: 3vw;
+}
+
+.option_btn_q3{
+    width: 33.2vw;
+}
+
+.q3_a{
+    margin: 1.2vw 0 0 33.6vw;
+}
+
+.q3_b{
+    margin: 11vw 0 0 33.6vw;
+}
+
+.q3_c{
+    margin: 21vw 0 0 33.6vw;
 }
 
 
@@ -616,13 +635,13 @@ body,html{
 
 
     /*page3 iphone X*/
-    .pageThree{
+    /*.pageThree{
         background: #00FF00 url(../images/xpage3.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
         z-index: 40;
-    }
+    }*/
 
     .top_three {
         width: 43.8vw;
@@ -642,6 +661,22 @@ body,html{
     }
     .q3_crystal{
         width: 52vw;
+    }
+
+    .option_btn_q3{
+        width: 39.2vw;
+    }
+
+    .q3_a{
+        margin: 1.2vw 0 0 31.6vw;
+    }
+
+    .q3_b{
+        margin: 13vw 0 0 31.6vw;
+    }
+
+    .q3_c{
+        margin: 24vw 0 0 31.6vw;
     }
 
     /*page4 iphoneX*/

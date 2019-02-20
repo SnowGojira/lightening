@@ -5,11 +5,14 @@ window.onload=function(){
     //预加载资源
     manifest = [
         {src: 'assets/audio/btn.mp3', id: 'sona2'},
-        /*{src: 'asset/audio/right.mp3', id: 'sona3'},
-        {src: 'asset/audio/running.mp3', id: 'sona4'},
-        {src: 'asset/audio/start.mp3', id: 'sona5'},
-        {src: 'asset/audio/wrong.mp3', id: 'sona6'},
-        {src: 'asset/audio/bg.mp3', id: 'sona7'},*/
+        {src: 'assets/audio/bgm.mp3', id: 'sona3'},
+        {src: 'assets/audio/A.mp3', id: 'sona4'},
+        {src: 'assets/audio/B.mp3', id: 'sona5'},
+        {src: 'assets/audio/P1.mp3', id: 'sona6'},
+        {src: 'assets/audio/q1.mp3', id: 'sona7'},
+        {src: 'assets/audio/q2_step.mp3', id: 'sona8'},
+        {src: 'assets/audio/q2_watch.mp3', id: 'sona9'},
+        {src: 'assets/audio/q5.mp3', id: 'sona10'},
 
         {src: 'images/g_board.png', id: 'p13'},
         {src: 'images/crystal.gif', id: 'p12'},
@@ -70,31 +73,16 @@ window.onload=function(){
         {src: 'images/wait.png', id: 'p74'},
         {src: 'images/watch.gif', id: 'p75'},
 
-        /*{src: 'images/page7/btn3.png', id: 'p76'},
-        {src: 'images/railway.png', id: 'p1'},
-        {src: 'images/timer.png', id: 'p2'},
-        {src: 'images/train.png', id: 'p3'},
+        {src: 'images/result_1.jpg', id: 'p76'},
+        {src: 'images/result_2.jpg', id: 'p1'},
+        {src: 'images/result_3.jpg', id: 'p2'},
+        {src: 'images/result_4.jpg', id: 'p3'},
 
-        {src: 'images/title1/0.png', id: 't10'},
-        {src: 'images/title1/1.png', id: 't11'},
-        {src: 'images/title1/2.png', id: 't12'},
-        {src: 'images/title1/3.png', id: 't13'},
-        {src: 'images/title1/4.png', id: 't14'},
-        {src: 'images/title1/5.png', id: 't15'},
-        {src: 'images/title1/6.png', id: 't16'},
-        {src: 'images/title1/7.png', id: 't17'},
-        {src: 'images/title1/8.png', id: 't18'},
-        {src: 'images/title1/9.png', id: 't19'},
-        {src: 'images/title1/10.png', id: 't110'},
-        {src: 'images/title1/11.png', id: 't111'},
-        {src: 'images/title1/12.png', id: 't112'},
-        {src: 'images/title1/13.png', id: 't113'},
-        {src: 'images/title1/14.png', id: 't114'},*/
 
     ];
     loader = new createjs.LoadQueue(false);
     // 关键！----设置并发数
-    loader.setMaxConnections(100);
+    loader.setMaxConnections(300);
     // 关键！---一定要将其设置为 true, 否则不起作用。
     loader.maintainScriptOrder=true;
     loader.installPlugin(createjs.Sound);
@@ -108,12 +96,41 @@ function handleFileProgress(){//加载中函数
     document.getElementById('loadPercent').innerHTML=percent+"%";
 }
 var upArrow = $('.pl_upArrow');
-// var BGMAudio = document.getElementById("#BGM");
-// var BGMAudio =?new Audio("./assets/audio/bgm.mp3");
-// BGMAudio.loop=true;
+
 function handleComplete(){
     $('#loadPercent').hide();
     upArrow.show();
+    /*var BGMAudio = new Audio('./assets/audio/bgm.mp3');
+    BGMAudio.loop=true;
+    Play(BGMAudio);*/
+}
+var srcBgm="./assets/audio/bgm.mp3";
+/*页面一加载，音乐便开始播放*/
+//--创建页面监听，等待微信端页面加载完毕 触发音频播放
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("自动播放");
+    function audioAutoPlay() {
+        var audio = document.getElementById('BGM');
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            audio.play();
+        }, false);
+    }
+    audioAutoPlay();
+});
+//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+function audioAutoPlay() {
+    var audio = document.getElementById('BGM');
+    audio.play();
+    document.removeEventListener('touchstart',audioAutoPlay);
+}
+document.addEventListener('touchstart', audioAutoPlay);
+
+//停止播放
+function audioPause() {
+    var audio = document.getElementById('BGM');
+    audio.pause();
+    document.removeEventListener('touchstart',audioPause);
 }
 
 /*向上滑动*/
@@ -125,12 +142,12 @@ var pageStart=$(".pageStart");
 var startBoard=$(".g_board");
 
 pageLoad.on("touchstart", function(e) {
-
     startY = e.originalEvent.touches[0].pageY;
     return startY;
 });
 
 pageLoad.on("touchmove", function(e) {
+
     moveY = e.originalEvent.touches[0].pageY;
     moveSpace = startY - moveY;
     if (moveSpace > 15) {
@@ -145,6 +162,10 @@ pageLoad.on("touchmove", function(e) {
             }
         );
     }
+
+    //
+    var heartAudio = new Audio('./assets/audio/p1.mp3');
+    Play(heartAudio);
 });
 
 /*pageStart 点亮动画逻辑*/
@@ -158,11 +179,11 @@ var quizOne=$(".quiz_one");
 var optionOne=$(".q1_options");
 var hint=$(".indicator");
 
-function BGM(){
 
-}
 heart.on("click",function () {
     console.log("点击触发");
+    var q1Audio = new Audio('./assets/audio/q1.mp3');
+    Play(q1Audio);
 
     sparkTitle.animate({opacity:"1.0"},800,function () {
        pageStart.animate({left:"-600px"},800,function () {
@@ -171,7 +192,11 @@ heart.on("click",function () {
            quizInScene(q1Board,topOne,quizOne,optionOne);
 
        })
-    });
+    })
+
+    //
+    var q1Audio = new Audio('./assets/audio/q1.mp3');
+    Play(q1Audio);
 });
 
 function quizInScene(dom1,dom2,dom3,dom4) {
@@ -214,12 +239,28 @@ btn.on("click",function(){
 
 });
 
+
+
 function Play(audio) {
-    audio.play();
+    /*audio.play();
     document.addEventListener("WeixinJSBridgeReady", function() {
         audio.play();
-    }, false);
+    }, false);*/
+
+    if (window.WeixinJSBridge) {
+        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+            audio.play();
+        }, false);
+    } else {
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                audio.play();
+            });
+        }, false);
+    }
+    audio.play();
 }
+
 /*page1即将结束，进入page2*/
 var pageTwo=$(".pageTwo");
 var q2Board=$(".q2_board");
@@ -230,13 +271,25 @@ var optionTwo=$(".q2_options");
 optionOne.on("click",function(){
     pageOne.animate({opacity:"0"},500,function(){
         /*转场音乐1*/
+        var stepAudio = new Audio('./assets/audio/q2_step.mp3');
+        Play(stepAudio);
 
         pageTwo.show();
         q2Board.addClass("mainIn");
         setTimeout(function () {
             topTwo.show();
-            topTwo.animate({opacity:"1.0"},1000,function () {
-                /*转场音乐2*/
+            topTwo.animate({opacity:"1.0"},1500,function () {
+                // /*转场音乐2*/
+                //
+                //
+                // var start = 0;//定义循环的变量
+                // var times=4;//定于循环的次数
+                // watchAudio.addEventListener("ended",function() {
+                //     Play(watchAudio);//启动音频，也就是播放
+                //     start++;//循环
+                //     start == times && watchAudio.pause();//也就是当循环的变量等于次数的时候，就会终止循环并且关掉音频
+                //});
+                //Play(watchAudio);
 
                 quizTwo.animate({opacity:"1.0"},500,function () {
                     optionTwo.animate({opacity:"1.0"},500,function () {
@@ -245,6 +298,7 @@ optionOne.on("click",function(){
                 });
             });
         },200);
+
 
     });
 });
@@ -275,16 +329,39 @@ var quizFour=$(".quiz_four");
 var optionFour=$(".q4_options");
 var musicOpt=$(".music");
 optionThree.on("click",function () {
+
+
     pageThree.animate({opacity:"0"},500,function(){
         /*转场音乐*/
-
+        document.getElementById("BGM").play();
         pageFour.show();
         quizInScene(q4Board,topFour,quizFour,optionFour);
         setTimeout(function () {
-            musicOpt.animate({opacity:"1.0"},500)
-        },3000);
+            musicOpt.animate({opacity:"1.0"},500);
+        },2000);
+
     });
 });
+
+var musicA=$(".q4_a_music");
+musicA.on("click",function () {
+    document.getElementById("BGM").pause();
+    document.getElementById("A").play();
+    document.getElementById("B").pause();
+    // var aAudio = new Audio('./assets/audio/A.mp3');
+    // Play(aAudio);
+});
+
+var musicB=$(".q4_b_music");
+musicB.on("click",function () {
+    document.getElementById("BGM").pause();
+    document.getElementById("B").play();
+    document.getElementById("A").pause();
+
+});
+
+
+
 
 /*关于page4的音乐播放逻辑*/
 
@@ -296,10 +373,17 @@ var quizFive=$(".quiz_five");
 var optionFive=$(".q5_options");
 
 optionFour.on("click",function () {
-    pageFour.animate({opacity:"0"},500,function(){
-        /*转场音乐*/
+    /*转场音乐*/
+    document.getElementById("A").pause();
+    document.getElementById("B").pause();
+    var oAudio = new Audio('./assets/audio/q5.mp3');
+    Play(oAudio);
 
+    pageFour.animate({opacity:"0"},500,function(){
+        var lipAudio = new Audio('./assets/audio/q5.mp3');
+        Play(lipAudio);
         pageFive.show();
+        document.getElementById("BGM").play();
         quizInScene(q5Board,topFive,quizFive,optionFive);
     });
 });

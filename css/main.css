@@ -580,7 +580,9 @@ body,html{
     margin: 10.5vw auto 0 auto;
     opacity: 0;
 }
-
+.q5_options{
+    opacity: 0;
+}
 .option_btn_q5 {
     width: 24.2vw;
 }
@@ -611,6 +613,7 @@ body,html{
 
 /*pageInput iphone 4'7''*/
 .pageInput{
+    background: #000;
     /*background: #00FF00 url(../images/pageinput.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;

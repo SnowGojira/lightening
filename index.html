@@ -12,6 +12,22 @@
 </head>
 <body>
 
+<audio preload autoplay loop id="BGM">
+    <source src="assets/audio/bgm.mp3" type="audio/mpeg">
+</audio>
+
+<audio preload id="btn_audio">
+  <source src="assets/audio/btn.mp3" type="audio/mpeg">
+</audio>
+
+<audio preload id="A">
+    <source src="assets/audio/A.mp3" type="audio/mpeg">
+</audio>
+
+<audio preload id="B">
+    <source src="assets/audio/B.mp3" type="audio/mpeg">
+</audio>
+
 <!--lock_screen-->
 <div class="lock" >
     <div class="lock-bg"></div>
@@ -25,7 +41,7 @@
 <div class="page pageBox ">
 
     <!--pageLoad-->
-    <div  class="page pageLoad" >
+    <div  class="page pageLoad">
         <div class="pl_lightenBox absolute">
             <img class="pl_logo absolute" src="images/logo.png" alt="logo"/>
             <img class="pl_flicker absolute" src="images/pl_flicker.png" alt="flicker"/>
@@ -196,8 +212,8 @@
             <div class="content absolute">
                 <p class="WrtType quiz_five question">睡梦中,天使给了你两支口红,涂上红色，你会有一个大胆冒险的人生；粉色则会让你一生安稳平凡，你会选择：</p>
 
-                <img class="option_lipstick pink absolute q_optionContainer q5_options" data-value="20" data-opt="q5_a1_btn" src="images/pink.gif" alt="lipstick_a"/>
-                <img class="option_lipstick red absolute q_optionContainer q5_options" data-value="10" data-opt="q5_b1_btn" src="images/red.gif" alt="lipstick_b"/>
+                <img class="option_lipstick pink absolute  q5_options" data-value="20" data-opt="q5_a1_btn" src="images/pink.gif" alt="lipstick_a"/>
+                <img class="option_lipstick red absolute  q5_options" data-value="10" data-opt="q5_b1_btn" src="images/red.gif" alt="lipstick_b"/>
                 <!--选项A-->
                 <div class="q_optionContainer q5_a q5_options" data-value="20" data-opt="q5_a1_btn">
                     <div class="q5_btn_a">
@@ -240,7 +256,6 @@
     <!--画报-->
     <div  class="page pageCanvas none" >
 
-
         <div class="absolute resultImg" >
             <img class="absolute" id="outputImg" src="" style="width: 100vw;height: 161vw;"/>
         </div>
@@ -251,16 +266,6 @@
     </div>
 
 
-
-    <!--<iframe class="none" src = "assets/audio/bgm.mp3" allow = "autoplay loop"/>-->
-    <audio preload loop id="bgm">
-        <source src="assets/audio/bgm.mp3" type="audio/mpeg">
-    </audio>
-
-    <!--<audio preload id="btn_audio">-->
-        <!--<source src="assets/audio/btn.mp3" type="audio/mpeg">-->
-    <!--</audio>-->
-
 </div>
 
 <script src="libs/zepto.min.js"></script>
@@ -270,8 +275,10 @@
 <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 <script src="libs/jweixin-1.0.0.js"></script>
 <script src="js/main.js"></script>
+<!--<script src="js/audioplayer.js"></script>-->
 
 <!--@http://github.com/SirSnow-->
+
 
 </body>
 </html>

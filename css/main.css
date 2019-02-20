@@ -610,13 +610,22 @@ body,html{
 }
 
 /*pageInput iphone 4'7''*/
-/*.pageInput{
-    background: #00FF00 url(../images/pageinput.jpg) no-repeat fixed top;
+.pageInput{
+    /*background: #00FF00 url(../images/pageinput.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
 
-    z-index: 70;
-}*/
+    z-index: 70;*/
+    /*opacity:0;*/
+}
+.input_content{
+    top: 86vw;
+    left: 29vw;
+    width: 41vw;
+    text-align: center;
+    outline: none;
+    color: #898989;
+}
 
 .input_board{
     margin-top: 14vw;
@@ -643,7 +652,9 @@ body,html{
     left: 27vw;
     width: 45vw;
 }
-
+.pageCanvas{
+    z-index: 10;
+}
 .waitParent{
     top: 67.5vw;
     left: 25vw;
@@ -674,9 +685,47 @@ body,html{
     to { background-position: 0 150%; }
 }
 
+/*海报的布局*/
+.postBG{
+    width: 100vw;
+}
+.nickName{
+    font-size: 0.8rem;
+    top: 8vw;
+    left: 14vw;
+}
+.QRcode{
+    width: 12.2vw;
+    top: 125.5vw;
+    left: 44vw;
+}
 
+.desc{
+    width: 14.2vw;
+    top: 138.5vw;
+    left: 43vw;
+}
+.link{
+    width: 24.2vw;
+    top: 142.5vw;
+    left: 38vw;
+}
+.hand{
+    width: 5.2vw;
+    top: 144.5vw;
+    left: 59vw;
+}
 
+.back{
+    width: 12.2vw;
+    top: 150.5vw;
+    left: 84vw;
+}
 
+.inputImg{
+    width: 100vw;
+    height: 161vw;
+}
 /*iphone X的布局*/
 
 @media only screen and (device-width: 375px) and (min-device-height:680px) {
@@ -977,7 +1026,9 @@ body,html{
         background-size: cover;
         z-index: 70;
     }*/
-
+    .input_content {
+        top: 100vw;
+    }
     .input_board {
         margin-top: 28vw;
     }

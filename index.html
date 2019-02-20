@@ -17,11 +17,15 @@
     <div class="lock-bg"></div>
     <p class="WrtType lock-txt">请在手机上看</p>
 </div>
-
+<div class="inputImg absolute" id="InputImg">
+    <!--<img class="postBG absolute" src="images/result_4.jpg" alt="result"/>
+    <p class="absolute NumType nickName">Haku</p>
+    <img class="absolute QRcode" src="images/qr.jpg" alt="qrcode"/>-->
+</div>
 <div class="page pageBox ">
 
     <!--pageLoad-->
-    <div  class="page pageLoad none" >
+    <div  class="page pageLoad" >
         <div class="pl_lightenBox absolute">
             <img class="pl_logo absolute" src="images/logo.png" alt="logo"/>
             <img class="pl_flicker absolute" src="images/pl_flicker.png" alt="flicker"/>
@@ -48,9 +52,9 @@
         </div>
     </div>
     <!--答题页面-->
-    <div class="page quizPage ">
+    <div class="page quizPage none">
         <!--page1-->
-        <div  class="quiz pageOne " >
+        <div  class="quiz pageOne none" >
             <img class="quiz_board absolute q1_board" src="images/quiz_board.png" alt="quiz_board"/>
             <img class="absolute top_one" src="images/top1.png" alt="top1"/>
             <!--灯型边框动画-->
@@ -192,11 +196,10 @@
             <div class="content absolute">
                 <p class="WrtType quiz_five question">睡梦中,天使给了你两支口红,涂上红色，你会有一个大胆冒险的人生；粉色则会让你一生安稳平凡，你会选择：</p>
 
-                <img class="option_lipstick pink absolute q5_options"  src="images/pink.gif" alt="lipstick_a"/>
-                <img class="option_lipstick red absolute q5_options"  src="images/red.gif" alt="lipstick_b"/>
+                <img class="option_lipstick pink absolute q_optionContainer q5_options" data-value="20" data-opt="q5_a1_btn" src="images/pink.gif" alt="lipstick_a"/>
+                <img class="option_lipstick red absolute q_optionContainer q5_options" data-value="10" data-opt="q5_b1_btn" src="images/red.gif" alt="lipstick_b"/>
                 <!--选项A-->
                 <div class="q_optionContainer q5_a q5_options" data-value="20" data-opt="q5_a1_btn">
-
                     <div class="q5_btn_a">
                         <img class="option_btn_q5 absolute" id="q5_a_btn" src="images/q5_a.png" alt="q4_a"/>
                         <img class="option_btn_q5 absolute none" id="q5_a1_btn" src="images/q5_a1.png" alt="q4_a"/>
@@ -221,13 +224,14 @@
         <div class="input_board absolute">
             <img class="input_bg absolute " src="images/inputBG.png" alt="gBoard"/>
         </div>
-        <div class="input_name none">
+        <div class="input_name">
             <img class="input_title absolute " src="images/input_title.png" alt="inputTitle"/>
             <img class="input_box absolute " src="images/input_box.png" alt="inputBox"/>
-            <img class="input_btn absolute " src="images/input_btn.png" alt="inputBtn"/>
+            <img class="input_btn absolute " id="input_submit" src="images/input_btn.png" alt="inputBtn"/>
+            <input class="input_content absolute" type="text" maxlength = "9" placeholder="请输入你的名字"/>
         </div>
         <!--等待生成图片Gif图-->
-        <div class="waitParent">
+        <div class="waitParent none">
             <div class="wait"></div>
         </div>
 
@@ -235,17 +239,36 @@
 
     <!--画报-->
     <div  class="page pageCanvas none" >
-        <div class="g_board absolute">
-            <img class="g_bg absolute " src="images/g_board.png" alt="gBoard"/>
+
+
+        <div class="absolute resultImg" >
+            <img class="absolute" id="outputImg" src="" style="width: 100vw;height: 161vw;"/>
         </div>
+        <img class="desc absolute" src="images/desc.png"/>
+        <img class="link absolute " src="images/link_1.png"/>
+        <img class="hand absolute " src="images/hand.png"/>
+        <img class="back absolute" src="images/back_1.png"/>
     </div>
+
+
+
+    <!--<iframe class="none" src = "assets/audio/bgm.mp3" allow = "autoplay loop"/>-->
+    <audio preload loop id="bgm">
+        <source src="assets/audio/bgm.mp3" type="audio/mpeg">
+    </audio>
+
+    <!--<audio preload id="btn_audio">-->
+        <!--<source src="assets/audio/btn.mp3" type="audio/mpeg">-->
+    <!--</audio>-->
 
 </div>
 
 <script src="libs/zepto.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="libs/preloadjs-0.6.2.min.js"></script>
-<script src="libs/html2canvas.min.js"></script>
+<!--<script src="libs/html2canvas.min.js"></script>-->
+<script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
+<script src="libs/jweixin-1.0.0.js"></script>
 <script src="js/main.js"></script>
 
 <!--@http://github.com/SirSnow-->

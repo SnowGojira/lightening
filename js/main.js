@@ -1,9 +1,11 @@
 /*预加载逻辑*/
+
 window.onload=function(){
+
     //预加载资源
     manifest = [
-        /*{src: 'asset/audio/out.mp3', id: 'sona2'},
-        {src: 'asset/audio/right.mp3', id: 'sona3'},
+        {src: 'assets/audio/btn.mp3', id: 'sona2'},
+        /*{src: 'asset/audio/right.mp3', id: 'sona3'},
         {src: 'asset/audio/running.mp3', id: 'sona4'},
         {src: 'asset/audio/start.mp3', id: 'sona5'},
         {src: 'asset/audio/wrong.mp3', id: 'sona6'},
@@ -106,7 +108,9 @@ function handleFileProgress(){//加载中函数
     document.getElementById('loadPercent').innerHTML=percent+"%";
 }
 var upArrow = $('.pl_upArrow');
-
+// var BGMAudio = document.getElementById("#BGM");
+// var BGMAudio =?new Audio("./assets/audio/bgm.mp3");
+// BGMAudio.loop=true;
 function handleComplete(){
     $('#loadPercent').hide();
     upArrow.show();
@@ -121,6 +125,7 @@ var pageStart=$(".pageStart");
 var startBoard=$(".g_board");
 
 pageLoad.on("touchstart", function(e) {
+
     startY = e.originalEvent.touches[0].pageY;
     return startY;
 });
@@ -153,8 +158,12 @@ var quizOne=$(".quiz_one");
 var optionOne=$(".q1_options");
 var hint=$(".indicator");
 
+function BGM(){
+
+}
 heart.on("click",function () {
     console.log("点击触发");
+
     sparkTitle.animate({opacity:"1.0"},800,function () {
        pageStart.animate({left:"-600px"},800,function () {
            quizPage.show();
@@ -183,11 +192,11 @@ function quizInScene(dom1,dom2,dom3,dom4) {
 }
 
 //调试使用之后关闭
-quizInScene(q1Board,topOne,quizOne,optionOne);
+// quizInScene(q1Board,topOne,quizOne,optionOne);
 
 var count=0;
 var btn=$(".q_optionContainer");
-
+// var btnAudio=$("#btn_audio");
 //点击按钮的通识属性
 btn.on("click",function(){
     hint.hide();
@@ -200,9 +209,17 @@ btn.on("click",function(){
     $("#"+id_str).show();
 
     //添加音频元素
+    var btnAudio = new Audio('./assets/audio/btn.mp3');
+    Play(btnAudio);
 
 });
 
+function Play(audio) {
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function() {
+        audio.play();
+    }, false);
+}
 /*page1即将结束，进入page2*/
 var pageTwo=$(".pageTwo");
 var q2Board=$(".q2_board");
@@ -286,3 +303,153 @@ optionFour.on("click",function () {
         quizInScene(q5Board,topFive,quizFive,optionFive);
     });
 });
+
+/*音乐播放方法*/
+function audioPlay(audio) { //背景音乐
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function() {
+        audio.pause();
+    }, false);
+}
+
+function audioPause(audio) { //背景音乐
+    audio.pause();
+    document.addEventListener("WeixinJSBridgeReady", function() {
+        audio.play();
+    }, false);
+}
+
+/*page5即将结束，跳转输入框页面*/
+var pageInput=$(".pageInput");
+
+optionFive.on("click",function () {
+    pageFive.animate({opacity:"0"},500,function(){
+        quizPage.hide();
+        pageInput.show();
+        pageInput.animate({opacity:"1"},500);
+
+    });
+});
+
+/*input的逻辑*/
+var name;
+var input = $(".input_content");
+var submitBtn = $(".input_btn");
+var InputImg=$(".inputImg");
+var OutputImg=$("#outputImg");
+
+submitBtn.on("click",function(){
+    //姓名赋值
+    name=input.val();
+
+    if (typeof name === "undefined" || name == null || name === ""){
+        console.log("重新取值");
+    }else{
+
+        //得分表
+
+        $(".input_name").animate({opacity:"0"},1000,function () {
+            console.log("姓名"+name);
+            $(".input_name").hide();
+            //InputImg.innerHTML=getInputDiv(name);
+            InputImg.append(getInputDiv(name));
+            $(".waitParent").show();
+            downFile();
+            /*$(".waitParent").animate({opacity:"0"},1000,function () {
+                downFile();
+            });*/
+            setTimeout(function () {
+                pageInput.animate({opacity:"0"},1000,function(){
+                    pageInput.hide();
+                    $(".pageCanvas").show();
+                }) ;
+            },6000);
+        });
+        // $(".waitParent").show();
+        // downFile();
+    }
+});
+
+$(".wait").on("click",function () {
+    downFile();
+    setTimeout(function () {
+        pageInput.animate({opacity:"0"},1000,function(){
+            pageInput.hide();
+            $(".pageCanvas").show();
+        }) ;
+    },6000);
+});
+
+function innDiv(name,id){
+    var innerDiv='<img class="postBG absolute" src="images/result_'+id+'.jpg" alt="result"/>';
+    innerDiv += '<p class="absolute NumType nickName">'+name+'</p>';
+    innerDiv += '<img class="absolute QRcode" src="images/qr.jpg" alt="qrcode"/>';
+
+    return innerDiv;
+}
+
+function downFile() {
+    console.log(".................")
+    var targetDom = InputImg;
+    var copyDom = targetDom.clone();
+    var cwidth=targetDom.width();
+    var cheight=targetDom.height();
+    console.log(cwidth);
+    console.log(cheight);
+//
+    //要将 canvas 的宽高设置成容器宽高的 2 倍
+    var canvas = document.createElement("canvas");
+    canvas.width = cwidth * 2;
+    canvas.height = cheight * 2;
+    canvas.style.width = cwidth + "px";
+    canvas.style.height = cheight + "px";
+    var context = canvas.getContext("2d");
+    //然后将画布缩放，将图像放大两倍画到画布上
+    context.scale(2,2);
+
+    html2canvas($(".inputImg"),{
+        // $(".myImg")是你要复制生成canvas的区域，可以自己选
+        allowTaint: true,
+        taintTest: true,
+        canvas:canvas,
+        onrendered:function(canvas){
+            dataURL =canvas.toDataURL("image/png");
+//           $("body").append(canvas);
+            console.log(dataURL);
+            OutputImg.attr('src',dataURL);
+
+            $(".inputImg").hide();
+            OutputImg.show();
+        },
+        width:cwidth*2,
+        height:cheight*2
+    })
+
+}
+
+function getInputDiv(name) {
+    var inner;
+    if(count<60){
+        console.log("黑洞");
+        inner=innDiv(name,1);
+        //InputImg.innerHTML= innDiv(name,1);
+
+        return inner;
+    }else if(count<75 && count >=60){
+        console.log("棱镜");
+        inner=innDiv(name,2);
+        //InputImg.innerHTML= innDiv(name,2);
+        return inner;
+    }else if(count<90 && count >=75){
+        console.log("水母");
+        inner=innDiv(name,3);
+        // InputImg.innerHTML= innDiv(name,3);
+        return inner;
+    }else if(count>=90){
+        console.log("太阳");
+        inner=innDiv(name,4);
+        // InputImg.innerHTML= innDiv(name,4);
+        return inner;
+    }
+}
+

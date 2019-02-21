@@ -11,7 +11,6 @@ window.onload=function(){
         {src: 'assets/audio/P1.mp3', id: 'sona6'},
         {src: 'assets/audio/q1.mp3', id: 'sona7'},
         {src: 'assets/audio/q2_step.mp3', id: 'sona8'},
-        {src: 'assets/audio/q2_watch.mp3', id: 'sona9'},
         {src: 'assets/audio/q5.mp3', id: 'sona10'},
 
         {src: 'images/g_board.png', id: 'p13'},
@@ -186,7 +185,7 @@ heart.on("click",function () {
     Play(q1Audio);
 
     sparkTitle.animate({opacity:"1.0"},800,function () {
-       pageStart.animate({left:"-600px"},800,function () {
+       pageStart.animate({top:"-800px"},800,function () {
            quizPage.show();
            pageOne.show();
            quizInScene(q1Board,topOne,quizOne,optionOne);

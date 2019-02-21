@@ -476,6 +476,7 @@ body,html{
     padding-left: 1.5vw;
     margin: 11vw auto 0 auto;
     text-align: justify;
+    letter-spacing: 0.05rem;
     opacity: 0;
 }
 .quiz_three_br{
@@ -995,7 +996,7 @@ letter-spacing: 0.26rem;
 
 
     /*page3 iphone X*/
-  /*  .pageThree{
+    /*.pageThree{
         background: #00FF00 url(../images/BGref/xpage3.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
@@ -1010,33 +1011,35 @@ letter-spacing: 0.26rem;
     }
 
     .quiz_three {
-        width: 79vw;
+        width: 68vw;
         padding-left: 1.5vw;
-        margin: 6.8vw auto 0 auto;
-        text-align: center;
+        margin: 9.8vw auto 0 auto;
+        text-align: justify;
+        font-size: 0.95rem;
     }
 
     /*.q3_crystalContainer{
         margin-top: 3vw;
     }*/
     .q3_crystal{
-        width: 52vw;
+        width: 46vw;
+        margin: -3vw 0 0 11vw;
     }
 
     .option_btn_q3{
-        width: 39.2vw;
+        width: 33.2vw;
     }
 
     .q3_a{
-        margin: 2.2vw 0 0 31.5vw;
+        margin: 5vw 0 0 33.5vw;
     }
 
     .q3_b{
-        margin: 13vw 0 0 31.6vw;
+        margin: 18vw 0 0 33.5vw;
     }
 
     .q3_c{
-        margin: 23vw 0 0 31.6vw;
+        margin: 31vw 0 0 33.5vw;
     }
 
     /*page4 iphoneX*/

@@ -349,13 +349,20 @@ body,html{
 
 }
 .quiz1_opt_a{
-    background:url('../images/qa.png')  -0 -0 no-repeat;
+    background:url('../images/q1.png')  -0 -0 no-repeat;
     background-size:100%;
 }
 .quiz1_opt_a1{
-    width: 8vw;
-    height: 8vw;
-    background:url('../images/qa.png')  0 33.3333%;
+    background:url('../images/q1.png')  0 33.3333%;
+    background-size:100%;
+}
+
+.quiz1_opt_b{
+    background:url('../images/q1.png')  0 66.6666%;
+    background-size:100%;
+}
+.quiz1_opt_b1{
+    background:url('../images/q1.png')  0 100%;
     background-size:100%;
 }
 
@@ -463,6 +470,26 @@ body,html{
 }
 .option_btn_q2{
     width: 49vw;
+    height: 7.84vw;
+}
+.quiz2_opt_a{
+    background: url('../images/q2.png') 0 0;
+    background-size: 100%;
+}
+
+.quiz2_opt_a1{
+    background: url('../images/q2.png') 0 33.3333%;
+    background-size: 100%;
+}
+
+.quiz2_opt_b{
+    background: url('../images/q2.png') 0 66.6666%;
+    background-size: 100%;
+}
+
+.quiz2_opt_b1{
+    background: url('../images/q2.png') 0 100%;
+    background-size: 100%;
 }
 
 .q2_a{
@@ -948,6 +975,7 @@ letter-spacing: 0.26rem;
 
     .option_btn {
         width: 7vw;
+        height: 7vw;
         /*background:url("image/sprite.png") 0 -10px no-repeat;
         background-size:50% auto;*/
     }
@@ -1017,6 +1045,7 @@ letter-spacing: 0.26rem;
 
     .option_btn_q2 {
         width: 48vw;
+        height: 7.68vw;
     }
 
     .q2_a {

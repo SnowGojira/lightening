@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/elements.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/qa.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/select.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/q2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/qa.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/select.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -35,18 +35,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4193" />
-          <entry key="html" value="3992" />
+          <entry key="css" value="4343" />
+          <entry key="html" value="4055" />
           <entry key="js" value="6074" />
-          <entry key="txt" value="1615" />
+          <entry key="txt" value="1646" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4193" />
-          <entry key="HTML" value="3992" />
+          <entry key="CSS" value="4343" />
+          <entry key="HTML" value="4055" />
           <entry key="JavaScript" value="6074" />
-          <entry key="PLAIN_TEXT" value="1615" />
+          <entry key="PLAIN_TEXT" value="1646" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -80,8 +80,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="351">
-              <caret line="355" column="15" lean-forward="true" selection-start-line="355" selection-start-column="15" selection-end-line="355" selection-end-column="15" />
+            <state relative-caret-position="286">
+              <caret line="1047" column="23" selection-start-line="1047" selection-start-column="23" selection-end-line="1047" selection-end-column="23" />
               <folding>
                 <element signature="e#5120#5291#0" />
                 <element signature="e#5303#5617#0" />
@@ -116,8 +116,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="104" column="73" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
+            <state relative-caret-position="429">
+              <caret line="151" column="71" selection-start-line="151" selection-start-column="71" selection-end-line="151" selection-end-column="71" />
               <folding>
                 <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -131,7 +131,7 @@
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
+                <element signature="n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" />
@@ -152,8 +152,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>main</find>
-      <find>iphone X</find>
       <find>wait</find>
       <find>iphoneOne X</find>
       <find>lightS</find>
@@ -180,8 +178,10 @@
       <find>option</find>
       <find>parent</find>
       <find>three</find>
-      <find>q3</find>
       <find>quiz1</find>
+      <find>q3</find>
+      <find>option_btn</find>
+      <find>option_btn_2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -323,7 +323,7 @@
       <workItem from="1550496934388" duration="34375000" />
       <workItem from="1550579103168" duration="27700000" />
       <workItem from="1550616432235" duration="34610000" />
-      <workItem from="1550718894789" duration="37499000" />
+      <workItem from="1550718894789" duration="39086000" />
     </task>
     <task id="LOCAL-00001" summary="add the css frame">
       <created>1550384235528</created>
@@ -626,11 +626,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550753172093</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="finish the q1_A spites">
+      <created>1550769574554</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1550769574554</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="167057000" />
+    <option name="totallyTimeSpent" value="168644000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -683,7 +690,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finish the quiz4 iphone4'7'' static style" />
     <MESSAGE value="finish the quiz4 static style" />
     <MESSAGE value="update some gif files" />
     <MESSAGE value="finish page5's static style" />
@@ -708,7 +714,8 @@
     <MESSAGE value="fix the post and add watch audio" />
     <MESSAGE value="rough way" />
     <MESSAGE value="use a normal way to control audio" />
-    <option name="LAST_COMMIT_MESSAGE" value="use a normal way to control audio" />
+    <MESSAGE value="finish the q1_A spites" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish the q1_A spites" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -791,8 +798,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="355" column="15" lean-forward="true" selection-start-line="355" selection-start-column="15" selection-end-line="355" selection-end-column="15" />
+        <state relative-caret-position="286">
+          <caret line="1047" column="23" selection-start-line="1047" selection-start-column="23" selection-end-line="1047" selection-end-column="23" />
           <folding>
             <element signature="e#5120#5291#0" />
             <element signature="e#5303#5617#0" />
@@ -811,8 +818,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="104" column="73" selection-start-line="104" selection-start-column="73" selection-end-line="104" selection-end-column="73" />
+        <state relative-caret-position="429">
+          <caret line="151" column="71" selection-start-line="151" selection-start-column="71" selection-end-line="151" selection-end-column="71" />
           <folding>
             <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -826,7 +833,7 @@
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" />

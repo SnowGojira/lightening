@@ -467,22 +467,39 @@ body,html{
     background-position: center center;
     background-size: cover;
     z-index: 30;
-
     opacity: 1;
 }*/
 
 .quiz_three{
     width: 69vw;
     padding-left: 1.5vw;
+    font-size: 0.95rem;
     margin: 11vw auto 0 auto;
     text-align: justify;
     letter-spacing: 0.05rem;
     opacity: 0;
 }
+
+.quiz_three_1{
+    margin-top: 0vw;
+    letter-spacing: 0.22rem;
+}
+
+.quiz_three_2{
+    margin-top: 0vw;
+    letter-spacing: 0.22rem;
+}
+
+.quiz_three_3{
+    margin-top: 0vw;
+    letter-spacing: 0.24rem;
+}
+
 .quiz_three_br{
     text-align: center;
     margin-top: 0;
 }
+
 
 .top_three{
     width: 34.8vw;
@@ -1013,9 +1030,30 @@ letter-spacing: 0.26rem;
     .quiz_three {
         width: 68vw;
         padding-left: 1.5vw;
-        margin: 9.8vw auto 0 auto;
+        margin: 13.8vw auto 0 auto;
         text-align: justify;
-        font-size: 0.95rem;
+        font-size: 0.93rem;
+        letter-spacing: 0.29rem;
+    }
+
+    .quiz_three_1{
+       margin-top: -1vw;
+        letter-spacing: 0.22rem;
+    }
+
+    .quiz_three_2{
+        margin-top: -0.2vw;
+        letter-spacing: 0.22rem;
+    }
+
+    .quiz_three_3{
+        margin-top: -0.7vw;
+        letter-spacing: 0.24rem;
+    }
+
+    .quiz_three_br{
+        text-align: center;
+        margin-top: 0;
     }
 
     /*.q3_crystalContainer{

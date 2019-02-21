@@ -277,7 +277,7 @@ var optionTwo=$(".q2_options");
 optionOne.on("click",function(){
     pageOne.animate({opacity:"0"},500,function(){
         /*转场音乐1*/
-        audioPlay('q2');
+        audioPlay('step');
         // var stepAudio = new Audio('./assets/audio/q2_step.mp3');
         // Play(stepAudio);
 
@@ -286,8 +286,8 @@ optionOne.on("click",function(){
         setTimeout(function () {
             topTwo.show();
             topTwo.animate({opacity:"1.0"},1500,function () {
-
                 quizTwo.animate({opacity:"1.0"},500,function () {
+                    audioPlay('watch');
                     optionTwo.animate({opacity:"1.0"},500,function () {
                         hint.show();
                     });
@@ -307,8 +307,9 @@ var quizThree=$(".quiz_three");
 var optionThree=$(".q3_options");
 
 optionTwo.on("click",function () {
+    /*音乐*/
+    audioPause('watch');
     pageTwo.animate({opacity:"0"},500,function(){
-        /*转场音乐*/
         pageThree.show();
         quizInScene(q3Board,topThree,quizThree,optionThree);
     });
@@ -509,7 +510,7 @@ function getInputDiv(name) {
     }
 }
 
-var link_url='http://www.17xpw.com/2019/index.php/index/?uid=udaScaA0O';
+var link_url='http://www.17xpw.com/2019/index.php/index/?uid=uqYNHhyTo';
 var link=$(".link");
 link.on("click",function () {
     window.location.href=link_url;

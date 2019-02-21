@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/audio/q2_watch.mp3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/result_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/result_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/result_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_4.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -32,16 +36,16 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="3849" />
-          <entry key="html" value="3825" />
-          <entry key="js" value="6009" />
+          <entry key="html" value="3838" />
+          <entry key="js" value="6058" />
           <entry key="txt" value="1532" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="3849" />
-          <entry key="HTML" value="3825" />
-          <entry key="JavaScript" value="6009" />
+          <entry key="HTML" value="3838" />
+          <entry key="JavaScript" value="6058" />
           <entry key="PLAIN_TEXT" value="1532" />
         </counts>
       </usages-collector>
@@ -51,7 +55,7 @@
           <entry key="html" value="3" />
           <entry key="jpg" value="6" />
           <entry key="js" value="11" />
-          <entry key="mp3" value="2" />
+          <entry key="mp3" value="3" />
           <entry key="png" value="1" />
           <entry key="rnc" value="1" />
           <entry key="ts" value="1" />
@@ -64,7 +68,7 @@
           <entry key="HTML" value="3" />
           <entry key="Image" value="7" />
           <entry key="JavaScript" value="11" />
-          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="PLAIN_TEXT" value="6" />
           <entry key="RNG Compact" value="1" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -77,7 +81,7 @@
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="1033" column="18" lean-forward="true" selection-start-line="1033" selection-start-column="18" selection-end-line="1033" selection-end-column="18" />
+              <caret line="1033" column="18" selection-start-line="1033" selection-start-column="18" selection-end-line="1033" selection-end-column="18" />
               <folding>
                 <element signature="e#5120#5291#0" />
                 <element signature="e#5303#5617#0" />
@@ -95,11 +99,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="482" column="50" selection-start-line="482" selection-start-column="50" selection-end-line="482" selection-end-column="50" />
+            <state relative-caret-position="429">
+              <caret line="311" column="49" selection-start-line="311" selection-start-column="49" selection-end-line="311" selection-end-column="49" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#34#3450#0" />
@@ -109,11 +113,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+            <state relative-caret-position="208">
+              <caret line="39" column="32" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="32" />
               <folding>
                 <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -147,8 +151,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>watch</find>
-      <find>audio</find>
       <find>red</find>
       <find>pink</find>
       <find>pageO</find>
@@ -174,9 +176,11 @@
       <find>In</find>
       <find>page4</find>
       <find>quiz_three</find>
-      <find>btn</find>
       <find>quiz</find>
       <find>page3</find>
+      <find>btn</find>
+      <find>step</find>
+      <find>q2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -186,9 +190,9 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/function.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/js/main.js" />
       </list>
     </option>
   </component>
@@ -284,8 +288,8 @@
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\font" />
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\audio" />
+      <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\font" />
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\images" />
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\libs" />
     </key>
@@ -318,7 +322,7 @@
       <workItem from="1550496934388" duration="34375000" />
       <workItem from="1550579103168" duration="27700000" />
       <workItem from="1550616432235" duration="34610000" />
-      <workItem from="1550718894789" duration="25929000" />
+      <workItem from="1550718894789" duration="28237000" />
     </task>
     <task id="LOCAL-00001" summary="add the css frame">
       <created>1550384235528</created>
@@ -604,7 +608,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="155487000" />
+    <option name="totallyTimeSpent" value="157795000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -748,22 +752,10 @@
     <entry file="file://$PROJECT_DIR$/assets/font/hanzhen.ttf">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="482" column="50" selection-start-line="482" selection-start-column="50" selection-end-line="482" selection-end-column="50" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#34#3450#0" />
-            <element signature="e#3685#3738#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="1033" column="18" lean-forward="true" selection-start-line="1033" selection-start-column="18" selection-end-line="1033" selection-end-column="18" />
+          <caret line="1033" column="18" selection-start-line="1033" selection-start-column="18" selection-end-line="1033" selection-end-column="18" />
           <folding>
             <element signature="e#5120#5291#0" />
             <element signature="e#5303#5617#0" />
@@ -780,10 +772,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/audio/q2_watch.mp3">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="64" column="36" selection-start-line="64" selection-start-column="36" selection-end-line="64" selection-end-column="36" />
+        <state relative-caret-position="208">
+          <caret line="39" column="32" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="32" />
           <folding>
             <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -801,6 +796,18 @@
             <element signature="n#div#3;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="429">
+          <caret line="311" column="49" selection-start-line="311" selection-start-column="49" selection-end-line="311" selection-end-column="49" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#34#3450#0" />
+            <element signature="e#3685#3738#0" />
           </folding>
         </state>
       </provider>

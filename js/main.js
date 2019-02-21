@@ -275,9 +275,13 @@ var quizTwo=$(".quiz_two");
 var optionTwo=$(".q2_options");
 
 optionOne.on("click",function(){
+    /*转场音乐1*/
+    audioPlay('step');
+    setTimeout(function () {
+        audioPlay('watch');
+    },2500);
     pageOne.animate({opacity:"0"},500,function(){
-        /*转场音乐1*/
-        audioPlay('step');
+
         // var stepAudio = new Audio('./assets/audio/q2_step.mp3');
         // Play(stepAudio);
 
@@ -287,7 +291,7 @@ optionOne.on("click",function(){
             topTwo.show();
             topTwo.animate({opacity:"1.0"},1500,function () {
                 quizTwo.animate({opacity:"1.0"},500,function () {
-                    audioPlay('watch');
+
                     optionTwo.animate({opacity:"1.0"},500,function () {
                         hint.show();
                     });

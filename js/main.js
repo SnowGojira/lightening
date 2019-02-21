@@ -9,6 +9,7 @@ window.onload=function(){
         {src: 'assets/audio/P1.mp3', id: 'sona6'},
         {src: 'assets/audio/q1.mp3', id: 'sona7'},
         {src: 'assets/audio/q2_step.mp3', id: 'sona8'},
+        {src: 'assets/audio/q2_watch.mp3', id: 'sona9'},
         {src: 'assets/audio/q5.mp3', id: 'sona10'},
 
         {src: 'images/g_board.png', id: 'p13'},
@@ -28,24 +29,14 @@ window.onload=function(){
         {src: 'images/ps_title.png', id: 'p30'},
         {src: 'images/ps_title_en.png', id: 'p31'},
 
-        {src: 'images/q1_a.png', id: 'p32'},
-        {src: 'images/q1_a1.png', id: 'p33'},
+        {src: 'images/q1.png', id: 'p32'},
         {src: 'images/q1_ap.png', id: 'p34'},
-        {src: 'images/q1_b.png', id: 'p35'},
-        {src: 'images/q1_b1.png', id: 'p36'},
         {src: 'images/q1_bp.png', id: 'p37'},
 
-        {src: 'images/q2_a.png', id: 'p38'},
-        {src: 'images/q2_a1.png', id: 'p40'},
-        {src: 'images/q2_b.png', id: 'p41'},
-        {src: 'images/q2_b1.png', id: 'p42'},
+        {src: 'images/q2.png', id: 'p38'},
 
-        {src: 'images/q3_a.png', id: 'p43'},
-        {src: 'images/q3_a1.png', id: 'p44'},
-        {src: 'images/q3_b.png', id: 'p45'},
-        {src: 'images/q3_b1.png', id: 'p46'},
-        {src: 'images/q3_c.png', id: 'p47'},
-        {src: 'images/q3_c1.png', id: 'p48'},
+        {src: 'images/q3.png', id: 'p43'},
+
 
         {src: 'images/q4_a.png', id: 'p50'},
         {src: 'images/q4_a1.png', id: 'p51'},

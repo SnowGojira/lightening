@@ -568,6 +568,36 @@ body,html{
 
 .option_btn_q3{
     width: 33.2vw;
+    height: 10.4912vw;
+}
+
+.quiz3_opt_a{
+    background: url('../images/q3.png') 0 0;
+    background-size: 100%;
+}
+.quiz3_opt_a{
+    background: url('../images/q3.png') 0 0;
+    background-size: 100%;
+}
+.quiz3_opt_a1{
+    background: url('../images/q3.png') 0 20%;
+    background-size: 100%;
+}
+.quiz3_opt_b{
+    background: url('../images/q3.png') 0 40%;
+    background-size: 100%;
+}
+.quiz3_opt_b1{
+    background: url('../images/q3.png') 0 60%;
+    background-size: 100%;
+}
+.quiz3_opt_c{
+    background: url('../images/q3.png') 0 80%;
+    background-size: 100%;
+}
+.quiz3_opt_c1{
+    background: url('../images/q3.png') 0 100%;
+    background-size: 100%;
 }
 
 .q3_a{

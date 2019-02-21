@@ -377,38 +377,45 @@ body,html{
     bottom: 0;
     background:  url('../images/light_board.png') no-repeat 0 0;
     background-size: 100%;
-    animation: lightSprite 1.2s steps(2) infinite;
+    animation: lightSprite 1.2s steps(3) infinite;
 }
 
 @keyframes lightSprite {
     from { background-position: 0 0; }
-    to { background-position: 0 100%; }
+    to { background-position: 0 150%; }
 }
 @-webkit-keyframes lightSprite {
     from { background-position: 0 0; }
-    to { background-position: 0 100%; }
+    to { background-position: 0 150%; }
 }
 @-moz-keyframes lightSprite {
     from { background-position: 0 0; }
-    to { background-position: 0 100%; }
+    to { background-position: 0 150%; }
 }
 
 
 /*page2 iphone 4'7''*/
 .pageTwo{
-    /*background: url(../images/page2.jpg) no-repeat fixed top;
+    /*background: url(../images/BGref/page2.jpg) no-repeat fixed top;*/
     background-position: center center;
     background-size: cover;
-
-    z-index: 30;*/
     opacity: 1;
 }
 .quiz_two{
-    width: 71vw;
+    width: 68vw;
     padding-left: 1.5vw;
     margin: 11vw auto 0 auto;
-    text-align: center;
+    text-align: justify;
+    letter-spacing: 0.26rem;
     opacity: 0;
+}
+.quiz_two1{
+    margin-top: -4.8vw;
+    letter-spacing: 0.17rem;
+}
+.quiz_two2{
+    margin-top:0;
+    text-align: center;
 }
 .q2_options{
     opacity: 0;
@@ -444,20 +451,22 @@ body,html{
 
 /*page3 iphone 4'7''*/
 .pageThree{
-    /*background: #00FF00 url(../images/page3.jpg) no-repeat fixed top;
-    background-position: center center;
-    background-size: cover;
-
-    z-index: 40;*/
+    /*background: #00FF00 url(../images/BGref/page3.jpg) no-repeat fixed top;*/
+    /*background-position: center center;*/
+    /*background-size: cover;*/
     opacity: 1;
 }
 
 .quiz_three{
-    width: 71vw;
+    width: 69vw;
     padding-left: 1.5vw;
     margin: 11vw auto 0 auto;
-    text-align: center;
+    text-align: justify;
     opacity: 0;
+}
+.quiz_three_br{
+    text-align: center;
+    margin-top: 0;
 }
 
 .top_three{
@@ -478,7 +487,7 @@ body,html{
 }
 .q3_crystal{
     width: 47vw;
-    padding-left: 3vw;
+    padding-left: 0;
 }
 
 .option_btn_q3{
@@ -486,15 +495,15 @@ body,html{
 }
 
 .q3_a{
-    margin: 1.2vw 0 0 33.6vw;
+    margin: 2.2vw 0 0 33.6vw;
 }
 
 .q3_b{
-    margin: 11vw 0 0 33.6vw;
+    margin: 12vw 0 0 33.6vw;
 }
 
 .q3_c{
-    margin: 21vw 0 0 33.6vw;
+    margin: 22vw 0 0 33.6vw;
 }
 
 
@@ -558,10 +567,9 @@ body,html{
 
 /*page5 iphone 4'7''*/
 .pageFive{
-    /*background: #00FF00 url(../images/page5.jpg) no-repeat fixed top;
+    /*background: #00FF00 url(../images/BGref/page5.jpg) no-repeat fixed top;*/
     background-position: center center;
     background-size: cover;
-    z-index: 60;*/
     opacity: 1;
 }
 
@@ -587,7 +595,7 @@ body,html{
     width: 24.2vw;
 }
 .q5_a {
-    margin: 15.2vw 0 0 37.6vw;
+    margin: 13.2vw 0 0 37.6vw;
 }
 .q5_b {
     margin: 39.2vw 0 0 37.6vw;
@@ -595,21 +603,21 @@ body,html{
 
 
 .option_lipstick{
-    width: 34.9vw;
+   width: 34.9vw;
 }
 .pink{
-    margin:16vw 0 0 31.2vw;
+margin:16.1vw 0 0 31.2vw;
 }
 
 .red{
-    margin:45vw 0 0 31.2vw;
+margin: 45vw 0 0 30.8vw;
 }
 .quiz_five {
-    width: 71vw;
-    padding-left: 1.5vw;
-    margin: 11vw auto 0 auto;
-    text-align: center;
-    letter-spacing: 0.26rem;
+width: 71vw;
+padding-left: 1.5vw;
+margin: 11vw auto 0 auto;
+text-align: center;
+letter-spacing: 0.26rem;
 }
 
 /*pageInput iphone 4'7''*/
@@ -669,7 +677,7 @@ body,html{
 .waitParent:before {
     content: "";
     display: block;
-    padding-top: 15.6%;
+    padding-top: 15.3%;
 
 }
 
@@ -731,8 +739,6 @@ body,html{
     height: 161vw;
     background: black;
 }
-/*iphone X 690布局的布局*/
-
 
 /*iphone X 725布局的布局*/
 

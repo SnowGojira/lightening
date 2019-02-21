@@ -420,23 +420,7 @@ submitBtn.on("click",function(){
     }
 });
 
-$(".wait").on("click",function () {
-    downFile();
-    setTimeout(function () {
-        pageInput.animate({opacity:"0"},1000,function(){
-            pageInput.hide();
-            $(".pageCanvas").show();
-        }) ;
-    },6000);
-});
 
-function innDiv(name,id){
-    var innerDiv='<img class="postBG absolute" src="images/result_'+id+'.jpg" alt="result"/>';
-    innerDiv += '<p class="absolute NumType nickName">'+name+'</p>';
-    innerDiv += '<img class="absolute QRcode" src="images/qr.jpg" alt="qrcode"/>';
-
-    return innerDiv;
-}
 
 function downFile() {
     console.log(".................")
@@ -476,7 +460,13 @@ function downFile() {
     })
 
 }
+function innDiv(name,id){
+    var innerDiv='<img class="postBG absolute" src="images/result_'+id+'.jpg" alt="result"/>';
+    innerDiv += '<p class="absolute NumType nickName">'+name+'</p>';
+    innerDiv += '<img class="absolute QRcode" src="images/qr.jpg" alt="qrcode"/>';
 
+    return innerDiv;
+}
 function getInputDiv(name) {
     var inner;
     if(count<60){
@@ -503,3 +493,8 @@ function getInputDiv(name) {
     }
 }
 
+var link_url='http://www.17xpw.com/2019/index.php/index/?uid=udaScaA0O';
+var link=$(".link");
+link.on("click",function () {
+    window.location.href=link_url;
+});

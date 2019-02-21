@@ -276,17 +276,23 @@ body,html{
 
 /*pageOne iphone 4'7'' 布局*/
 .pageOne{
-    /*background: url(../images/page1.jpg) no-repeat fixed top;
-    background-position: center center;
-    background-size: cover;
+    /*background: url(../images/BGref/page1.jpg) no-repeat fixed top;*/
+    /*background-position: center center;*/
+    /*background-size: cover;*/
 
-    z-index: 20;*/
+    /*z-index: 20;*/
     opacity: 1;
 }
 .quiz_board{
     top: 23.5vw;
     left: 7.5vw;
-    width: 85.4vw;
+    width: 86vw;
+    height: 121.5vw;
+    background: url("../images/quiz_board.png") no-repeat 0 0;
+    background-position: center center;
+    background-size: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
 }
 
 .indicator{
@@ -787,25 +793,55 @@ letter-spacing: 0.26rem;
 
 
     /*pageOne—X 适配*/
-    /*.pageOne{
-        background: url(../images/xpage1.jpg) no-repeat fixed top;
-        background-position: center center;
-        background-size: cover;
-
-        z-index: 20;
-    }*/
+    .pageOne{
+        /*background: url("../images/BGref/xpage1.jpg") no-repeat fixed top;*/
+        /*background-position: center center;*/
+        /*background-size: cover;*/
+        /*z-index: 10;*/
+    }
     /*.q1_top{
         top:100vw;
     }*/
+
     .quiz_board{
         top: 28.5vw;
-        left: 2.5vw;
-        width: 95.7vw;
+        left: 6.5vw;
+        width: 87vw;
+        height: 151.5vw;
+        background: url("../images/x_quiz_board.png") no-repeat 0 0;
+        background-position: center center;
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+    }
+
+    .q1_lightParent{
+        top: 33vw;
+        left: 5vw;
+        width: 91vw;
+        position: absolute;
+        /*z-index: 11;*/
+    }
+    .q1_lightParent:before {
+        content: "";
+        display: block;
+        padding-top: 164.9%;
+    }
+
+    .q1_light {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url(../images/x_light_board.png) no-repeat 0 0;
+        background-size: 100%;
+        animation: lightSprite 1.2s steps(3) infinite;
     }
 
     .indicator{
-        bottom: 9.4vw;
-        margin-bottom: 5vw;
+        bottom: 8.4vw;
+        /*margin-bottom: 5vw;*/
     }
 
     .top_one{
@@ -819,74 +855,72 @@ letter-spacing: 0.26rem;
     }
 
     .quiz_one {
-        width: 79vw;
-        padding-left: 1vw;
-        margin-top: 11vw;
+        width: 71vw;
+        padding-left: 0vw;
+        margin-top: 14vw;
     }
 
     .question {
-        font-size: 1.1rem;
-        letter-spacing: 0.24rem;
-        line-height: 1.75rem;
+        font-size: 0.98rem;
+        letter-spacing: 0.2rem;
+        line-height: 1.55rem;
     }
 
     .option_btn {
-        width: 9vw;
+        width: 7vw;
     }
 
     .q1_a {
-        margin: 9.8vw 0 0 10.4vw;
+        margin: 23.8vw 0 0 14.4vw;
     }
 
     .q1_a_p {
-        margin: 3vw 0 0 19vw;
-        width: 42vw;
-        height: 29.5vw;
+        margin: 1.7vw 0 0 17.4vw;
+        width: 37vw;
+        height: 25vw;
     }
 
     .q1_b {
-        margin: 3.8vw 0 0 10.4vw;
+        margin: 13.8vw 0 0 14.4vw;
     }
 
     .q1_b_p {
-        margin: 2.7vw 0 0 19vw;
-        width: 43vw;
-        height: 29vw;
+        margin: 1.7vw 0 0 17.4vw;
+        width: 37vw;
+        height: 25vw;
     }
-    .q1_lightParent{
-        top: 33vw;
-        left: 3vw;
-        width: 96vw;
-        position: absolute;
-        /*z-index: 11;*/
-    }
-    .q1_lightParent:before {
-        content: "";
-        display: block;
-        padding-top: 135.5%;
-    }
+
 
 
     /*page2 iphone X*/
-    /* .pageTwo{
-         background: url(../images/xpage2.jpg) no-repeat fixed top;
-         background-position: center center;
-         background-size: cover;
-
-         z-index: 30;
-     }*/
+     .pageTwo{
+         /*background: url(../images/BGref/xpage2.jpg) no-repeat fixed top;*/
+         /*background-position: center center;*/
+         /*background-size: cover;*/
+         /*z-index: 30;*/
+     }
 
     .quiz_two {
-        width: 79vw;
-        padding-left: 1.5vw;
-        margin: 12.8vw auto 0 auto;
+        width: 71vw;
+        padding-left: 4vw;
+        margin: 13.8vw auto 0 auto;
+        text-align: justify;
+        letter-spacing: 0.26rem;
+        font-size: 0.97rem;
+    }
+    .quiz_two1{
+        margin-top: -5vw;
+        letter-spacing: 0.17rem;
+    }
+    .quiz_two2{
+        margin: 0 0 0 11vw;
         text-align: center;
     }
 
     .watch_two {
-        width: 79vw;
-        padding-left: 1.5vw;
-        margin:6.8vw auto 0 auto;
+        width: 54vw;
+        padding-left: 0vw;
+        margin: 14.8vw auto 0 auto;
         text-align: center;
     }
     .top_two{
@@ -900,15 +934,15 @@ letter-spacing: 0.26rem;
     }
 
     .option_btn_q2 {
-        width: 55vw;
+        width: 48vw;
     }
 
     .q2_a {
-        margin: -5vw 0 0 22.4vw;
+        margin: 5.4vw 0 0 25.4vw;
     }
 
     .q2_b {
-        margin: 15vw 0 0 22.4vw;
+        margin: 21.4vw 0 0 25.4vw;
     }
 
 
@@ -916,18 +950,18 @@ letter-spacing: 0.26rem;
 
 
     /*page3 iphone X*/
-    /*.pageThree{
-        background: #00FF00 url(../images/xpage3.jpg) no-repeat fixed top;
+    .pageThree{
+        background: #00FF00 url(../images/BGref/xpage3.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
         z-index: 40;
-    }*/
+    }
 
     .top_three {
-        width: 43.8vw;
-        left: 28vw;
-        top: 3vw;
+        width: 38.8vw;
+        left: 30vw;
+        top: 6.2vw;
     }
 
     .quiz_three {
@@ -961,53 +995,52 @@ letter-spacing: 0.26rem;
     }
 
     /*page4 iphoneX*/
-    /*.pageFour{
-        background: #00FF00 url(../images/xpage4.jpg) no-repeat fixed top;
+    .pageFour{
+        /*background: #00FF00 url(../images/BGref/xpage4.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
-        z-index: 50;
-    }*/
+        z-index: 50;*/
+    }
 
     .top_four {
-        width: 47.9vw;
-        left: 25.5vw;
-        top: 6.5vw;
+        width: 42.9vw;
+        left: 27.5vw;
+        top: 9.5vw;
     }
 
     .quiz_four {
-        width: 78vw;
-        margin: 10.5vw auto 0 auto;
+        width: 72vw;
+        margin: 13.5vw auto 0 auto;
     }
 
     .option_btn_q4 {
-        width: 38.2vw;
+        width: 33.2vw;
     }
     .q4_a {
-        margin: 14.2vw 0 0 31.6vw;
+        margin: 20.2vw 0 0 32.6vw;
     }
     .q4_b {
-        margin: 50.2vw 0 0 31.6vw;
+        margin: 61vw 0 0 32.6vw;
     }
     .option_btn_musicA {
-        top: 62vw;
+        top: 71vw;
         left: 44vw;
-        width: 12.2vw;
+        width: 11.2vw;
     }
     .option_btn_musicB {
-        top: 100.5vw;
+        top: 111.5vw;
         left: 44vw;
-        width: 12.2vw;
+        width: 11.2vw;
     }
 
     /*page5 iphoneX*/
-    /*.pageFive{
-        background: #00FF00 url(../images/xpage5.jpg) no-repeat fixed top;
+    .pageFive{
+        /*background: #00FF00 url(../images/BGref/xpage5.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
-        z-index: 60;
-
-    }*/
+        z-index: 60;*/
+    }
 
     .top_five {
         width: 43.9vw;
@@ -1016,34 +1049,37 @@ letter-spacing: 0.26rem;
     }
 
     .quiz_five {
-        width: 78vw;
-        margin: 10.6vw auto 0 auto;
-        letter-spacing: 0.3rem;
+        width: 69vw;
+        margin: 13.6vw auto 0 auto;
+        /* letter-spacing: 0.3rem; */
+        font-size: 0.96rem;
+        padding-left: 2.8vw;
+        letter-spacing: 0.28rem;
     }
 
     .option_btn_q5 {
-        width: 27.2vw;
+        width: 25.2vw;
     }
     .q5_a {
-        margin: 9.2vw 0 0 35.6vw;
+        margin: 15.2vw 0 0 37.6vw;
     }
     .q5_b {
-        margin: 45.2vw 0 0 35.6vw;
+        margin: 53.2vw 0 0 37.6vw;
     }
 
     .pageCanvas{
         margin-top: 15vw;
     }
     .option_lipstick{
-        width: 39.2vw;
+        width: 35.2vw;
     }
 
     .pink{
-        margin: 13vw 0 0 28.2vw;
+        margin: 25.3vw 0 0 30.2vw;
     }
 
     .red{
-        margin: 49.5vw 0 0 28.2vw;
+        margin: 63.5vw 0 0 30.2vw;
     }
 
     /*pageInput iphone X*/

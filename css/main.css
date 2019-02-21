@@ -334,6 +334,12 @@ body,html{
     width: 100%;
     height: auto;
 }
+
+.q_optionContainerKiss{
+    width: 100%;
+    height: auto;
+}
+
 .alignCenter{
     text-align: center;
 }
@@ -456,12 +462,14 @@ body,html{
 
 
 /*page3 iphone 4'7''*/
-.pageThree{
-    /*background: #00FF00 url(../images/BGref/page3.jpg) no-repeat fixed top;*/
-    /*background-position: center center;*/
-    /*background-size: cover;*/
+/*.pageThree{
+    background: #00FF00 url(../images/BGref/page3.jpg) no-repeat fixed top;
+    background-position: center center;
+    background-size: cover;
+    z-index: 30;
+
     opacity: 1;
-}
+}*/
 
 .quiz_three{
     width: 69vw;
@@ -601,7 +609,7 @@ body,html{
     width: 24.2vw;
 }
 .q5_a {
-    margin: 13.2vw 0 0 37.6vw;
+    margin: 11.2vw 0 0 37.6vw;
 }
 .q5_b {
     margin: 39.2vw 0 0 37.6vw;
@@ -732,6 +740,43 @@ letter-spacing: 0.26rem;
     width: 5.2vw;
     top: 144.5vw;
     left: 59vw;
+    animation: handDown 1s infinite;
+}
+
+@keyframes handDown {
+    0% {
+        top: 144.5vw;
+    }
+    50% {
+        top: 143vw;
+    }
+    100% {
+        top: 144.5vw;
+    }
+}
+
+@-webkit-keyframes handDown {
+    0% {
+        top: 144.5vw;
+    }
+    50% {
+        top: 143vw;
+    }
+    100% {
+        top: 144.5vw;
+    }
+}
+
+@-moz-keyframes handDown {
+    0% {
+        top: 144.5vw;
+    }
+    50% {
+        top: 143vw;
+    }
+    100% {
+        top: 144.5vw;
+    }
 }
 
 .back{
@@ -756,8 +801,8 @@ letter-spacing: 0.26rem;
         background-size: cover;
     }*/
     .pl_logo{
-        width: 47vw;
-        margin: -6vw 0 0 28vw;
+        width: 49vw;
+        margin: -7vw 0 0 27vw;
     }
     .pl_lightenBox{
         margin-top: 12vw;
@@ -950,13 +995,13 @@ letter-spacing: 0.26rem;
 
 
     /*page3 iphone X*/
-    .pageThree{
+  /*  .pageThree{
         background: #00FF00 url(../images/BGref/xpage3.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
-        z-index: 40;
-    }
+        !*z-index: 40;*!
+    }*/
 
     .top_three {
         width: 38.8vw;

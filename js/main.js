@@ -160,6 +160,9 @@ var pageLoad=$(".pageLoad");
 var flickerBox=$(".pl_lightenBox");
 var pageStart=$(".pageStart");
 var startBoard=$(".g_board");
+//点击按钮的通识属性
+var count=0;
+var btn=$(".q_optionContainer");
 
 pageLoad.on("touchstart", function(e) {
     audioPlay('heart');
@@ -232,12 +235,22 @@ function quizInScene(dom1,dom2,dom3,dom4) {
 
 }
 
-//点击按钮的通识属性
-var count=0;
-var btn=$(".q_optionContainer");
+
+
 btn.on("click",function(){
-    //添加音频元素
-    audioPlay('btn');
+        hint.hide();
+        //计数
+        count+=parseInt($(this).attr('data-value'));
+        console.log("count:"+count);
+        //变色反馈
+        var id_str=$(this).attr('data-opt');
+        console.log("id:"+id_str);
+        $("#"+id_str).show();
+        //音效
+        audioPlay('btn')
+});
+
+$(".q_optionContainerKiss").on("click",function(){
     hint.hide();
     //计数
     count+=parseInt($(this).attr('data-value'));
@@ -246,8 +259,11 @@ btn.on("click",function(){
     var id_str=$(this).attr('data-opt');
     console.log("id:"+id_str);
     $("#"+id_str).show();
-
+    //音效
+    audioPlay('q5');
 });
+
+
 
 
 
@@ -293,10 +309,8 @@ var optionThree=$(".q3_options");
 optionTwo.on("click",function () {
     pageTwo.animate({opacity:"0"},500,function(){
         /*转场音乐*/
-
         pageThree.show();
         quizInScene(q3Board,topThree,quizThree,optionThree);
-
     });
 });
 
@@ -359,9 +373,9 @@ optionFour.on("click",function () {
     /*转场音乐*/
     audioPause('A');
     audioPause('B');
-    setTimeout(function () {
-        audioPlay('q5');
-    },2500);
+    // setTimeout(function () {
+    //     audioPlay('q5');
+    // },2500);
     pageFour.animate({opacity:"0"},500,function(){
         pageFive.show();
         audioPlay('BGM');
@@ -497,4 +511,10 @@ var link_url='http://www.17xpw.com/2019/index.php/index/?uid=udaScaA0O';
 var link=$(".link");
 link.on("click",function () {
     window.location.href=link_url;
+});
+
+//重新加载
+var reload=$(".back");
+reload.on("click",function () {
+    window.location.reload();
 });

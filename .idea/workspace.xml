@@ -5,11 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/q4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/q5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/elements.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q3_a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q3_a1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q3_b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q3_b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q3_c.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q3_c1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q4_a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q4_a1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q4_b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q4_b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q5_a.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q5_a1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q5_b.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/q5_b1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ref_4.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/function.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -38,7 +51,7 @@
           <entry key="css" value="4643" />
           <entry key="html" value="4249" />
           <entry key="js" value="6081" />
-          <entry key="txt" value="1688" />
+          <entry key="txt" value="1704" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -46,7 +59,7 @@
           <entry key="CSS" value="4643" />
           <entry key="HTML" value="4249" />
           <entry key="JavaScript" value="6081" />
-          <entry key="PLAIN_TEXT" value="1688" />
+          <entry key="PLAIN_TEXT" value="1704" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -102,8 +115,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+            <state relative-caret-position="48">
+              <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#3685#3738#0" />
@@ -115,8 +128,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="39">
-              <caret line="268" column="55" lean-forward="true" selection-start-line="268" selection-start-column="55" selection-end-line="268" selection-end-column="55" />
+            <state relative-caret-position="312">
+              <caret line="323" column="30" selection-start-line="323" selection-start-column="30" selection-end-line="323" selection-end-column="30" />
               <folding>
                 <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -192,8 +205,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/function.js" />
-        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/css/main.css" />
+        <option value="$PROJECT_DIR$/js/main.js" />
         <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
@@ -324,7 +337,7 @@
       <workItem from="1550496934388" duration="34375000" />
       <workItem from="1550579103168" duration="27700000" />
       <workItem from="1550616432235" duration="34610000" />
-      <workItem from="1550718894789" duration="42268000" />
+      <workItem from="1550718894789" duration="42562000" />
     </task>
     <task id="LOCAL-00001" summary="add the css frame">
       <created>1550384235528</created>
@@ -655,17 +668,24 @@
       <option name="project" value="LOCAL" />
       <updated>1550772713102</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="make less node">
+      <created>1550774327924</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1550774327925</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="171826000" />
+    <option name="totallyTimeSpent" value="172120000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13879709" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13879709" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -712,7 +732,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finish pageInput's static style" />
     <MESSAGE value="finish the preload logic" />
     <MESSAGE value="finish the pageload animate logic" />
     <MESSAGE value="enlightening logic" />
@@ -737,7 +756,8 @@
     <MESSAGE value="finish the q2 spites" />
     <MESSAGE value="update the images" />
     <MESSAGE value="finish the q3 sprite" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish the q3 sprite" />
+    <MESSAGE value="make less node" />
+    <option name="LAST_COMMIT_MESSAGE" value="make less node" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -831,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="36" column="42" selection-start-line="36" selection-start-column="42" selection-end-line="36" selection-end-column="42" />
+        <state relative-caret-position="48">
+          <caret line="40" column="48" selection-start-line="40" selection-start-column="48" selection-end-line="40" selection-end-column="48" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#3685#3738#0" />
@@ -842,8 +862,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="39">
-          <caret line="268" column="55" lean-forward="true" selection-start-line="268" selection-start-column="55" selection-end-line="268" selection-end-column="55" />
+        <state relative-caret-position="312">
+          <caret line="323" column="30" selection-start-line="323" selection-start-column="30" selection-end-line="323" selection-end-column="30" />
           <folding>
             <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />

@@ -39,11 +39,8 @@ window.onload=function(){
 
         {src: 'images/q4_play.png', id: 'p54'},
         {src: 'images/q4_pause.png', id: 'p55'},
+        {src: 'images/q5.png', id: 'p56'},
 
-        {src: 'images/q5_a.png', id: 'p56'},
-        {src: 'images/q5_a1.png', id: 'p57'},
-        {src: 'images/q5_b.png', id: 'p58'},
-        {src: 'images/q5_b1.png', id: 'p63'},
         {src: 'images/quiz_board.png', id: 'p64'},
         {src: 'images/red.gif', id: 'p65'},
 

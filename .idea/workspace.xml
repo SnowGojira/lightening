@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,16 +33,16 @@
         <counts>
           <entry key="css" value="3365" />
           <entry key="html" value="3694" />
-          <entry key="js" value="5564" />
-          <entry key="txt" value="1290" />
+          <entry key="js" value="5590" />
+          <entry key="txt" value="1299" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="3365" />
           <entry key="HTML" value="3694" />
-          <entry key="JavaScript" value="5564" />
-          <entry key="PLAIN_TEXT" value="1290" />
+          <entry key="JavaScript" value="5590" />
+          <entry key="PLAIN_TEXT" value="1299" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -77,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+            <state relative-caret-position="537">
+              <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -98,22 +97,21 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="615">
-              <caret line="382" column="7" lean-forward="true" selection-start-line="382" selection-start-column="7" selection-end-line="382" selection-end-column="7" />
+            <state relative-caret-position="220">
+              <caret line="210" column="25" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="25" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#34#3450#0" />
                 <element signature="e#3685#3738#0" />
-                <element signature="e#3860#4136#0" />
                 <element signature="e#4440#4614#0" />
                 <element signature="e#4643#4817#0" />
                 <element signature="e#4851#5260#0" />
                 <element signature="e#4755#4824#0" />
                 <element signature="e#4865#5409#0" />
-                <element signature="e#5726#6155#0" />
                 <element signature="e#6201#6592#0" />
                 <element signature="e#6772#7083#0" />
                 <element signature="e#9104#9271#0" />
+                <element signature="e#11052#11212#0" />
               </folding>
             </state>
           </provider>
@@ -130,7 +128,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pageStart</find>
       <find>pageOne</find>
       <find>q1_options</find>
       <find>page3</find>
@@ -148,7 +145,6 @@
       <find>heartA</find>
       <find>complete</find>
       <find>inpu</find>
-      <find>heart</find>
       <find>BGM</find>
       <find>addEventListener</find>
       <find>watch</find>
@@ -158,8 +154,10 @@
       <find>red</find>
       <find>pink</find>
       <find>pageO</find>
-      <find>q5</find>
       <find>lip</find>
+      <find>heart</find>
+      <find>q5</find>
+      <find>q1</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -288,7 +286,7 @@
       <workItem from="1550496934388" duration="34375000" />
       <workItem from="1550579103168" duration="27700000" />
       <workItem from="1550616432235" duration="34610000" />
-      <workItem from="1550718894789" duration="1788000" />
+      <workItem from="1550718894789" duration="3828000" />
     </task>
     <task id="LOCAL-00001" summary="add the css frame">
       <created>1550384235528</created>
@@ -514,11 +512,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550718056961</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="clean the music code">
+      <created>1550720958565</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1550720958565</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="131346000" />
+    <option name="totallyTimeSpent" value="133386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="42" y="0" width="1391" height="874" extended-state="0" />
@@ -571,7 +576,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="complete the start page's arrangement , I lose some time in justify the animation just because the web cache not reload the image resouse, and I arrange a sprite pattern which need 3 frames." />
     <MESSAGE value="add a shine title layer to page start" />
     <MESSAGE value="finish the quiz1's static arrangement for both mobile size." />
     <MESSAGE value="finish all the arrangement of pageOne" />
@@ -596,7 +600,8 @@
     <MESSAGE value="finish the post part" />
     <MESSAGE value="fix a click btn bug" />
     <MESSAGE value="clean the load head code" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean the load head code" />
+    <MESSAGE value="clean the music code" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean the music code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -668,8 +673,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+        <state relative-caret-position="537">
+          <caret line="28" column="8" lean-forward="true" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -678,22 +683,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="382" column="7" lean-forward="true" selection-start-line="382" selection-start-column="7" selection-end-line="382" selection-end-column="7" />
+        <state relative-caret-position="220">
+          <caret line="210" column="25" selection-start-line="210" selection-start-column="23" selection-end-line="210" selection-end-column="25" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#34#3450#0" />
             <element signature="e#3685#3738#0" />
-            <element signature="e#3860#4136#0" />
             <element signature="e#4440#4614#0" />
             <element signature="e#4643#4817#0" />
             <element signature="e#4851#5260#0" />
             <element signature="e#4755#4824#0" />
             <element signature="e#4865#5409#0" />
-            <element signature="e#5726#6155#0" />
             <element signature="e#6201#6592#0" />
             <element signature="e#6772#7083#0" />
             <element signature="e#9104#9271#0" />
+            <element signature="e#11052#11212#0" />
           </folding>
         </state>
       </provider>

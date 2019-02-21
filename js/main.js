@@ -107,10 +107,9 @@ function handleComplete(){
 document.addEventListener('DOMContentLoaded', function () {
     console.log("自动播放");
     function audioAutoPlay() {
-        var Aaudio = document.getElementById('BGM');
-        Aaudio.play();
+        document.getElementById('BGM').play();
         document.addEventListener("WeixinJSBridgeReady", function () {
-            Aaudio.play();
+            document.getElementById('BGM').play();
         }, false);
     }
     audioAutoPlay();
@@ -118,8 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
 function audioAutoPlay() {
-    var Aaudio = document.getElementById('BGM');
-    Aaudio.play();
+    document.getElementById('BGM').play();
     document.removeEventListener('touchstart',audioAutoPlay);
 }
 document.addEventListener('touchstart', audioAutoPlay);
@@ -164,6 +162,7 @@ var pageStart=$(".pageStart");
 var startBoard=$(".g_board");
 
 pageLoad.on("touchstart", function(e) {
+    audioPlay('heart');
     startY = e.originalEvent.touches[0].pageY;
     return startY;
 });
@@ -185,7 +184,6 @@ pageLoad.on("touchmove", function(e) {
         );
     }
 
-    audioPlay('heart');
     // var heartAudio = new Audio('./assets/audio/p1.mp3');
     // Play(heartAudio);
 });
@@ -213,11 +211,8 @@ heart.on("click",function () {
            quizInScene(q1Board,topOne,quizOne,optionOne);
 
        })
-    })
+    });
 
-    //
-    var q1Audio = new Audio('./assets/audio/q1.mp3');
-    Play(q1Audio);
 });
 /*动画全局属性*/
 function quizInScene(dom1,dom2,dom3,dom4) {
@@ -364,15 +359,14 @@ optionFour.on("click",function () {
     /*转场音乐*/
     audioPause('A');
     audioPause('B');
-
+    setTimeout(function () {
+        audioPlay('q5');
+    },2500);
     pageFour.animate({opacity:"0"},500,function(){
         pageFive.show();
         audioPlay('BGM');
         // document.getElementById("BGM").play();
         quizInScene(q5Board,topFive,quizFive,optionFive);
-        setTimeout(function () {
-            audioPlay('q5');
-        },2000);
     });
 });
 

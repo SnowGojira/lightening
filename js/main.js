@@ -1,7 +1,5 @@
 /*预加载逻辑*/
-
 window.onload=function(){
-
     //预加载资源
     manifest = [
         {src: 'assets/audio/btn.mp3', id: 'sona2'},
@@ -89,21 +87,19 @@ window.onload=function(){
     loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
     loader.loadManifest(manifest);
 };
-
+/*percent 显示函数*/
 function handleFileProgress(){//加载中函数
     var percent=loader.progress*100|0+'%';
     document.getElementById('loadPercent').innerHTML=percent+"%";
 }
-var upArrow = $('.pl_upArrow');
 
+/*加载完成*/
+var upArrow = $('.pl_upArrow');
 function handleComplete(){
     $('#loadPercent').hide();
     upArrow.show();
-    /*var BGMAudio = new Audio('./assets/audio/bgm.mp3');
-    BGMAudio.loop=true;
-    Play(BGMAudio);*/
 }
-var srcBgm="./assets/audio/bgm.mp3";
+
 /*页面一加载，音乐便开始播放*/
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放
 document.addEventListener('DOMContentLoaded', function () {

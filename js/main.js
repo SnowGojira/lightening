@@ -34,14 +34,9 @@ window.onload=function(){
         {src: 'images/q1_bp.png', id: 'p37'},
 
         {src: 'images/q2.png', id: 'p38'},
-
         {src: 'images/q3.png', id: 'p43'},
+        {src: 'images/q4.png', id: 'p50'},
 
-
-        {src: 'images/q4_a.png', id: 'p50'},
-        {src: 'images/q4_a1.png', id: 'p51'},
-        {src: 'images/q4_b.png', id: 'p52'},
-        {src: 'images/q4_b1.png', id: 'p53'},
         {src: 'images/q4_play.png', id: 'p54'},
         {src: 'images/q4_pause.png', id: 'p55'},
 

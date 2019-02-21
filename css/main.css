@@ -647,8 +647,27 @@ body,html{
 
 .option_btn_q4{
     width: 33.2vw;
+    height: 9.7967vw;
 }
 
+.quiz4_opt_a{
+    background: url('../images/q4.png') 0 0;
+    background-size: 100%;
+}
+.quiz4_opt_a1{
+    background: url('../images/q4.png') 0 33.3333%;
+    background-size: 100%;
+}
+
+.quiz4_opt_b1{
+    background: url('../images/q4.png') 0 66.6666%;
+    background-size: 100%;
+}
+
+.quiz4_opt_b{
+    background: url('../images/q4.png') 0 100%;
+    background-size: 100%;
+}
 .option_btn_musicA{
     top: 57vw;
     left: 45vw;
@@ -697,9 +716,28 @@ body,html{
 .q5_options{
     opacity: 0;
 }
+
 .option_btn_q5 {
     width: 24.2vw;
+    height: 9.85vw;
 }
+.quiz5_opt_a{
+    background: url('../images/q5.png') 0 0;
+    background-size: 100% auto;
+}
+.quiz5_opt_a1{
+    background: url('../images/q5.png') 0 33.3333%;
+    background-size: 100% auto;
+}
+.quiz5_opt_b{
+    background: url('../images/q5.png') 0 66.6666%;
+    background-size: 100% auto;
+}
+.quiz5_opt_b1{
+    background: url('../images/q5.png') 0 100%;
+    background-size: 100% auto;
+}
+
 .q5_a {
     margin: 11.2vw 0 0 37.6vw;
 }
@@ -1144,6 +1182,7 @@ letter-spacing: 0.26rem;
 
     .option_btn_q3{
         width: 33.2vw;
+        height: 10.4912vw;
     }
 
     .q3_a{
@@ -1180,6 +1219,7 @@ letter-spacing: 0.26rem;
 
     .option_btn_q4 {
         width: 33.2vw;
+        height: 9.7967vw;
     }
     .q4_a {
         margin: 20.2vw 0 0 32.6vw;
@@ -1223,6 +1263,7 @@ letter-spacing: 0.26rem;
 
     .option_btn_q5 {
         width: 25.2vw;
+        height:10.2573vw;
     }
     .q5_a {
         margin: 15.2vw 0 0 37.6vw;

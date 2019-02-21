@@ -387,21 +387,6 @@ optionFour.on("click",function () {
     });
 });
 
-/*音乐播放方法*/
-function audioPlay(audio) { //背景音乐
-    audio.play();
-    document.addEventListener("WeixinJSBridgeReady", function() {
-        audio.pause();
-    }, false);
-}
-
-function audioPause(audio) { //背景音乐
-    audio.pause();
-    document.addEventListener("WeixinJSBridgeReady", function() {
-        audio.play();
-    }, false);
-}
-
 /*page5即将结束，跳转输入框页面*/
 var pageInput=$(".pageInput");
 

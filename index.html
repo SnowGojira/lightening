@@ -55,7 +55,11 @@
 <div class="page pageBox ">
 
     <!--pageLoad-->
-    <div  class="page pageLoad">
+    <div  class="page pageLoad ">
+        <!--元素试验场-->
+        <div class="option_btn absolute quiz1_opt_a1" id="q1_a2_btn"></div>
+        <!--元素试验场-->
+        <div class="quiz1_opt_a absolute"></div>
         <div class="pl_lightenBox absolute">
             <img class="pl_logo absolute" src="images/logo.png" alt="logo"/>
             <img class="pl_flicker absolute" src="images/pl_flicker.png" alt="flicker"/>
@@ -97,8 +101,8 @@
                 <!--选项A-->
                 <div class="q_optionContainer q1_options q1_a flex" data-value="20" data-opt="q1_a1_btn">
                     <div class="q1_btn_a">
-                        <img class="option_btn absolute" id="q1_a_btn" src="images/q1_a.png" alt="q1_a"/>
-                        <img class="option_btn absolute none" id="q1_a1_btn" src="images/q1_a1.png" alt="q1_a"/>
+                        <div class="option_btn absolute quiz1_opt_a" id="q1_a_btn"></div>
+                        <div class="option_btn absolute quiz1_opt_a1 none" id="q1_a1_btn"></div>
                     </div>
                     <img class="q1_a_p" src="images/q1_ap.png" alt="q1_a_p"/>
                 </div>
@@ -156,11 +160,14 @@
                 <div class="q1_light"></div>
             </div>
             <div class="content absolute">
-                <p class="WrtType question quiz_three">派对的尽头有一个神奇的水晶</p>
-                <p class="WrtType question quiz_three quiz_three_1">球,旋转水晶球,可以一秒化妆成</p>
-                <p class="WrtType question quiz_three quiz_three_2">你想要的模样,继续参加派对,但</p>
-                <p class="WrtType question quiz_three quiz_three_3">天亮后你将恢复成自己的素颜,</p>
-                <p class="WrtType question quiz_three quiz_three_br">你会</p>
+                <div class="quizContent">
+                    <p class="WrtType question quiz_three">派对的尽头有一个神奇的水晶</p>
+                    <p class="WrtType question quiz_three quiz_three_1">球,旋转水晶球,可以一秒化妆成</p>
+                    <p class="WrtType question quiz_three quiz_three_2">你想要的模样,继续参加派对,但</p>
+                    <p class="WrtType question quiz_three quiz_three_3">天亮后你将恢复成自己的素颜,</p>
+                    <p class="WrtType question quiz_three quiz_three_br">你会</p>
+                </div>
+
                 <!--插入gif-->
                 <div class="q3_crystalContainer watch_three quiz_three">
                     <img class="q3_crystal" src="images/crystal.gif" alt="crystal"/>

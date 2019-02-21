@@ -26,7 +26,7 @@ img{vertical-align:middle;}
 .WrtType{
      font-family: Writing_Font,Arial,sans-serif;
      color:#fff;
-     text-shadow:-0.12rem -0.06rem 0 #881574;
+     text-shadow:-0.12rem -0.08rem 0 #881574;
      letter-spacing: 0.25rem;
  }
 
@@ -345,7 +345,20 @@ body,html{
 }
 .option_btn{
     width: 8vw;
+    height: 8vw;
+
 }
+.quiz1_opt_a{
+    background:url('../images/qa.png')  -0 -0 no-repeat;
+    background-size:100%;
+}
+.quiz1_opt_a1{
+    width: 8vw;
+    height: 8vw;
+    background:url('../images/qa.png')  0 33.3333%;
+    background-size:100%;
+}
+
 .q1_options{
     opacity: 0;
 }
@@ -469,13 +482,17 @@ body,html{
     z-index: 30;
     opacity: 1;
 }*/
-
+.quizContent{
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
 .quiz_three{
-    width: 69vw;
-    padding-left: 1.5vw;
+    width: 71vw;
     font-size: 0.95rem;
     margin: 11vw auto 0 auto;
     text-align: justify;
+    padding-left: 4.5vw;
     letter-spacing: 0.29rem;
     opacity: 0;
 }
@@ -931,6 +948,8 @@ letter-spacing: 0.26rem;
 
     .option_btn {
         width: 7vw;
+        /*background:url("image/sprite.png") 0 -10px no-repeat;
+        background-size:50% auto;*/
     }
 
     .q1_a {
@@ -1028,8 +1047,8 @@ letter-spacing: 0.26rem;
     }
 
     .quiz_three {
-        width: 68vw;
-        padding-left: 1.5vw;
+        width: 71vw;
+        padding-left: 5.5vw;
         margin: 13.8vw auto 0 auto;
         text-align: justify;
         font-size: 0.93rem;

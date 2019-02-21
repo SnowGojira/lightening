@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -21,27 +22,28 @@
     <session id="2117484287">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
+          <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.50" value="1" />
           <entry key="project.open.time.6" value="4" />
-          <entry key="project.opened" value="6" />
+          <entry key="project.opened" value="7" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="css" value="3365" />
-          <entry key="html" value="3658" />
-          <entry key="js" value="5248" />
-          <entry key="txt" value="1260" />
+          <entry key="html" value="3694" />
+          <entry key="js" value="5564" />
+          <entry key="txt" value="1290" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="CSS" value="3365" />
-          <entry key="HTML" value="3658" />
-          <entry key="JavaScript" value="5248" />
-          <entry key="PLAIN_TEXT" value="1260" />
+          <entry key="HTML" value="3694" />
+          <entry key="JavaScript" value="5564" />
+          <entry key="PLAIN_TEXT" value="1290" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -75,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="214" column="28" selection-start-line="214" selection-start-column="28" selection-end-line="214" selection-end-column="43" />
+            <state relative-caret-position="615">
+              <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -87,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="10881">
               <caret line="279" column="33" selection-start-line="279" selection-start-column="33" selection-end-line="279" selection-end-column="33" />
             </state>
           </provider>
@@ -96,11 +98,22 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+            <state relative-caret-position="615">
+              <caret line="382" column="7" lean-forward="true" selection-start-line="382" selection-start-column="7" selection-end-line="382" selection-end-column="7" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#34#3450#0" />
+                <element signature="e#3685#3738#0" />
+                <element signature="e#3860#4136#0" />
+                <element signature="e#4440#4614#0" />
+                <element signature="e#4643#4817#0" />
+                <element signature="e#4851#5260#0" />
+                <element signature="e#4755#4824#0" />
+                <element signature="e#4865#5409#0" />
+                <element signature="e#5726#6155#0" />
+                <element signature="e#6201#6592#0" />
+                <element signature="e#6772#7083#0" />
+                <element signature="e#9104#9271#0" />
               </folding>
             </state>
           </provider>
@@ -169,9 +182,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="53" />
-    <option name="width" value="1738" />
-    <option name="height" value="1092" />
+    <option name="x" value="52" />
+    <option name="width" value="1739" />
+    <option name="height" value="1093" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -229,7 +242,7 @@
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../community.assemblemedia.cn.5.0/community.assemblemedia.cn.5.0/community.assemblemedia.cn/community.assemblemedia.cn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/nodeJs/node" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
@@ -275,6 +288,7 @@
       <workItem from="1550496934388" duration="34375000" />
       <workItem from="1550579103168" duration="27700000" />
       <workItem from="1550616432235" duration="34610000" />
+      <workItem from="1550718894789" duration="1788000" />
     </task>
     <task id="LOCAL-00001" summary="add the css frame">
       <created>1550384235528</created>
@@ -493,17 +507,24 @@
       <option name="project" value="LOCAL" />
       <updated>1550717732514</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="clean the load head code">
+      <created>1550718056961</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1550718056961</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="129445000" />
+    <option name="totallyTimeSpent" value="131346000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="42" y="0" width="1391" height="874" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15532055" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15509601" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -550,7 +571,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="add the optional audio resource" />
     <MESSAGE value="complete the start page's arrangement , I lose some time in justify the animation just because the web cache not reload the image resouse, and I arrange a sprite pattern which need 3 frames." />
     <MESSAGE value="add a shine title layer to page start" />
     <MESSAGE value="finish the quiz1's static arrangement for both mobile size." />
@@ -575,7 +595,8 @@
     <MESSAGE value="finish the post logic" />
     <MESSAGE value="finish the post part" />
     <MESSAGE value="fix a click btn bug" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix a click btn bug" />
+    <MESSAGE value="clean the load head code" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean the load head code" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -623,9 +644,7 @@
     <entry file="file://$PROJECT_DIR$/libs/soundjs-0.6.2.min.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../jq22pd-c75fc952-2a02-11e4-ac58-000c29b03321/bofq/js/main.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../jq22pd-c75fc952-2a02-11e4-ac58-000c29b03321/bofq/js/main.js" />
     <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="219">
@@ -642,15 +661,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="10881">
           <caret line="279" column="33" selection-start-line="279" selection-start-column="33" selection-end-line="279" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="214" column="28" selection-start-line="214" selection-start-column="28" selection-end-line="214" selection-end-column="43" />
+        <state relative-caret-position="615">
+          <caret line="39" column="20" lean-forward="true" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#4;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
@@ -659,11 +678,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="112" column="5" lean-forward="true" selection-start-line="112" selection-start-column="5" selection-end-line="112" selection-end-column="5" />
+        <state relative-caret-position="615">
+          <caret line="382" column="7" lean-forward="true" selection-start-line="382" selection-start-column="7" selection-end-line="382" selection-end-column="7" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#34#3450#0" />
+            <element signature="e#3685#3738#0" />
+            <element signature="e#3860#4136#0" />
+            <element signature="e#4440#4614#0" />
+            <element signature="e#4643#4817#0" />
+            <element signature="e#4851#5260#0" />
+            <element signature="e#4755#4824#0" />
+            <element signature="e#4865#5409#0" />
+            <element signature="e#5726#6155#0" />
+            <element signature="e#6201#6592#0" />
+            <element signature="e#6772#7083#0" />
+            <element signature="e#9104#9271#0" />
           </folding>
         </state>
       </provider>

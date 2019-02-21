@@ -100,36 +100,63 @@ function handleComplete(){
     upArrow.show();
 }
 
-/*页面一加载，音乐便开始播放*/
+/*音乐开始播放*/
+//创建播放与停止的函数
+
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放
 document.addEventListener('DOMContentLoaded', function () {
     console.log("自动播放");
     function audioAutoPlay() {
-        var audio = document.getElementById('BGM');
-        audio.play();
+        var Aaudio = document.getElementById('BGM');
+        Aaudio.play();
         document.addEventListener("WeixinJSBridgeReady", function () {
-            audio.play();
+            Aaudio.play();
         }, false);
     }
     audioAutoPlay();
 });
+
 //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
 function audioAutoPlay() {
-    var audio = document.getElementById('BGM');
-    audio.play();
+    var Aaudio = document.getElementById('BGM');
+    Aaudio.play();
     document.removeEventListener('touchstart',audioAutoPlay);
 }
 document.addEventListener('touchstart', audioAutoPlay);
 
-//停止播放
-function audioPause() {
-    var audio = document.getElementById('BGM');
+//创建audio play和audio pause的函数
+function audioPlay(id_str){
+    var audio = document.getElementById(id_str);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
+}
+function audioPause(id_str){
+    var audio = document.getElementById(id_str);
     audio.pause();
-    document.removeEventListener('touchstart',audioPause);
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.pause();
+    }, false);
+}
+/*备选play如果微信不播放音乐时*/
+function Play(audio_str) {
+
+    if (window.WeixinJSBridge) {
+        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+            audio_str.play();
+        }, false);
+    } else {
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+                audio_str.play();
+            });
+        }, false);
+    }
+    audio_str.play();
 }
 
-/*向上滑动*/
-
+/*pageLoad向上滑动*/
 var startY, moveY, moveSpace;
 var pageLoad=$(".pageLoad");
 var flickerBox=$(".pl_lightenBox");
@@ -158,9 +185,9 @@ pageLoad.on("touchmove", function(e) {
         );
     }
 
-    //
-    var heartAudio = new Audio('./assets/audio/p1.mp3');
-    Play(heartAudio);
+    audioPlay('heart');
+    // var heartAudio = new Audio('./assets/audio/p1.mp3');
+    // Play(heartAudio);
 });
 
 /*pageStart 点亮动画逻辑*/
@@ -174,11 +201,10 @@ var quizOne=$(".quiz_one");
 var optionOne=$(".q1_options");
 var hint=$(".indicator");
 
-
 heart.on("click",function () {
     console.log("点击触发");
-    var q1Audio = new Audio('./assets/audio/q1.mp3');
-    Play(q1Audio);
+    audioPlay('q1');
+    audioPause('heart');
 
     sparkTitle.animate({opacity:"1.0"},800,function () {
        pageStart.animate({top:"-800px"},800,function () {
@@ -193,7 +219,7 @@ heart.on("click",function () {
     var q1Audio = new Audio('./assets/audio/q1.mp3');
     Play(q1Audio);
 });
-
+/*动画全局属性*/
 function quizInScene(dom1,dom2,dom3,dom4) {
     dom1.addClass("mainIn");
     setTimeout(function () {
@@ -211,14 +237,12 @@ function quizInScene(dom1,dom2,dom3,dom4) {
 
 }
 
-//调试使用之后关闭
-// quizInScene(q1Board,topOne,quizOne,optionOne);
-
+//点击按钮的通识属性
 var count=0;
 var btn=$(".q_optionContainer");
-// var btnAudio=$("#btn_audio");
-//点击按钮的通识属性
 btn.on("click",function(){
+    //添加音频元素
+    audioPlay('btn');
     hint.hide();
     //计数
     count+=parseInt($(this).attr('data-value'));
@@ -228,33 +252,9 @@ btn.on("click",function(){
     console.log("id:"+id_str);
     $("#"+id_str).show();
 
-    //添加音频元素
-    var btnAudio = new Audio('./assets/audio/btn.mp3');
-    Play(btnAudio);
-
 });
 
 
-
-function Play(audio) {
-    /*audio.play();
-    document.addEventListener("WeixinJSBridgeReady", function() {
-        audio.play();
-    }, false);*/
-
-    if (window.WeixinJSBridge) {
-        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-            audio.play();
-        }, false);
-    } else {
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-                audio.play();
-            });
-        }, false);
-    }
-    audio.play();
-}
 
 /*page1即将结束，进入page2*/
 var pageTwo=$(".pageTwo");
@@ -266,25 +266,15 @@ var optionTwo=$(".q2_options");
 optionOne.on("click",function(){
     pageOne.animate({opacity:"0"},500,function(){
         /*转场音乐1*/
-        var stepAudio = new Audio('./assets/audio/q2_step.mp3');
-        Play(stepAudio);
+        audioPlay('q2');
+        // var stepAudio = new Audio('./assets/audio/q2_step.mp3');
+        // Play(stepAudio);
 
         pageTwo.show();
         q2Board.addClass("mainIn");
         setTimeout(function () {
             topTwo.show();
             topTwo.animate({opacity:"1.0"},1500,function () {
-                // /*转场音乐2*/
-                //
-                //
-                // var start = 0;//定义循环的变量
-                // var times=4;//定于循环的次数
-                // watchAudio.addEventListener("ended",function() {
-                //     Play(watchAudio);//启动音频，也就是播放
-                //     start++;//循环
-                //     start == times && watchAudio.pause();//也就是当循环的变量等于次数的时候，就会终止循环并且关掉音频
-                //});
-                //Play(watchAudio);
 
                 quizTwo.animate({opacity:"1.0"},500,function () {
                     optionTwo.animate({opacity:"1.0"},500,function () {
@@ -325,10 +315,9 @@ var optionFour=$(".q4_options");
 var musicOpt=$(".music");
 optionThree.on("click",function () {
 
-
     pageThree.animate({opacity:"0"},500,function(){
         /*转场音乐*/
-        document.getElementById("BGM").play();
+        // document.getElementById("BGM").play();
         pageFour.show();
         quizInScene(q4Board,topFour,quizFour,optionFour);
         setTimeout(function () {
@@ -338,27 +327,31 @@ optionThree.on("click",function () {
     });
 });
 
+
+/*关于page4的音乐播放逻辑*/
 var musicA=$(".q4_a_music");
 musicA.on("click",function () {
-    document.getElementById("BGM").pause();
-    document.getElementById("A").play();
-    document.getElementById("B").pause();
+    audioPause('BGM');
+    audioPause('B');
+    audioPlay('A');
+    // document.getElementById("BGM").pause();
+    // document.getElementById("A").play();
+    // document.getElementById("B").pause();
     // var aAudio = new Audio('./assets/audio/A.mp3');
     // Play(aAudio);
 });
 
 var musicB=$(".q4_b_music");
 musicB.on("click",function () {
-    document.getElementById("BGM").pause();
-    document.getElementById("B").play();
-    document.getElementById("A").pause();
-
+    audioPause('BGM');
+    audioPause('A');
+    audioPlay('B');
+    // document.getElementById("BGM").pause();
+    // document.getElementById("B").play();
+    // document.getElementById("A").pause();
 });
 
 
-
-
-/*关于page4的音乐播放逻辑*/
 
 /*page4即将结束，进入page5*/
 var pageFive=$(".pageFive");
@@ -369,17 +362,17 @@ var optionFive=$(".q5_options");
 
 optionFour.on("click",function () {
     /*转场音乐*/
-    document.getElementById("A").pause();
-    document.getElementById("B").pause();
-    var oAudio = new Audio('./assets/audio/q5.mp3');
-    Play(oAudio);
+    audioPause('A');
+    audioPause('B');
 
     pageFour.animate({opacity:"0"},500,function(){
-        var lipAudio = new Audio('./assets/audio/q5.mp3');
-        Play(lipAudio);
         pageFive.show();
-        document.getElementById("BGM").play();
+        audioPlay('BGM');
+        // document.getElementById("BGM").play();
         quizInScene(q5Board,topFive,quizFive,optionFive);
+        setTimeout(function () {
+            audioPlay('q5');
+        },2000);
     });
 });
 
@@ -391,7 +384,6 @@ optionFive.on("click",function () {
         quizPage.hide();
         pageInput.show();
         pageInput.animate({opacity:"1"},500);
-
     });
 });
 

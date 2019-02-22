@@ -925,7 +925,71 @@ letter-spacing: 0.26rem;
     background: black;
 }
 
-/*iphone X 725布局的布局*/
+
+/*添加锁频逻辑*/
+.lock{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: none;
+}
+
+.lock-txt{
+    margin-top: 30%;
+}
+
+@media only screen and (min-device-width: 800px) {
+    .lock{
+        display: block;
+    }
+}
+
+
+/*淡入*/
+.mainIn{
+    display: block;
+    -webkit-animation:mainIn 1s .2s ease both;
+    -moz-animation:mainIn 1s .2s ease both;
+}
+@keyframes mainIn{
+    0%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
+    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+    100%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+}
+@-webkit-keyframes mainIn{
+    0%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
+    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+    100%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+}
+@-moz-keyframes mainIn{
+    0%{-moz-transform:scale(0.9); opacity: 0; -moz-transform-origin:center center;}
+    50%{-moz-transform:scale(1); opacity: 1; -moz-transform-origin:center center;}
+    100%{-moz-transform:scale(1); opacity: 1; -moz-transform-origin:center center;}
+}
+
+/*淡出*/
+.mainOut{
+    display: none;
+    -webkit-animation:mainOut 1s .2s ease both;
+    -moz-animation:mainOut 1s .2s ease both;}
+@keyframes mainOut{
+    0%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+    100%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
+}
+@-webkit-keyframes mainOut{
+    0%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+    100%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
+}
+@-moz-keyframes mainOut{
+    0%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
+    100%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
+}
+
+
+/*iphone X 的布局*/
 
 @media only screen and (device-width: 375px) and (min-device-height:680px) {
     /*pageLoad—X 适配*/
@@ -1326,66 +1390,407 @@ letter-spacing: 0.26rem;
         top: 74vw;
     }
 }
-/*添加锁频逻辑*/
-.lock{
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: none;
-}
 
-.lock-txt{
-    margin-top: 30%;
-}
+/*iphone Xs XMax的布局*/
+@media only screen and (min-device-width: 375px) and (min-device-height:800px) {
+    /*pageLoad—X 适配*/
+    /*.pageLoad{
+        background: url(../images/xpageload.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+    }*/
+    .pl_logo{
+        width: 49vw;
+        margin: -7vw 0 0 27vw;
+    }
+    .pl_lightenBox{
+        margin-top: 12vw;
+    }
 
-@media only screen and (min-device-width: 800px) {
-    .lock{
+    /*pageStart—X 适配*/
+    /*.pageStart{
+        background: url(../images/xpagestart.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 10;
+    }*/
+    .g_bg{
+        top: 36vw;
+    }
+
+    .ps_decorate{
+        top: 46.8vw;
+    }
+
+    .ps_title{
+        top: 73.8vw;
+    }
+
+    .ps_heartParent{
+        top: 123vw;
+    }
+
+    /*.g_board{
+        margin-top: 14vw;
+    }*/
+
+
+    /*pageOne—X 适配*/
+    .pageOne{
+        /*background: url("../images/BGref/xp1.jpg") no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+        z-index: 10;*/
+    }
+    /*.q1_top{
+        top:100vw;
+    }*/
+
+    .quiz_board{
+        top: 24.5vw;
+        left: 6.5vw;
+        width: 87vw;
+        height: 153.5vw;
+        background: url("../images/x_quiz_board.png") no-repeat 0 0;
+        background-position: center center;
+        background-size: 100%;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+    }
+
+    .q1_lightParent{
+        top: 29vw;
+        left: 5vw;
+        width: 91vw;
+        position: absolute;
+        /*z-index: 11;*/
+    }
+    .q1_lightParent:before {
+        content: "";
         display: block;
+        padding-top: 164.9%;
+    }
+
+    .q1_light {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url(../images/x_light_board.png) no-repeat 0 0;
+        background-size: 100%;
+        animation: lightSprite 1.2s steps(3) infinite;
+    }
+
+    .indicator{
+        bottom: 8.4vw;
+        /*margin-bottom: 5vw;*/
+    }
+
+    .top_one{
+        width: 69vw;
+        left: 14.8vw;
+        top: 0vw;
+    }
+
+    .content {
+        margin-top: 37%;
+    }
+
+    .quiz_one {
+        width: 71vw;
+        padding-left: 0;
+        margin-top: 11vw;
+    }
+
+    .question {
+        font-size: 0.98rem;
+        letter-spacing: 0.2rem;
+        line-height: 1.55rem;
+    }
+
+    .option_btn {
+        width: 7vw;
+        height: 7vw;
+        /*background:url("image/sprite.png") 0 -10px no-repeat;
+        background-size:50% auto;*/
+    }
+
+    .q1_a {
+        margin: 14.8vw 0 0 14.4vw;
+    }
+
+    .q1_a_p {
+        margin: 1.7vw 0 0 17.4vw;
+        width: 37vw;
+        height: 25vw;
+    }
+
+    .q1_b {
+        margin: 14.8vw 0 0 14.4vw;
+    }
+
+    .q1_b_p {
+        margin: 1.7vw 0 0 17.4vw;
+        width: 37vw;
+        height: 25vw;
+    }
+
+
+
+    /*page2 iphone X*/
+    .pageTwo{
+        /*background: url(../images/BGref/xp2.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+        z-index: 30;*/
+    }
+
+    .quiz_two {
+        width: 73vw;
+        /* padding-left: 2vw; */
+        margin: 8.6vw 0 0 -3vw;
+        text-align: center;
+        letter-spacing: 0.26rem;
+        font-size: 0.97rem;
+    }
+    .quiz_two1{
+        margin-top: 0;
+        letter-spacing: 0.17rem;
+    }
+    .quiz_two2{
+        margin: 0 0 0 11vw;
+        text-align: center;
+    }
+
+    .watch_two {
+        width: 54vw;
+        padding-left: 0vw;
+        margin: 8.8vw auto 0 auto;
+        text-align: center;
+    }
+    .top_two{
+        width: 64vw;
+        left: 17.4vw;
+        top: 0;
+    }
+    .q2_watch {
+        width: 53vw;
+        padding-left: 3vw;
+    }
+
+    .option_btn_q2 {
+        width: 48vw;
+        height: 7.68vw;
+    }
+
+    .q2_a {
+        margin: 6.4vw 0 0 25.4vw;
+    }
+
+    .q2_b {
+        margin: 22.4vw 0 0 25.4vw;
+    }
+
+
+
+
+
+    /*page3 iphone X*/
+    .pageThree{
+        /*background: #00FF00 url(../images/BGref/xp3.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+        z-index: 40;*/
+    }
+    .question_3{
+
+    }
+    .top_three {
+        width: 38.8vw;
+        left: 30vw;
+        top: 3.2vw;
+    }
+
+    .quiz_three {
+        width: 73vw;
+        padding-left: 0.5vw;
+        margin: 7.8vw auto 0 auto;
+        text-align: justify;
+        font-size: 0.93rem;
+        letter-spacing: 0.29rem;
+    }
+
+    .quiz_three_1{
+        margin-top: -1vw;
+        letter-spacing: 0.22rem;
+    }
+
+    .quiz_three_2{
+        margin-top: -0.2vw;
+        letter-spacing: 0.22rem;
+    }
+
+    .quiz_three_3{
+        margin-top: -0.7vw;
+        letter-spacing: 0.24rem;
+    }
+
+    .quiz_three_br{
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .q3_crystalContainer{
+        margin: 4vw 0 0 15vw;
+    }
+    .q3_crystal{
+        width: 46vw;
+        margin: 0 0 0 11vw;
+    }
+
+    .option_btn_q3{
+        width: 33.2vw;
+        height: 10.4912vw;
+    }
+
+    .q3_a{
+        margin: 3vw 0 0 33.5vw;
+    }
+
+    .q3_b{
+        margin: 17vw 0 0 33.5vw;
+    }
+
+    .q3_c{
+        margin: 31vw 0 0 33.5vw;
+    }
+
+    /*page4 iphoneX*/
+    .pageFour{
+        /*background: #00FF00 url(../images/BGref/xp4.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+
+        z-index: 50;*/
+    }
+
+    .top_four {
+        width: 42.9vw;
+        left: 27.5vw;
+        top: 5.5vw;
+    }
+
+    .quiz_four {
+        width: 72vw;
+        margin: 10.5vw auto 0 auto;
+    }
+
+    .option_btn_q4 {
+        width: 33.2vw;
+        height: 9.7967vw;
+    }
+    .q4_a {
+        margin: 15.2vw 0 0 32.6vw;
+    }
+    .q4_b {
+        margin: 56vw 0 0 32.6vw;
+    }
+    .option_btn_musicA {
+        top: 59.5vw;
+        left: 43vw;
+        width: 13.2vw;
+    }
+    .option_btn_musicB {
+        top: 101.5vw;
+        left: 43vw;
+        width: 13.2vw;
+    }
+
+    /*page5 iphoneX*/
+    .pageFive{
+        /* background: #00FF00 url(../images/BGref/xp5.jpg) no-repeat fixed top;
+         background-position: center center;
+         background-size: cover;
+         z-index: 60;*/
+    }
+
+    .top_five {
+        width: 43.9vw;
+        left: 26.8vw;
+        top: 0.5vw;
+    }
+
+    .quiz_five {
+        width: 69vw;
+        margin: 10.6vw auto 0 auto;
+        /* letter-spacing: 0.3rem; */
+        font-size: 0.96rem;
+        padding-left: 2.8vw;
+        letter-spacing: 0.28rem;
+    }
+
+    .option_btn_q5 {
+        width: 25.2vw;
+        height:10.2573vw;
+    }
+    .q5_a {
+        margin: 11.2vw 0 0 37.6vw;
+    }
+    .q5_b {
+        margin: 49.2vw 0 0 37.6vw;
+    }
+
+    .pageCanvas{
+        margin-top: 15vw;
+    }
+    .option_lipstick{
+        width: 35.5vw;
+    }
+
+    .pink{
+        margin: 20.3vw 0 0 -19.8vw;
+    }
+
+    .red{
+        margin: 58.5vw 0 0 -19.8vw;
+    }
+
+    /*pageInput iphone X*/
+    /*.pageInput{
+        background: #00FF00 url(../images/xpageinput.jpg) no-repeat fixed top;
+        background-position: center center;
+        background-size: cover;
+        z-index: 70;
+    }*/
+    .input_content {
+        top: 100vw;
+    }
+    .input_board {
+        margin-top: 28vw;
+    }
+
+    .waitParent {
+        top: 89.5vw;
+    }
+
+    .waitParent:before {
+        padding-top: 15.2%;
+    }
+
+    .input_btn {
+        top: 114vw;
+    }
+
+    .input_box {
+        top: 97vw;
+    }
+
+    .input_title {
+        top: 74vw;
     }
 }
 
-
-/*淡入*/
-.mainIn{
-    display: block;
-    -webkit-animation:mainIn 1s .2s ease both;
-    -moz-animation:mainIn 1s .2s ease both;
-}
-@keyframes mainIn{
-    0%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
-    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-    100%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-}
-@-webkit-keyframes mainIn{
-    0%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
-    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-    100%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-}
-@-moz-keyframes mainIn{
-    0%{-moz-transform:scale(0.9); opacity: 0; -moz-transform-origin:center center;}
-    50%{-moz-transform:scale(1); opacity: 1; -moz-transform-origin:center center;}
-    100%{-moz-transform:scale(1); opacity: 1; -moz-transform-origin:center center;}
-}
-
-/*淡出*/
-.mainOut{
-    display: none;
-    -webkit-animation:mainOut 1s .2s ease both;
-    -moz-animation:mainOut 1s .2s ease both;}
-@keyframes mainOut{
-    0%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-    100%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
-}
-@-webkit-keyframes mainOut{
-    0%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-    100%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
-}
-@-moz-keyframes mainOut{
-    0%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-    50%{-webkit-transform:scale(1); opacity: 1; -webkit-transform-origin:center center;}
-    100%{-webkit-transform:scale(0.9); opacity: 0; -webkit-transform-origin:center center;}
-}
 
 

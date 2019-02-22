@@ -510,8 +510,7 @@ function downFile() {
                     OutputImg.show();
                     $(".pageCanvas").show();
                 }) ;
-            },10000);
-
+            },6000);
 
         },
         width:cwidth*2,

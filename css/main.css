@@ -503,46 +503,46 @@ body,html{
 
 
 /*page3 iphone 4'7''*/
-/*.pageThree{
-    background: #00FF00 url(../images/BGref/page3.jpg) no-repeat fixed top;
+.pageThree{
+    /*background: #00FF00 url(../images/BGref/p3.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
-    z-index: 30;
+    z-index: 30;*/
     opacity: 1;
-}*/
+}
 .quizContent{
     width: 100%;
     height: auto;
     text-align: center;
 }
 .quiz_three{
-    width: 71vw;
-    font-size: 0.95rem;
-    margin: 11vw auto 0 auto;
-    text-align: justify;
-    padding-left: 4.5vw;
-    letter-spacing: 0.29rem;
+    width: 73vw;
+    font-size: 0.98rem;
+    margin: 10.5vw auto 0 auto;
+    text-align: center;
+    padding-left: 2.5vw;
+    letter-spacing: 0.3rem;
     opacity: 0;
 }
 
 .quiz_three_1{
-    margin-top: 0vw;
+    margin-top: -0.6vw;
     letter-spacing: 0.22rem;
 }
 
 .quiz_three_2{
-    margin-top: 0vw;
+    margin-top: -0.6vw;
     letter-spacing: 0.22rem;
 }
 
 .quiz_three_3{
-    margin-top: 0vw;
+    margin-top: -0.6vw;
     letter-spacing: 0.24rem;
 }
 
 .quiz_three_br{
     text-align: center;
-    margin-top: 0;
+    margin-top: -0.6vw;
 }
 
 
@@ -560,15 +560,15 @@ body,html{
 .q3_crystalContainer{
     width: 100%;
     text-align: center;
-    margin-top: 3vw;
+    margin-top: 3.5vw;
 }
 .q3_crystal{
-    width: 47vw;
-    padding-left: 0;
+    width: 43vw;
+    margin-left: -5vw;
 }
 
 .option_btn_q3{
-    width: 33.2vw;
+    width: 33.5vw;
     height: 10.4912vw;
 }
 
@@ -602,24 +602,23 @@ body,html{
 }
 
 .q3_a{
-    margin: 2.2vw 0 0 33.6vw;
+    margin: 1.2vw 0 0 33.6vw;
 }
 
 .q3_b{
-    margin: 12vw 0 0 33.6vw;
+    margin: 11vw 0 0 33.6vw;
 }
 
 .q3_c{
-    margin: 22vw 0 0 33.6vw;
+    margin: 21vw 0 0 33.6vw;
 }
 
 
 /*page4 iphone 4'7''*/
 .pageFour{
-    /*background: #00FF00 url(../images/page4.jpg) no-repeat fixed top;
+    /*background: #00FF00 url(../images/BGref/p4.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
-
     z-index: 50;*/
     opacity: 1;
 }
@@ -670,32 +669,33 @@ body,html{
     background-size: 100%;
 }
 .option_btn_musicA{
-    top: 57vw;
+    top: 55vw;
     left: 45vw;
     width: 10.2vw;
 }
 .option_btn_musicB{
-    top: 91.5vw;
+    top: 89.5vw;
     left: 45vw;
     width: 10.2vw;
 }
 
 .q4_a{
-    margin: 12.2vw 0 0 33.6vw;
+    margin: 11.2vw 0 0 33.6vw;
 }
 
 
 .q4_b{
-    margin: 45vw 0 0 33.6vw;
+    margin: 43vw 0 0 33.6vw;
 }
 
 
 
 /*page5 iphone 4'7''*/
 .pageFive{
-    /*background: #00FF00 url(../images/BGref/page5.jpg) no-repeat fixed top;*/
+    /*background: #00FF00 url(../images/BGref/p5.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
+    z-index: 50;*/
     opacity: 1;
 }
 
@@ -705,7 +705,7 @@ body,html{
 .top_five {
     width: 34.9vw;
     left: 31.5vw;
-    top: 2vw;
+    top: 5vw;
     opacity: 0;
 }
 
@@ -740,22 +740,22 @@ body,html{
 }
 
 .q5_a {
-    margin: 11.2vw 0 0 37.6vw;
+    margin: 8.2vw 0 0 36.6vw;
 }
 .q5_b {
-    margin: 39.2vw 0 0 37.6vw;
+    margin: 39.6vw 0 0 36.6vw;
 }
 
 
 .option_lipstick{
-   width: 34.9vw;
+   width: 36vw;
 }
 .pink{
-margin:16.1vw 0 0 31.2vw;
+    margin: 12.1vw 0 0 -20.8vw;
 }
 
 .red{
-margin: 45vw 0 0 30.8vw;
+    margin: 43vw 0 0 -21.2vw;
 }
 .quiz_five {
 width: 71vw;
@@ -1075,8 +1075,8 @@ letter-spacing: 0.26rem;
      .pageTwo{
          /*background: url(../images/BGref/xp2.jpg) no-repeat fixed top;
          background-position: center center;
-         background-size: cover;*/
-         z-index: 30;
+         background-size: cover;
+         z-index: 30;*/
      }
 
     .quiz_two {
@@ -1131,23 +1131,22 @@ letter-spacing: 0.26rem;
 
     /*page3 iphone X*/
     /*.pageThree{
-        background: #00FF00 url(../images/BGref/xpage3.jpg) no-repeat fixed top;
+        background: #00FF00 url(../images/BGref/xp3.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
-
         !*z-index: 40;*!
     }*/
 
     .top_three {
         width: 38.8vw;
         left: 30vw;
-        top: 6.2vw;
+        top: 3.2vw;
     }
 
     .quiz_three {
         width: 71vw;
         padding-left: 5.5vw;
-        margin: 13.8vw auto 0 auto;
+        margin: 10.8vw auto 0 auto;
         text-align: justify;
         font-size: 0.93rem;
         letter-spacing: 0.29rem;
@@ -1178,7 +1177,7 @@ letter-spacing: 0.26rem;
     }*/
     .q3_crystal{
         width: 46vw;
-        margin: -3vw 0 0 11vw;
+        margin: -6vw 0 0 11vw;
     }
 
     .option_btn_q3{
@@ -1187,11 +1186,11 @@ letter-spacing: 0.26rem;
     }
 
     .q3_a{
-        margin: 5vw 0 0 33.5vw;
+        margin: 3vw 0 0 33.5vw;
     }
 
     .q3_b{
-        margin: 18vw 0 0 33.5vw;
+        margin: 17vw 0 0 33.5vw;
     }
 
     .q3_c{
@@ -1200,7 +1199,7 @@ letter-spacing: 0.26rem;
 
     /*page4 iphoneX*/
     .pageFour{
-        /*background: #00FF00 url(../images/BGref/xpage4.jpg) no-repeat fixed top;
+        /*background: #00FF00 url(../images/BGref/xp4.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
 
@@ -1210,12 +1209,12 @@ letter-spacing: 0.26rem;
     .top_four {
         width: 42.9vw;
         left: 27.5vw;
-        top: 9.5vw;
+        top: 5.5vw;
     }
 
     .quiz_four {
         width: 72vw;
-        margin: 13.5vw auto 0 auto;
+        margin: 10.5vw auto 0 auto;
     }
 
     .option_btn_q4 {
@@ -1223,25 +1222,25 @@ letter-spacing: 0.26rem;
         height: 9.7967vw;
     }
     .q4_a {
-        margin: 20.2vw 0 0 32.6vw;
+        margin: 15.2vw 0 0 32.6vw;
     }
     .q4_b {
-        margin: 61vw 0 0 32.6vw;
+        margin: 56vw 0 0 32.6vw;
     }
     .option_btn_musicA {
-        top: 71vw;
-        left: 44vw;
-        width: 11.2vw;
+        top: 59.5vw;
+        left: 43vw;
+        width: 13.2vw;
     }
     .option_btn_musicB {
-        top: 111.5vw;
-        left: 44vw;
-        width: 11.2vw;
+        top: 101.5vw;
+        left: 43vw;
+        width: 13.2vw;
     }
 
     /*page5 iphoneX*/
     .pageFive{
-        /*background: #00FF00 url(../images/BGref/xpage5.jpg) no-repeat fixed top;
+       /* background: #00FF00 url(../images/BGref/xp5.jpg) no-repeat fixed top;
         background-position: center center;
         background-size: cover;
         z-index: 60;*/
@@ -1250,12 +1249,12 @@ letter-spacing: 0.26rem;
     .top_five {
         width: 43.9vw;
         left: 26.8vw;
-        top: 4.5vw;
+        top: 0.5vw;
     }
 
     .quiz_five {
         width: 69vw;
-        margin: 13.6vw auto 0 auto;
+        margin: 10.6vw auto 0 auto;
         /* letter-spacing: 0.3rem; */
         font-size: 0.96rem;
         padding-left: 2.8vw;
@@ -1267,25 +1266,25 @@ letter-spacing: 0.26rem;
         height:10.2573vw;
     }
     .q5_a {
-        margin: 15.2vw 0 0 37.6vw;
+        margin: 11.2vw 0 0 37.6vw;
     }
     .q5_b {
-        margin: 53.2vw 0 0 37.6vw;
+        margin: 49.2vw 0 0 37.6vw;
     }
 
     .pageCanvas{
         margin-top: 15vw;
     }
     .option_lipstick{
-        width: 35.2vw;
+        width: 35.5vw;
     }
 
     .pink{
-        margin: 25.3vw 0 0 30.2vw;
+        margin: 20.3vw 0 0 -19.8vw;
     }
 
     .red{
-        margin: 63.5vw 0 0 30.2vw;
+        margin: 58.5vw 0 0 -19.8vw;
     }
 
     /*pageInput iphone X*/

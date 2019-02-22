@@ -33,7 +33,7 @@
           <entry key="css" value="4799" />
           <entry key="html" value="4249" />
           <entry key="js" value="6081" />
-          <entry key="txt" value="1916" />
+          <entry key="txt" value="1929" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -41,7 +41,7 @@
           <entry key="CSS" value="4799" />
           <entry key="HTML" value="4249" />
           <entry key="JavaScript" value="6081" />
-          <entry key="PLAIN_TEXT" value="1916" />
+          <entry key="PLAIN_TEXT" value="1929" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -302,14 +302,7 @@
       <workItem from="1550496934388" duration="34375000" />
       <workItem from="1550579103168" duration="27700000" />
       <workItem from="1550616432235" duration="34610000" />
-      <workItem from="1550718894789" duration="54692000" />
-    </task>
-    <task id="LOCAL-00009" summary="complete the start page's arrangement , I lose some time in justify the animation just because the web cache not reload the image resouse, and I arrange a sprite pattern which need 3 frames.">
-      <created>1550483883141</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1550483883141</updated>
+      <workItem from="1550718894789" duration="55908000" />
     </task>
     <task id="LOCAL-00010" summary="add a shine title layer to page start">
       <created>1550484287982</created>
@@ -647,14 +640,21 @@
       <option name="project" value="LOCAL" />
       <updated>1550813290544</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="version 0.2.2">
+      <created>1550814223339</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1550814223339</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="184250000" />
+    <option name="totallyTimeSpent" value="185466000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13879709" />
@@ -704,7 +704,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="clean the load head code" />
     <MESSAGE value="clean the music code" />
     <MESSAGE value="fix a double echo problem" />
     <MESSAGE value="fix the post white edge problem" />
@@ -729,7 +728,8 @@
     <MESSAGE value="update the quiz 1 arrangement" />
     <MESSAGE value="update the quiz 2 arrangement" />
     <MESSAGE value="finish the style" />
-    <option name="LAST_COMMIT_MESSAGE" value="finish the style" />
+    <MESSAGE value="version 0.2.2" />
+    <option name="LAST_COMMIT_MESSAGE" value="version 0.2.2" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">

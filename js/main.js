@@ -131,6 +131,7 @@ document.addEventListener('touchstart', audioAutoPlay);
 function audioPlay(id_str){
     var audio = document.getElementById(id_str);
     audio.play();
+    audio.muted=false;
     document.addEventListener("WeixinJSBridgeReady", function () {
         audio.play();
     }, false);
@@ -296,8 +297,7 @@ var watch = document.getElementById('watch');
 optionOne.on("click",function(){
     /*转场音乐1*/
     audioPlay('step');
-    audioPlay('watch');
-    watch.volume=0.1;
+    // audioPlay('watch');
     watch.play();
     document.addEventListener("WeixinJSBridgeReady", function () {
         watch.play();
@@ -329,7 +329,7 @@ optionOne.on("click",function(){
 
                     optionTwo.animate({opacity:"1.0"},500,function () {
                         hint.show();
-                        watch.volume=1;
+                        watch.muted=false;
                     });
                 });
             });

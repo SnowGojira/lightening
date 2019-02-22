@@ -312,6 +312,7 @@ body,html{
     width: 100%;
     height: 85%;
     margin-top: 25%;
+    text-align: center;
 }
 .question{
     font-size: 0.98rem;
@@ -428,21 +429,21 @@ body,html{
 
 /*page2 iphone 4'7''*/
 .pageTwo{
-    background: url(../images/BGref/p2.jpg) no-repeat fixed top;
+    /*background: url(../images/BGref/p2.jpg) no-repeat fixed top;
     background-position: center center;
-    background-size: cover;
+    background-size: cover;*/
     opacity: 1;
 }
 .quiz_two{
     width: 68vw;
-    padding-left: 1.5vw;
     margin: 11vw auto 0 auto;
-    text-align: justify;
+    text-align: center;
     letter-spacing: 0.26rem;
+    padding-left: 2.5vw;
     opacity: 0;
 }
 .quiz_two1{
-    margin-top: -4.8vw;
+    margin-top: 0vw;
     letter-spacing: 0.17rem;
 }
 .quiz_two2{
@@ -462,7 +463,7 @@ body,html{
 .q2_watchContainer{
     width: 100%;
     text-align: center;
-    margin-top: 8vw;
+    margin-top: 6vw;
 }
 .q2_watch{
     width: 47vw;
@@ -493,11 +494,11 @@ body,html{
 }
 
 .q2_a{
-    margin: 3vw 0 0 25.4vw;
+    margin: 5vw 0 0 25.6vw;
 }
 
 .q2_b{
-    margin: 13vw 0 0 25.4vw;
+    margin: 15vw 0 0 25.6vw;
 }
 
 
@@ -1072,22 +1073,22 @@ letter-spacing: 0.26rem;
 
     /*page2 iphone X*/
      .pageTwo{
-         background: url(../images/BGref/xp2.jpg) no-repeat fixed top;
+         /*background: url(../images/BGref/xp2.jpg) no-repeat fixed top;
          background-position: center center;
-         background-size: cover;
+         background-size: cover;*/
          z-index: 30;
      }
 
     .quiz_two {
         width: 71vw;
-        padding-left: 4vw;
-        margin: 13.8vw auto 0 auto;
-        text-align: justify;
+        padding-left: 2vw;
+        margin: 10.3vw auto 0 auto;
+        text-align: center;
         letter-spacing: 0.26rem;
         font-size: 0.97rem;
     }
     .quiz_two1{
-        margin-top: -5vw;
+        margin-top: 0;
         letter-spacing: 0.17rem;
     }
     .quiz_two2{
@@ -1098,12 +1099,12 @@ letter-spacing: 0.26rem;
     .watch_two {
         width: 54vw;
         padding-left: 0vw;
-        margin: 14.8vw auto 0 auto;
+        margin: 8.8vw auto 0 auto;
         text-align: center;
     }
     .top_two{
-        width: 70.5vw;
-        left: 15vw;
+        width: 64vw;
+        left: 17.4vw;
         top: 0;
     }
     .q2_watch {
@@ -1117,11 +1118,11 @@ letter-spacing: 0.26rem;
     }
 
     .q2_a {
-        margin: 5.4vw 0 0 25.4vw;
+        margin: 7.4vw 0 0 25.4vw;
     }
 
     .q2_b {
-        margin: 21.4vw 0 0 25.4vw;
+        margin: 22.4vw 0 0 25.4vw;
     }
 
 

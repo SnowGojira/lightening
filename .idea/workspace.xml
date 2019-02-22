@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/logo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/page1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/page2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/page3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/page4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/page5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/xpage1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/xpage2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/xpage3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/xpage4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/BGref/xpage5.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +42,7 @@
           <entry key="css" value="4643" />
           <entry key="html" value="4249" />
           <entry key="js" value="6081" />
-          <entry key="txt" value="1729" />
+          <entry key="txt" value="1798" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -41,7 +50,7 @@
           <entry key="CSS" value="4643" />
           <entry key="HTML" value="4249" />
           <entry key="JavaScript" value="6081" />
-          <entry key="PLAIN_TEXT" value="1729" />
+          <entry key="PLAIN_TEXT" value="1798" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -54,7 +63,7 @@
           <entry key="png" value="2" />
           <entry key="rnc" value="1" />
           <entry key="ts" value="1" />
-          <entry key="ttf" value="3" />
+          <entry key="ttf" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -63,7 +72,7 @@
           <entry key="HTML" value="3" />
           <entry key="Image" value="8" />
           <entry key="JavaScript" value="11" />
-          <entry key="PLAIN_TEXT" value="6" />
+          <entry key="PLAIN_TEXT" value="7" />
           <entry key="RNG Compact" value="1" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -110,8 +119,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+            <state relative-caret-position="351">
+              <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
               <folding>
                 <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -174,9 +183,9 @@
       <find>option_btn_2</find>
       <find>option_btn_q3</find>
       <find>option_btn_q4</find>
-      <find>option_btn_q5</find>
-      <find>q3</find>
       <find>three</find>
+      <find>q3</find>
+      <find>option_btn_q5</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -284,9 +293,9 @@
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\images" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\font" />
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\images" />
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\audio" />
-      <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\font" />
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\libs" />
     </key>
   </component>
@@ -318,21 +327,7 @@
       <workItem from="1550496934388" duration="34375000" />
       <workItem from="1550579103168" duration="27700000" />
       <workItem from="1550616432235" duration="34610000" />
-      <workItem from="1550718894789" duration="44283000" />
-    </task>
-    <task id="LOCAL-00002" summary="add the css frame &amp; font basic">
-      <created>1550384298380</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1550384298380</updated>
-    </task>
-    <task id="LOCAL-00003" summary="define the quiz font style">
-      <created>1550385209491</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1550385209491</updated>
+      <workItem from="1550718894789" duration="45105000" />
     </task>
     <task id="LOCAL-00004" summary="add the bg reference to iphone 4'7&quot;">
       <created>1550392808050</created>
@@ -663,11 +658,25 @@
       <option name="project" value="LOCAL" />
       <updated>1550801688883</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="change the logo png">
+      <created>1550802865598</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1550802865598</updated>
+    </task>
+    <task id="LOCAL-00052" summary="changes font style profiles">
+      <created>1550803055073</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1550803055073</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173841000" />
+    <option name="totallyTimeSpent" value="174663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -719,8 +728,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="enlightening logic" />
-    <MESSAGE value="page1 enter animation" />
     <MESSAGE value="finish the quiz logic parts" />
     <MESSAGE value="finish the post logic" />
     <MESSAGE value="finish the post part" />
@@ -744,7 +751,9 @@
     <MESSAGE value="make less node" />
     <MESSAGE value="version 0.2.1 clean code" />
     <MESSAGE value="clean code" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean code" />
+    <MESSAGE value="change the logo png" />
+    <MESSAGE value="changes font style profiles" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes font style profiles" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -807,9 +816,6 @@
     <entry file="file://$PROJECT_DIR$/images/BGref/page3.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/font/hanzhen.ttf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/assets/audio/q2_watch.mp3">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -847,10 +853,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/font/hanzhen.ttf">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="60" column="8" selection-start-line="60" selection-start-column="8" selection-end-line="60" selection-end-column="8" />
+        <state relative-caret-position="351">
+          <caret line="61" column="48" selection-start-line="61" selection-start-column="48" selection-end-line="61" selection-end-column="48" />
           <folding>
             <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />

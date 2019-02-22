@@ -504,16 +504,13 @@ body,html{
 
 /*page3 iphone 4'7''*/
 .pageThree{
-    /*background: #00FF00 url(../images/BGref/p3.jpg) no-repeat fixed top;
+   /* background: #00FF00 url(../images/BGref/p3.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;
     z-index: 30;*/
     opacity: 1;
 }
-.question_3{
-    margin: 7vw 0 0 -3vw;
-    width: 75vw;
-}
+
 
 .quizContent{
     width: 100%;
@@ -523,9 +520,9 @@ body,html{
 .quiz_three{
     width: 73vw;
     font-size: 0.98rem;
-    margin: 10.5vw auto 0 auto;
+    margin: 7.5vw auto 0 auto;
     text-align: center;
-    padding-left: 2.5vw;
+    padding-left: 0;
     letter-spacing: 0.3rem;
     opacity: 0;
 }
@@ -565,7 +562,7 @@ body,html{
 .q3_crystalContainer{
     width: 100%;
     text-align: center;
-    margin-top: 1.5vw;
+    margin: 1.5vw 0 0 3vw;
 }
 .q3_crystal{
     width: 43vw;
@@ -1139,8 +1136,8 @@ letter-spacing: 0.26rem;
     .pageThree{
         /*background: #00FF00 url(../images/BGref/xp3.jpg) no-repeat fixed top;
         background-position: center center;
-        background-size: cover;*/
-        /*z-index: 40;*/
+        background-size: cover;
+        z-index: 40;*/
     }
     .question_3{
 
@@ -1152,9 +1149,9 @@ letter-spacing: 0.26rem;
     }
 
     .quiz_three {
-        width: 71vw;
+        width: 73vw;
         padding-left: 0.5vw;
-        margin: 8.8vw auto 0 auto;
+        margin: 7.8vw auto 0 auto;
         text-align: justify;
         font-size: 0.93rem;
         letter-spacing: 0.29rem;
@@ -1181,7 +1178,7 @@ letter-spacing: 0.26rem;
     }
 
     .q3_crystalContainer{
-        margin-top: 3vw;
+        margin: 4vw 0 0 15vw;
     }
     .q3_crystal{
         width: 46vw;

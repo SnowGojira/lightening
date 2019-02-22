@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/qrcode.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/quiz3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/quiz2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
@@ -35,18 +34,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4846" />
-          <entry key="html" value="4332" />
-          <entry key="js" value="6087" />
-          <entry key="txt" value="1971" />
+          <entry key="css" value="4861" />
+          <entry key="html" value="4369" />
+          <entry key="js" value="6094" />
+          <entry key="txt" value="1999" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4846" />
-          <entry key="HTML" value="4332" />
-          <entry key="JavaScript" value="6087" />
-          <entry key="PLAIN_TEXT" value="1971" />
+          <entry key="CSS" value="4861" />
+          <entry key="HTML" value="4369" />
+          <entry key="JavaScript" value="6094" />
+          <entry key="PLAIN_TEXT" value="1999" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -56,7 +55,7 @@
           <entry key="html" value="3" />
           <entry key="jpg" value="10" />
           <entry key="js" value="12" />
-          <entry key="mp3" value="3" />
+          <entry key="mp3" value="4" />
           <entry key="png" value="2" />
           <entry key="rnc" value="1" />
           <entry key="ts" value="1" />
@@ -69,7 +68,7 @@
           <entry key="HTML" value="3" />
           <entry key="Image" value="13" />
           <entry key="JavaScript" value="12" />
-          <entry key="PLAIN_TEXT" value="9" />
+          <entry key="PLAIN_TEXT" value="10" />
           <entry key="RNG Compact" value="1" />
           <entry key="TypeScript" value="1" />
         </counts>
@@ -81,8 +80,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="1182" column="4" selection-start-line="1182" selection-start-column="4" selection-end-line="1184" selection-end-column="5" />
+            <state relative-caret-position="546">
+              <caret line="1096" column="15" lean-forward="true" selection-start-line="1096" selection-start-column="15" selection-end-line="1096" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -90,8 +89,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="169" column="53" selection-start-line="169" selection-start-column="43" selection-end-line="169" selection-end-column="53" />
+            <state relative-caret-position="155">
+              <caret line="129" column="42" lean-forward="true" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
               <folding>
                 <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -103,7 +102,6 @@
                 <element signature="n#audio#7;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#audio#8;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#div#3;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
@@ -118,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
+            <state relative-caret-position="364">
+              <caret line="471" column="20" lean-forward="true" selection-start-line="471" selection-start-column="20" selection-end-line="471" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -138,8 +136,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>quiz_three</find>
-      <find>step</find>
       <find>q2</find>
       <find>.quiz_three</find>
       <find>sha</find>
@@ -168,6 +164,8 @@
       <find>input</find>
       <find>quiz</find>
       <find>page3</find>
+      <find>qr</find>
+      <find>page2</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -272,8 +270,8 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\images" />
-      <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\font" />
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\audio" />
+      <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\assets\font" />
       <recent name="C:\Users\hakuh\Desktop\网易项目\lightening\libs" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -310,21 +308,7 @@
       <workItem from="1550579103168" duration="27700000" />
       <workItem from="1550616432235" duration="34610000" />
       <workItem from="1550718894789" duration="57047000" />
-      <workItem from="1550820762956" duration="1954000" />
-    </task>
-    <task id="LOCAL-00012" summary="finish all the arrangement of pageOne">
-      <created>1550509526021</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1550509526021</updated>
-    </task>
-    <task id="LOCAL-00013" summary="finish page3 question style">
-      <created>1550510520241</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1550510520241</updated>
+      <workItem from="1550820762956" duration="4821000" />
     </task>
     <task id="LOCAL-00014" summary="finish page3 top style">
       <created>1550511625731</created>
@@ -655,11 +639,25 @@
       <option name="project" value="LOCAL" />
       <updated>1550821126907</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="add the qrcode">
+      <created>1550822920896</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1550822920896</updated>
+    </task>
+    <task id="LOCAL-00062" summary="finish quiz3">
+      <created>1550824854835</created>
+      <option name="number" value="00062" />
+      <option name="presentableId" value="LOCAL-00062" />
+      <option name="project" value="LOCAL" />
+      <updated>1550824854835</updated>
+    </task>
+    <option name="localTasksCounter" value="63" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="188559000" />
+    <option name="totallyTimeSpent" value="191426000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -712,8 +710,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fix the post white edge problem" />
-    <MESSAGE value="basic finish the page4'7'' style arrangement" />
     <MESSAGE value="fix the 1,2,4,5 X css style" />
     <MESSAGE value="reload" />
     <MESSAGE value="change the side color via result" />
@@ -737,7 +733,9 @@
     <MESSAGE value="version 0.2.2" />
     <MESSAGE value="version 0.2.3" />
     <MESSAGE value="fix the lipstick,indicator, inputBG" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix the lipstick,indicator, inputBG" />
+    <MESSAGE value="add the qrcode" />
+    <MESSAGE value="finish quiz3" />
+    <option name="LAST_COMMIT_MESSAGE" value="finish quiz3" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -812,10 +810,23 @@
     <entry file="file://$PROJECT_DIR$/images/red.gif">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/assets/audio/bgm.mp3">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="471" column="20" lean-forward="true" selection-start-line="471" selection-start-column="20" selection-end-line="471" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="169" column="53" selection-start-line="169" selection-start-column="43" selection-end-line="169" selection-end-column="53" />
+        <state relative-caret-position="155">
+          <caret line="129" column="42" lean-forward="true" selection-start-line="129" selection-start-column="42" selection-end-line="129" selection-end-column="42" />
           <folding>
             <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -827,7 +838,6 @@
             <element signature="n#audio#7;n#body#0;n#html#0;n#!!top" />
             <element signature="n#audio#8;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#0;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
             <element signature="n#div#3;n#div#2;n#div#2;n#div#2;n#div#2;n#body#0;n#html#0;n#!!top" />
@@ -838,20 +848,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1182" column="4" selection-start-line="1182" selection-start-column="4" selection-end-line="1184" selection-end-column="5" />
+        <state relative-caret-position="546">
+          <caret line="1096" column="15" lean-forward="true" selection-start-line="1096" selection-start-column="15" selection-end-line="1096" selection-end-column="15" />
         </state>
       </provider>
     </entry>

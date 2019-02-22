@@ -435,8 +435,8 @@ body,html{
     opacity: 1;
 }
 .quiz_two{
-    width: 68vw;
-    margin: 11vw auto 0 auto;
+    width: 74vw;
+    margin: 10vw auto 0 auto;
     text-align: center;
     letter-spacing: 0.26rem;
     padding-left: 2.5vw;
@@ -494,11 +494,11 @@ body,html{
 }
 
 .q2_a{
-    margin: 5vw 0 0 25.6vw;
+    margin: 3vw 0 0 25.6vw;
 }
 
 .q2_b{
-    margin: 15vw 0 0 25.6vw;
+    margin: 13vw 0 0 25.6vw;
 }
 
 
@@ -1083,9 +1083,9 @@ letter-spacing: 0.26rem;
      }
 
     .quiz_two {
-        width: 71vw;
-        padding-left: 2vw;
-        margin: 10.3vw auto 0 auto;
+        width: 73vw;
+        /* padding-left: 2vw; */
+        margin: 8.6vw 0 0 -3vw;
         text-align: center;
         letter-spacing: 0.26rem;
         font-size: 0.97rem;
@@ -1121,7 +1121,7 @@ letter-spacing: 0.26rem;
     }
 
     .q2_a {
-        margin: 7.4vw 0 0 25.4vw;
+        margin: 6.4vw 0 0 25.4vw;
     }
 
     .q2_b {

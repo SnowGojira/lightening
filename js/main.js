@@ -88,19 +88,42 @@ window.onload=function(){
     loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
     loader.loadManifest(manifest);
 };
+
+
+var i = 0;
+var timer = 0;
 /*percent 显示函数*/
 function handleFileProgress(){//加载中函数
-    var percent=loader.progress*100|0+'%';
-    document.getElementById('loadPercent').innerHTML=percent+"%";
+    var percent=loader.progress*100|0;
+    console.log(percent);
+
+     //定时器   递归函数
+     function F(){
+         i+=1;
+         document.getElementById('loadPercent').innerHTML=percent+"%";
+         console.log("i:"+i);
+          if(i>100){
+              clearInterval(timer);
+          }
+     }
+
+    timer = setInterval(F(),200);//不停加
+
 }
 
 /*加载完成*/
 var upArrow = $('.pl_upArrow');
+
 function handleComplete(){
-    setTimeout(function () {
-        $('#loadPercent').hide();
-        upArrow.show();
-    },1000);
+    // console.log(j);
+    var loadpercent=document.getElementById('loadPercent').innerHTML;
+    console.log(loadpercent);
+    if (loadpercent=="100%"){
+        setTimeout(function () {
+                $('#loadPercent').hide();
+                upArrow.show();
+            },1000);
+    }
 
 }
 
@@ -510,7 +533,7 @@ function downFile() {
                     OutputImg.show();
                     $(".pageCanvas").show();
                 }) ;
-            },6000);
+            },10000);
 
         },
         width:cwidth*2,

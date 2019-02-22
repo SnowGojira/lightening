@@ -465,7 +465,7 @@ function downFile() {
 function innDiv(name,id){
     var innerDiv='<img class="postBG absolute" src="images/result_'+id+'.jpg" alt="result"/>';
     innerDiv += '<p class="absolute NumType nickName">'+name+'</p>';
-    innerDiv += '<img class="absolute QRcode" src="images/qr.jpg" alt="qrcode"/>';
+    innerDiv += '<img class="absolute QRcode" src="images/qrcode.png" alt="qrcode"/>';
 
     $(".link").attr('src',"images/link_"+id+".png");
     $(".back").attr('src',"images/back_"+id+".png");

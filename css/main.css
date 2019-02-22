@@ -510,6 +510,11 @@ body,html{
     z-index: 30;*/
     opacity: 1;
 }
+.question_3{
+    margin: 7vw 0 0 -3vw;
+    width: 75vw;
+}
+
 .quizContent{
     width: 100%;
     height: auto;
@@ -560,7 +565,7 @@ body,html{
 .q3_crystalContainer{
     width: 100%;
     text-align: center;
-    margin-top: 3.5vw;
+    margin-top: 1.5vw;
 }
 .q3_crystal{
     width: 43vw;
@@ -812,6 +817,7 @@ letter-spacing: 0.26rem;
 .pageCanvas{
     z-index: 10;
 }
+
 .waitParent{
     top: 76.5vw;
     left: 25vw;
@@ -1130,13 +1136,15 @@ letter-spacing: 0.26rem;
 
 
     /*page3 iphone X*/
-    /*.pageThree{
-        background: #00FF00 url(../images/BGref/xp3.jpg) no-repeat fixed top;
+    .pageThree{
+        /*background: #00FF00 url(../images/BGref/xp3.jpg) no-repeat fixed top;
         background-position: center center;
-        background-size: cover;
-        !*z-index: 40;*!
-    }*/
+        background-size: cover;*/
+        /*z-index: 40;*/
+    }
+    .question_3{
 
+    }
     .top_three {
         width: 38.8vw;
         left: 30vw;
@@ -1145,8 +1153,8 @@ letter-spacing: 0.26rem;
 
     .quiz_three {
         width: 71vw;
-        padding-left: 5.5vw;
-        margin: 10.8vw auto 0 auto;
+        padding-left: 0.5vw;
+        margin: 8.8vw auto 0 auto;
         text-align: justify;
         font-size: 0.93rem;
         letter-spacing: 0.29rem;
@@ -1172,12 +1180,12 @@ letter-spacing: 0.26rem;
         margin-top: 0;
     }
 
-    /*.q3_crystalContainer{
+    .q3_crystalContainer{
         margin-top: 3vw;
-    }*/
+    }
     .q3_crystal{
         width: 46vw;
-        margin: -6vw 0 0 11vw;
+        margin: 0 0 0 11vw;
     }
 
     .option_btn_q3{

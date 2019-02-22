@@ -14,11 +14,11 @@ window.onload=function(){
 
         {src: 'images/g_board.png', id: 'p13'},
         {src: 'images/crystal.gif', id: 'p12'},
-        {src: 'images/indicator.gif', id: 'p15'},
+        {src: 'images/indicator.jpg', id: 'p15'},
         {src: 'images/input_box.png', id: 'p16'},
         {src: 'images/input_btn.png', id: 'p18'},
         {src: 'images/input_title.png', id: 'p19'},
-        {src: 'images/inputBG.png', id: 'p20'},
+        {src: 'images/inputBG.jpg', id: 'p20'},
 
         {src: 'images/light_board.png', id: 'p21'},
         {src: 'images/logo.png', id: 'p22'},

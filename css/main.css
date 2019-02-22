@@ -813,7 +813,7 @@ letter-spacing: 0.26rem;
     z-index: 10;
 }
 .waitParent{
-    top: 67.5vw;
+    top: 76.5vw;
     left: 25vw;
     width: 54.5vw;
     position: absolute;
@@ -1302,7 +1302,7 @@ letter-spacing: 0.26rem;
     }
 
     .waitParent {
-        top: 81.5vw;
+        top: 89.5vw;
     }
 
     .waitParent:before {

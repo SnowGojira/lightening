@@ -460,15 +460,11 @@ submitBtn.on("click",function(){
             InputImg.append(getInputDiv(name));
             $(".waitParent").show();
             downFile();
+
             /*$(".waitParent").animate({opacity:"0"},1000,function () {
                 downFile();
             });*/
-            setTimeout(function () {
-                pageInput.animate({opacity:"0"},1000,function(){
-                    pageInput.hide();
-                    $(".pageCanvas").show();
-                }) ;
-            },6000);
+
         });
         // $(".waitParent").show();
         // downFile();
@@ -506,9 +502,17 @@ function downFile() {
 //           $("body").append(canvas);
             console.log(dataURL);
             OutputImg.attr('src',dataURL);
-
             $(".inputImg").hide();
-            OutputImg.show();
+
+            setTimeout(function () {
+                pageInput.animate({opacity:"0"},1000,function(){
+                    pageInput.hide();
+                    OutputImg.show();
+                    $(".pageCanvas").show();
+                }) ;
+            },10000);
+
+
         },
         width:cwidth*2,
         height:cheight*2

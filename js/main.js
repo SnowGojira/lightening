@@ -36,12 +36,30 @@ window.onload=function(){
         {src: 'images/q2.png', id: 'p38'},
         {src: 'images/q3.png', id: 'p43'},
         {src: 'images/q4.png', id: 'p50'},
+        {src: 'images/quiz2.png', id: 'p250'},
+        {src: 'images/quiz3.png', id: 'p264'},
+        {src: 'images/link_1.png', id: 'p251'},
+        {src: 'images/link_2.png', id: 'p252'},
+        {src: 'images/link_3.png', id: 'p253'},
+        {src: 'images/link_4.png', id: 'p254'},
+        {src: 'images/back_1.png', id: 'p255'},
+        {src: 'images/back_2.png', id: 'p256'},
+        {src: 'images/back_3.png', id: 'p257'},
+        {src: 'images/back_4.png', id: 'p258'},
+        {src: 'images/result_1.jpg', id: 'p259'},
+        {src: 'images/result_2.jpg', id: 'p260'},
+        {src: 'images/result_3.jpg', id: 'p261'},
+        {src: 'images/result_4.jpg', id: 'p262'},
+        {src: 'images/qrcode.png', id: 'p263'},
+
 
         {src: 'images/q4_play.png', id: 'p54'},
         {src: 'images/q4_pause.png', id: 'p55'},
         {src: 'images/q5.png', id: 'p56'},
 
         {src: 'images/quiz_board.png', id: 'p64'},
+        {src: 'images/x_quiz_board.png', id: 'p166'},
+        {src: 'images/x_light_board.png', id: 'p167'},
         {src: 'images/red.gif', id: 'p65'},
 
         {src: 'images/top1.png', id: 'p60'},
@@ -62,7 +80,7 @@ window.onload=function(){
     ];
     loader = new createjs.LoadQueue(false);
     // 关键！----设置并发数
-    loader.setMaxConnections(300);
+    loader.setMaxConnections(100);
     // 关键！---一定要将其设置为 true, 否则不起作用。
     loader.maintainScriptOrder=true;
     loader.installPlugin(createjs.Sound);
@@ -79,8 +97,11 @@ function handleFileProgress(){//加载中函数
 /*加载完成*/
 var upArrow = $('.pl_upArrow');
 function handleComplete(){
-    $('#loadPercent').hide();
-    upArrow.show();
+    setTimeout(function () {
+        $('#loadPercent').hide();
+        upArrow.show();
+    },1000);
+
 }
 
 /*音乐开始播放*/
@@ -101,6 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
 //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
 function audioAutoPlay() {
     document.getElementById('BGM').play();
+
     document.removeEventListener('touchstart',audioAutoPlay);
 }
 document.addEventListener('touchstart', audioAutoPlay);
@@ -251,22 +273,52 @@ $(".q_optionContainerKiss").on("click",function(){
 
 
 /*page1即将结束，进入page2*/
+Function.prototype.bind = function(parent) {
+    var f = this;
+    var args = [];
+
+    for (var a = 1; a < arguments.length; a++) {
+        args[args.length] = arguments[a];
+    }
+    var temp = function() {
+        return f.apply(parent, args);
+    }
+    return(temp);
+};
+
 var pageTwo=$(".pageTwo");
 var q2Board=$(".q2_board");
 var topTwo=$(".top_two");
 var quizTwo=$(".quiz_two");
 var optionTwo=$(".q2_options");
+var watch = document.getElementById('watch');
 
 optionOne.on("click",function(){
     /*转场音乐1*/
     audioPlay('step');
-    setTimeout(function () {
+    audioPlay('watch');
+    watch.volume=0.1;
+    watch.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        watch.play();
+    }, false);
+
+    //
+    /*var data1=0;
+    function count1(){
         audioPlay('watch');
-    },2500);
+        console.log("count1:",data1++);
+    }
+    setInterval(count1,2500);*/
+
+    // setTimeout(function () {
+    //     audioPlay('watch');
+    // }.bind(this),2500);
+
+
     pageOne.animate({opacity:"0"},500,function(){
 
-        // var stepAudio = new Audio('./assets/audio/q2_step.mp3');
-        // Play(stepAudio);
+        // audioPlay('watch');
 
         pageTwo.show();
         q2Board.addClass("mainIn");
@@ -277,6 +329,7 @@ optionOne.on("click",function(){
 
                     optionTwo.animate({opacity:"1.0"},500,function () {
                         hint.show();
+                        watch.volume=1;
                     });
                 });
             });

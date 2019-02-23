@@ -2,8 +2,8 @@
 window.onload=function(){
     //预加载资源
     manifest = [
-        {src: 'assets/audio/btn.mp3', id: 'sona2'},
-        {src: 'assets/audio/bgm.mp3', id: 'sona3'},
+        /*{src: 'assets/audio/btn.mp3', id: 'sona2'},
+        {src: 'assets/audio/bgm.mp3', id: 'sona3'},*/
         /*{src: 'assets/audio/A.mp3', id: 'sona4'},
         {src: 'assets/audio/B.mp3', id: 'sona5'},
         {src: 'assets/audio/P1.mp3', id: 'sona6'},
@@ -56,7 +56,6 @@ window.onload=function(){
         {src: 'images/result_4.jpg', id: 'p262'},
         {src: 'images/qrcode.png', id: 'p263'},
 
-
         {src: 'images/q4_play.png', id: 'p54'},
         {src: 'images/q4_pause.png', id: 'p55'},
         {src: 'images/q5.png', id: 'p56'},
@@ -65,23 +64,16 @@ window.onload=function(){
         {src: 'images/x_quiz_board.png', id: 'p166'},
         {src: 'images/x_light_board.png', id: 'p167'},
         {src: 'images/red.gif', id: 'p65'},
-
         {src: 'images/top1.png', id: 'p60'},
         {src: 'images/top2.png', id: 'p61'},
         {src: 'images/top3.png', id: 'p71'},
         {src: 'images/top4.png', id: 'p72'},
         {src: 'images/top5.png', id: 'p73'},
-
         {src: 'images/wait.png', id: 'p74'},
         {src: 'images/watch.gif', id: 'p75'},
 
-        {src: 'images/result_1.jpg', id: 'p76'},
-        {src: 'images/result_2.jpg', id: 'p1'},
-        {src: 'images/result_3.jpg', id: 'p2'},
-        {src: 'images/result_4.jpg', id: 'p3'},
-
-
     ];
+
     loader = new createjs.LoadQueue(false);
     // 关键！----设置并发数
     loader.setMaxConnections(100);
@@ -89,9 +81,8 @@ window.onload=function(){
     loader.maintainScriptOrder=true;
     loader.installPlugin(createjs.Sound);
     loader.loadManifest(manifest);
-
     loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
-    // loader.addEventListener('progress', addLoader);//加载完成 调用handleFileProgress函数
+    // loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
 
 };
 
@@ -99,15 +90,15 @@ window.onload=function(){
 var width = 100,
     // The PerformanceTiming interface represents timing-related performance information for the given page.
     perfData = window.performance.timing,
-    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart)+36000,
     time = parseInt((EstimatedTime/100)%60)*100;
     console.log(time);
 // Percentage Increment Animation
 var PercentageID = $("#loadPercent"),
     start = 0,
-    end = 100,
-    durTime = time;
-animateValue(PercentageID, start, end, durTime);
+    end = 100;
+
+animateValue(PercentageID, start, end, time);
 
 function animateValue(id, start, end, duration) {
 
@@ -123,14 +114,8 @@ function animateValue(id, start, end, duration) {
         $(".pl_head").css("opacity",current/100);
         //obj.innerHTML = current;
         if (current === end) {
+            console.log("加载结束");
             clearInterval(timer);
-            /*setTimeout(function () {
-                $('.pageTest').animate({opacity:"0"},800,function () {
-                    $('.pageTest').hide();
-                    $('.pageLoad').show();
-                    $('.pageLoad').animate({opacity:"1.0"},800);
-                });
-            },1000);*/
         }
     }, stepTime);
 }
@@ -156,12 +141,11 @@ function audioAutoPlay() {
 document.addEventListener('touchstart', audioAutoPlay);
 
 /*percent 显示函数*/
+var percent;
 function handleFileProgress(){//加载中函数
-    var percent=loader.progress*100|0;
+    percent=(loader.progress*10|0)+90;
+    $("#loadPercent").text(percent+ "%");
     console.log(percent);
-    $(".pl_head").css("opacity",loader.progress);
-    addLoader(percent);
-    // document.getElementById('loadPercent').innerHTML=percent+"%";
 }
 
 /*加载完成*/
@@ -169,15 +153,19 @@ var upArrow = $('.pl_upArrow');
 
 function handleComplete(){
     // console.log(j);
+    console.log("开始调用Complete");
+    StartPageAnimete(1000);
+}
+
+function StartPageAnimete(delaytime){
     setTimeout(function () {
         $('.pageTest').animate({opacity:"0"},800,function () {
             $('.pageTest').hide();
             $('.pageLoad').show();
             $('.pageLoad').animate({opacity:"1.0"},800);
         });
-    },1000);
+    },delaytime);
 }
-
 
 /*音乐开始播放*/
 //创建播放与停止的函数

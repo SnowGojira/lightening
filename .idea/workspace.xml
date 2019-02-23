@@ -5,17 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/head.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/crystal.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/crystal.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/inputBG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/inputBG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ps_decorate.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ps_decorate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/quiz3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/quiz3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/result_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/result_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/result_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/result_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/watch.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/watch.gif" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
@@ -44,18 +36,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4939" />
-          <entry key="html" value="4585" />
+          <entry key="css" value="4972" />
+          <entry key="html" value="4599" />
           <entry key="js" value="7214" />
-          <entry key="txt" value="2082" />
+          <entry key="txt" value="2140" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4939" />
-          <entry key="HTML" value="4585" />
+          <entry key="CSS" value="4972" />
+          <entry key="HTML" value="4599" />
           <entry key="JavaScript" value="7214" />
-          <entry key="PLAIN_TEXT" value="2082" />
+          <entry key="PLAIN_TEXT" value="2140" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -95,8 +87,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+            <state relative-caret-position="325">
+              <caret line="171" column="22" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
               <folding>
                 <element signature="e#267#397#0" />
                 <element signature="e#521#950#0" />
@@ -124,8 +116,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
+            <state relative-caret-position="273">
+              <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
               <folding>
                 <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -152,8 +144,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="514">
-              <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
+            <state relative-caret-position="475">
+              <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#4787#4880#0" />
@@ -202,9 +194,9 @@
       <find>result</find>
       <find>heart</find>
       <find>timer</find>
-      <find>pl_up</find>
-      <find>page</find>
       <find>down</find>
+      <find>page</find>
+      <find>pl_up</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -219,8 +211,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/js/function.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/main.css" />
       </list>
     </option>
@@ -257,38 +249,6 @@
               <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
               <item name="lightening" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightening" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="audio" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightening" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="font" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightening" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightening" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightening" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightening" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -348,14 +308,7 @@
       <workItem from="1550718894789" duration="57047000" />
       <workItem from="1550820762956" duration="12122000" />
       <workItem from="1550834044492" duration="7000" />
-      <workItem from="1550834170887" duration="29017000" />
-    </task>
-    <task id="LOCAL-00021" summary="finish the quiz4 static style">
-      <created>1550562690894</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1550562690894</updated>
+      <workItem from="1550834170887" duration="30832000" />
     </task>
     <task id="LOCAL-00022" summary="update some gif files">
       <created>1550567379128</created>
@@ -693,11 +646,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550848870511</updated>
     </task>
-    <option name="localTasksCounter" value="70" />
+    <task id="LOCAL-00070" summary="change the preload arrangement to accurate the spead">
+      <created>1550916888244</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1550916888245</updated>
+    </task>
+    <option name="localTasksCounter" value="71" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="227751000" />
+    <option name="totallyTimeSpent" value="229566000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -750,7 +710,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="finish the q1_A spites" />
     <MESSAGE value="finish the q2 spites" />
     <MESSAGE value="update the images" />
     <MESSAGE value="finish the q3 sprite" />
@@ -775,7 +734,8 @@
     <MESSAGE value="version 0.6.0" />
     <MESSAGE value="add the iphone xs and max to the frame" />
     <MESSAGE value="add the loader percent" />
-    <option name="LAST_COMMIT_MESSAGE" value="add the loader percent" />
+    <MESSAGE value="change the preload arrangement to accurate the spead" />
+    <option name="LAST_COMMIT_MESSAGE" value="change the preload arrangement to accurate the spead" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -856,10 +816,23 @@
     <entry file="file://$PROJECT_DIR$/images/g_board.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="118" column="20" selection-start-line="118" selection-start-column="20" selection-end-line="118" selection-end-column="20" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#4787#4880#0" />
+            <element signature="e#4921#5464#0" />
+            <element signature="e#6159#6550#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
+        <state relative-caret-position="273">
+          <caret line="57" column="36" lean-forward="true" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
           <folding>
             <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -882,23 +855,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="514">
-          <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#4787#4880#0" />
-            <element signature="e#4921#5464#0" />
-            <element signature="e#6159#6550#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
+        <state relative-caret-position="325">
+          <caret line="171" column="22" selection-start-line="171" selection-start-column="22" selection-end-line="171" selection-end-column="22" />
           <folding>
             <element signature="e#267#397#0" />
             <element signature="e#521#950#0" />

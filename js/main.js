@@ -114,8 +114,8 @@ function handleComplete(){
     if (loadpercent === str){
         console.log("load true");
         setTimeout(function () {
-                    $('.pageTest').hide();
-                    $('.pageLoad').show();
+                    // $('.pageTest').hide();
+                    // $('.pageLoad').show();
                     // upArrow.show();
                 },1000);
 

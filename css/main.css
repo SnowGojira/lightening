@@ -75,7 +75,10 @@ body,html{
 .absolute{
     position: absolute;
 }
-
+.pageTest{
+    width: 100%;
+    text-align: center;
+}
 .pl_logo{
     width: 41vw;
     margin: 4vw 0 0 30vw;
@@ -157,15 +160,15 @@ body,html{
 }
 
 .pl_head{
-    top: 47vw;
-    left: 36vw;
     width: 30vw;
+    margin-top: 52vw;
     opacity: 0.3;
 }
+
 .pl_percent{
     font-size: 0.6rem;
-    top: 83vw;
-    left: 47.8vw;
+    margin-top: 5vw;
+    padding-left: 4vw;
 }
 
 .pl_upArrow{
@@ -1005,6 +1008,11 @@ letter-spacing: 0.26rem;
         background-position: center center;
         background-size: cover;
     }*/
+    .pl_head{
+        margin-top: 70vw;
+    }
+
+
     .pl_logo{
         width: 49vw;
         margin: -7vw 0 0 27vw;
@@ -1406,6 +1414,10 @@ letter-spacing: 0.26rem;
         background-position: center center;
         background-size: cover;
     }*/
+    .pl_head{
+        margin-top: 70vw;
+    }
+
     .pl_logo{
         width: 49vw;
         margin: -7vw 0 0 27vw;

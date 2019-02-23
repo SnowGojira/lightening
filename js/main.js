@@ -2,9 +2,9 @@
 window.onload=function(){
     //预加载资源
     manifest = [
-        /*{src: 'assets/audio/btn.mp3', id: 'sona2'},
+        {src: 'assets/audio/btn.mp3', id: 'sona2'},
         {src: 'assets/audio/bgm.mp3', id: 'sona3'},
-        {src: 'assets/audio/A.mp3', id: 'sona4'},
+        /*{src: 'assets/audio/A.mp3', id: 'sona4'},
         {src: 'assets/audio/B.mp3', id: 'sona5'},
         {src: 'assets/audio/P1.mp3', id: 'sona6'},
         {src: 'assets/audio/q1.mp3', id: 'sona7'},
@@ -87,29 +87,12 @@ window.onload=function(){
     loader.setMaxConnections(100);
     // 关键！---一定要将其设置为 true, 否则不起作用。
     loader.maintainScriptOrder=true;
+    loader.installPlugin(createjs.Sound);
     loader.loadManifest(manifest);
-    // loader.installPlugin(createjs.Sound);
-    // loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
+
+    loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
     // loader.addEventListener('progress', addLoader);//加载完成 调用handleFileProgress函数
 
-    //--创建页面监听，等待微信端页面加载完毕 触发音频播放
-    document.addEventListener('DOMContentLoaded', function () {
-        console.log("自动播放");
-        function audioAutoPlay() {
-            document.getElementById('BGM').play();
-            document.addEventListener("WeixinJSBridgeReady", function () {
-                document.getElementById('BGM').play();
-            }, false);
-        }
-        audioAutoPlay();
-    });
-//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-    function audioAutoPlay() {
-        document.getElementById('BGM').play();
-
-        document.removeEventListener('touchstart',audioAutoPlay);
-    }
-    document.addEventListener('touchstart', audioAutoPlay);
 };
 
 /*preload 逻辑*/
@@ -141,18 +124,36 @@ function animateValue(id, start, end, duration) {
         //obj.innerHTML = current;
         if (current === end) {
             clearInterval(timer);
-            setTimeout(function () {
+            /*setTimeout(function () {
                 $('.pageTest').animate({opacity:"0"},800,function () {
                     $('.pageTest').hide();
                     $('.pageLoad').show();
                     $('.pageLoad').animate({opacity:"1.0"},800);
                 });
-
-                // upArrow.show();
-            },1000);
+            },1000);*/
         }
     }, stepTime);
 }
+
+
+//--创建页面监听，等待微信端页面加载完毕 触发音频播放
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("自动播放");
+    function audioAutoPlay() {
+        document.getElementById('BGM').play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            document.getElementById('BGM').play();
+        }, false);
+    }
+    audioAutoPlay();
+});
+//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+function audioAutoPlay() {
+    document.getElementById('BGM').play();
+
+    document.removeEventListener('touchstart',audioAutoPlay);
+}
+document.addEventListener('touchstart', audioAutoPlay);
 
 /*percent 显示函数*/
 function handleFileProgress(){//加载中函数
@@ -168,13 +169,13 @@ var upArrow = $('.pl_upArrow');
 
 function handleComplete(){
     // console.log(j);
-    var loadpercent=document.getElementById('loadPercent').innerHTML;
-    let str="100%";
-    // console.log(loadpercent);
-    if (loadpercent === str){
-        console.log("load true");
-    }
-
+    setTimeout(function () {
+        $('.pageTest').animate({opacity:"0"},800,function () {
+            $('.pageTest').hide();
+            $('.pageLoad').show();
+            $('.pageLoad').animate({opacity:"1.0"},800);
+        });
+    },1000);
 }
 
 

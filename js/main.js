@@ -2,7 +2,7 @@
 window.onload=function(){
     //预加载资源
     manifest = [
-        {src: 'assets/audio/btn.mp3', id: 'sona2'},
+        /*{src: 'assets/audio/btn.mp3', id: 'sona2'},
         {src: 'assets/audio/bgm.mp3', id: 'sona3'},
         {src: 'assets/audio/A.mp3', id: 'sona4'},
         {src: 'assets/audio/B.mp3', id: 'sona5'},
@@ -10,7 +10,11 @@ window.onload=function(){
         {src: 'assets/audio/q1.mp3', id: 'sona7'},
         {src: 'assets/audio/q2_step.mp3', id: 'sona8'},
         {src: 'assets/audio/q2_watch.mp3', id: 'sona9'},
-        {src: 'assets/audio/q5.mp3', id: 'sona10'},
+        {src: 'assets/audio/q5.mp3', id: 'sona10'},*/
+        {src: 'images/pl_board.png', id: 'o13'},
+        {src: 'images/pl_title.png', id: 'o12'},
+        {src: 'images/pl_flicker.png', id: 'o15'},
+        {src: 'images/logo.png', id: 'o16'},
 
         {src: 'images/g_board.png', id: 'p13'},
         {src: 'images/crystal.gif', id: 'p12'},
@@ -90,25 +94,13 @@ window.onload=function(){
 };
 
 
-var i = 0;
-var timer = 0;
 /*percent 显示函数*/
 function handleFileProgress(){//加载中函数
     var percent=loader.progress*100|0;
     console.log(percent);
-
-     //定时器   递归函数
-     function F(){
-         i+=1;
-         document.getElementById('loadPercent').innerHTML=percent+"%";
-         console.log("i:"+i);
-          if(i>100){
-              clearInterval(timer);
-          }
-     }
-
-    timer = setInterval(F(),200);//不停加
-
+    $(".pl_head").css("opacity",loader.progress);
+    addLoader(percent);
+    // document.getElementById('loadPercent').innerHTML=percent+"%";
 }
 
 /*加载完成*/
@@ -117,14 +109,34 @@ var upArrow = $('.pl_upArrow');
 function handleComplete(){
     // console.log(j);
     var loadpercent=document.getElementById('loadPercent').innerHTML;
-    console.log(loadpercent);
-    if (loadpercent=="100%"){
+    let str="100%";
+    // console.log(loadpercent);
+    if (loadpercent === str){
+        console.log("load true");
         setTimeout(function () {
-                $('#loadPercent').hide();
-                upArrow.show();
-            },1000);
+                    $('.pageTest').hide();
+                    $('.pageLoad').show();
+                    // upArrow.show();
+                },1000);
+
     }
 
+}
+
+function addLoader(percent){
+    //定时器,递归函数
+    var i = 80;
+    var timer = 0;
+
+    function F(){
+        i+=1;
+        document.getElementById('loadPercent').innerHTML=percent+"%";
+        console.log("i:"+i);
+        if(i>100){
+            clearInterval(timer);
+        }
+    }
+    timer = setInterval(F(),100);//不停加
 }
 
 /*音乐开始播放*/
@@ -276,7 +288,7 @@ btn.on("click",function(){
         console.log("id:"+id_str);
         $("#"+id_str).show();
         //音效
-        audioPlay('btn')
+        audioPlay('btn');
 });
 
 $(".q_optionContainerKiss").on("click",function(){

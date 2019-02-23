@@ -18,22 +18,22 @@
 <audio preload autoplay muted id="btn">
   <source src="assets/audio/btn.mp3" type="audio/mpeg">
 </audio>
-<audio preload autoplay muted id="A">
+<audio preload id="A">
     <source src="assets/audio/A.mp3" type="audio/mpeg">
 </audio>
-<audio preload autoplay muted id="B">
+<audio preload id="B">
     <source src="assets/audio/B.mp3" type="audio/mpeg">
 </audio>
-<audio preload loop autoplay muted id="heart">
+<audio preload loop id="heart">
     <source src="assets/audio/P1.mp3" type="audio/mpeg">
 </audio>
-<audio preload autoplay muted id="q1">
+<audio preload id="q1">
     <source src="assets/audio/q1.mp3" type="audio/mpeg">
 </audio>
-<audio preload autoplay muted id="step">
+<audio preload id="step">
     <source src="assets/audio/q2_step.mp3" type="audio/mpeg">
 </audio>
-<audio preload autoplay muted id="q5">
+<audio preload id="q5">
     <source src="assets/audio/q5.mp3" type="audio/mpeg">
 </audio>
 <audio preload loop autoplay muted id="watch">
@@ -53,9 +53,12 @@
 </div>
 
 <div class="page pageBox ">
-
+    <div class="page pageTest">
+        <img class="pl_head absolute" src="images/head.jpg" alt="头像"/>
+        <p class="pl_percent WrtType absolute" id="loadPercent">0%</p>
+    </div>
     <!--pageLoad-->
-    <div  class="page pageLoad ">
+    <div  class="page pageLoad none">
         <!--元素试验场-->
         <!--<div class="option_btn_q3 absolute quiz3_opt_a" id="q1_a2_btn"></div>-->
         <!--元素试验场-->
@@ -69,8 +72,7 @@
                  <div class="pl_font"></div>
             </div>
         </div>
-        <p class="pl_percent WrtType absolute" id="loadPercent">0%</p>
-        <img class="pl_upArrow absolute none" src="images/pl_up.png" alt="upArrow"/>
+        <img class="pl_upArrow absolute" src="images/pl_up.png" alt="upArrow"/>
     </div>
     <!--pageStart-->
     <div  class="page pageStart none" >
@@ -325,10 +327,10 @@
 <!--<script src="libs/zepto.min.js"></script>-->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <script src="libs/preloadjs-0.6.2.min.js"></script>
-<!--<script src="libs/html2canvas.min.js"></script>-->
 <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script>
 <script src="libs/jweixin-1.0.0.js"></script>
 <script src="js/main.js"></script>
+
 <!--<script src="js/audioplayer.js"></script>-->
 
 <!--@http://github.com/SirSnow-->

@@ -7,6 +7,16 @@
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/crystal.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/crystal.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/inputBG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/inputBG.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/ps_decorate.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ps_decorate.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/quiz3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/quiz3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/result_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/result_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/result_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/result_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/watch.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/watch.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -34,18 +44,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="4885" />
-          <entry key="html" value="4502" />
-          <entry key="js" value="6510" />
-          <entry key="txt" value="2016" />
+          <entry key="css" value="4939" />
+          <entry key="html" value="4585" />
+          <entry key="js" value="7214" />
+          <entry key="txt" value="2082" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="4885" />
-          <entry key="HTML" value="4502" />
-          <entry key="JavaScript" value="6510" />
-          <entry key="PLAIN_TEXT" value="2016" />
+          <entry key="CSS" value="4939" />
+          <entry key="HTML" value="4585" />
+          <entry key="JavaScript" value="7214" />
+          <entry key="PLAIN_TEXT" value="2082" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -73,6 +83,11 @@
           <entry key="TypeScript" value="1" />
         </counts>
       </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages">
+        <counts>
+          <entry key="git.branch.create.new" value="1" />
+        </counts>
+      </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
@@ -80,8 +95,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="617">
-              <caret line="1394" column="74" selection-start-line="1394" selection-start-column="74" selection-end-line="1394" selection-end-column="74" />
+            <state relative-caret-position="208">
+              <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
               <folding>
                 <element signature="e#267#397#0" />
                 <element signature="e#521#950#0" />
@@ -109,8 +124,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="923">
-              <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+            <state relative-caret-position="195">
+              <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
               <folding>
                 <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -137,10 +152,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="507">
-              <caret line="289" column="12" lean-forward="true" selection-start-line="289" selection-start-column="12" selection-end-line="289" selection-end-column="12" />
+            <state relative-caret-position="514">
+              <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#4787#4880#0" />
+                <element signature="e#4921#5464#0" />
+                <element signature="e#6159#6550#0" />
               </folding>
             </state>
           </provider>
@@ -157,9 +175,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>option_btn_2</find>
-      <find>option_btn_q3</find>
-      <find>option_btn_q4</find>
       <find>three</find>
       <find>option_btn_q5</find>
       <find>page1</find>
@@ -186,11 +201,19 @@
       <find>wat</find>
       <find>result</find>
       <find>heart</find>
+      <find>timer</find>
+      <find>pl_up</find>
+      <find>page</find>
       <find>down</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -208,9 +231,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="37" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
     <option name="width" value="1740" />
     <option name="height" value="1095" />
   </component>
@@ -325,21 +348,7 @@
       <workItem from="1550718894789" duration="57047000" />
       <workItem from="1550820762956" duration="12122000" />
       <workItem from="1550834044492" duration="7000" />
-      <workItem from="1550834170887" duration="9155000" />
-    </task>
-    <task id="LOCAL-00019" summary="finish the quiz3 static style">
-      <created>1550548509406</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1550548509406</updated>
-    </task>
-    <task id="LOCAL-00020" summary="finish the quiz4 iphone4'7'' static style">
-      <created>1550562179028</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1550562179028</updated>
+      <workItem from="1550834170887" duration="29017000" />
     </task>
     <task id="LOCAL-00021" summary="finish the quiz4 static style">
       <created>1550562690894</created>
@@ -670,17 +679,31 @@
       <option name="project" value="LOCAL" />
       <updated>1550842870210</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="version 0.6.0">
+      <created>1550844818193</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1550844818193</updated>
+    </task>
+    <task id="LOCAL-00069" summary="add the loader percent">
+      <created>1550848870511</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1550848870511</updated>
+    </task>
+    <option name="localTasksCounter" value="70" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207889000" />
+    <option name="totallyTimeSpent" value="227751000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="55" y="30" width="1392" height="876" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15498155" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13879709" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -727,8 +750,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rough way" />
-    <MESSAGE value="use a normal way to control audio" />
     <MESSAGE value="finish the q1_A spites" />
     <MESSAGE value="finish the q2 spites" />
     <MESSAGE value="update the images" />
@@ -752,7 +773,9 @@
     <MESSAGE value="version 0.4.0" />
     <MESSAGE value="version 0.5.0" />
     <MESSAGE value="version 0.6.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 0.6.0" />
+    <MESSAGE value="add the iphone xs and max to the frame" />
+    <MESSAGE value="add the loader percent" />
+    <option name="LAST_COMMIT_MESSAGE" value="add the loader percent" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -835,8 +858,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="923">
-          <caret line="40" column="8" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="40" selection-end-column="8" />
+        <state relative-caret-position="195">
+          <caret line="56" column="67" selection-start-line="56" selection-start-column="67" selection-end-line="56" selection-end-column="67" />
           <folding>
             <element signature="n#audio#0;n#body#0;n#html#0;n#!!top" />
             <element signature="n#audio#1;n#body#0;n#html#0;n#!!top" />
@@ -861,18 +884,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="507">
-          <caret line="289" column="12" lean-forward="true" selection-start-line="289" selection-start-column="12" selection-end-line="289" selection-end-column="12" />
+        <state relative-caret-position="514">
+          <caret line="119" column="24" lean-forward="true" selection-start-line="119" selection-start-column="24" selection-end-line="119" selection-end-column="24" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <element signature="e#4787#4880#0" />
+            <element signature="e#4921#5464#0" />
+            <element signature="e#6159#6550#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="617">
-          <caret line="1394" column="74" selection-start-line="1394" selection-start-column="74" selection-end-line="1394" selection-end-column="74" />
+        <state relative-caret-position="208">
+          <caret line="159" column="14" lean-forward="true" selection-start-line="159" selection-start-column="14" selection-end-line="159" selection-end-column="14" />
           <folding>
             <element signature="e#267#397#0" />
             <element signature="e#521#950#0" />

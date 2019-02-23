@@ -87,12 +87,49 @@ window.onload=function(){
     loader.setMaxConnections(100);
     // 关键！---一定要将其设置为 true, 否则不起作用。
     loader.maintainScriptOrder=true;
-    loader.installPlugin(createjs.Sound);
-    loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
-    loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
     loader.loadManifest(manifest);
+    // loader.installPlugin(createjs.Sound);
+    // loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
+    // loader.addEventListener('progress', addLoader);//加载完成 调用handleFileProgress函数
 };
 
+/*preload 逻辑*/
+var width = 100,
+    // The PerformanceTiming interface represents timing-related performance information for the given page.
+    perfData = window.performance.timing,
+    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+    time = parseInt((EstimatedTime/100)%60)*100;
+    console.log(time);
+// Percentage Increment Animation
+var PercentageID = $("#loadPercent"),
+    start = 0,
+    end = 100,
+    durTime = time;
+animateValue(PercentageID, start, end, durTime);
+
+function animateValue(id, start, end, duration) {
+
+    var range = end - start,
+        current = start,
+        increment = end > start? 1 : -1,
+        stepTime = Math.abs(Math.floor(duration / range)),
+        obj = $(id);
+
+    var timer = setInterval(function() {
+        current += increment;
+        $(obj).text(current + "%");
+        $(".pl_head").css("opacity",current/100);
+        //obj.innerHTML = current;
+        if (current === end) {
+            clearInterval(timer);
+            setTimeout(function () {
+                $('.pageTest').hide();
+                $('.pageLoad').show();
+                // upArrow.show();
+            },1000);
+        }
+    }, stepTime);
+}
 
 /*percent 显示函数*/
 function handleFileProgress(){//加载中函数
@@ -113,31 +150,10 @@ function handleComplete(){
     // console.log(loadpercent);
     if (loadpercent === str){
         console.log("load true");
-        setTimeout(function () {
-                    // $('.pageTest').hide();
-                    // $('.pageLoad').show();
-                    // upArrow.show();
-                },1000);
-
     }
 
 }
 
-function addLoader(percent){
-    //定时器,递归函数
-    var i = 80;
-    var timer = 0;
-
-    function F(){
-        i+=1;
-        document.getElementById('loadPercent').innerHTML=percent+"%";
-        console.log("i:"+i);
-        if(i>100){
-            clearInterval(timer);
-        }
-    }
-    timer = setInterval(F(),100);//不停加
-}
 
 /*音乐开始播放*/
 //创建播放与停止的函数

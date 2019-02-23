@@ -66,11 +66,13 @@ body,html{
     position: absolute;
 }
 /*pageLoad 4'7'' 页面布局*/
-/*.pageLoad{
-    background: url(../images/pageload.jpg) no-repeat fixed top;
+.pageLoad{
+   /* background: url(../images/pageload.jpg) no-repeat fixed top;
     background-position: center center;
-    background-size: cover;
-}*/
+    background-size: cover;*/
+    opacity: 0;
+}
+
 
 .absolute{
     position: absolute;
@@ -162,7 +164,7 @@ body,html{
 .pl_head{
     width: 30vw;
     margin-top: 52vw;
-    opacity: 0.3;
+    opacity: 0.1;
 }
 
 .pl_percent{

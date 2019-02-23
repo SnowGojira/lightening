@@ -91,6 +91,25 @@ window.onload=function(){
     // loader.installPlugin(createjs.Sound);
     // loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
     // loader.addEventListener('progress', addLoader);//加载完成 调用handleFileProgress函数
+
+    //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+    document.addEventListener('DOMContentLoaded', function () {
+        console.log("自动播放");
+        function audioAutoPlay() {
+            document.getElementById('BGM').play();
+            document.addEventListener("WeixinJSBridgeReady", function () {
+                document.getElementById('BGM').play();
+            }, false);
+        }
+        audioAutoPlay();
+    });
+//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+    function audioAutoPlay() {
+        document.getElementById('BGM').play();
+
+        document.removeEventListener('touchstart',audioAutoPlay);
+    }
+    document.addEventListener('touchstart', audioAutoPlay);
 };
 
 /*preload 逻辑*/
@@ -123,8 +142,12 @@ function animateValue(id, start, end, duration) {
         if (current === end) {
             clearInterval(timer);
             setTimeout(function () {
-                $('.pageTest').hide();
-                $('.pageLoad').show();
+                $('.pageTest').animate({opacity:"0"},800,function () {
+                    $('.pageTest').hide();
+                    $('.pageLoad').show();
+                    $('.pageLoad').animate({opacity:"1.0"},800);
+                });
+
                 // upArrow.show();
             },1000);
         }
@@ -157,26 +180,6 @@ function handleComplete(){
 
 /*音乐开始播放*/
 //创建播放与停止的函数
-
-//--创建页面监听，等待微信端页面加载完毕 触发音频播放
-document.addEventListener('DOMContentLoaded', function () {
-    console.log("自动播放");
-    function audioAutoPlay() {
-        document.getElementById('BGM').play();
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            document.getElementById('BGM').play();
-        }, false);
-    }
-    audioAutoPlay();
-});
-
-//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-function audioAutoPlay() {
-    document.getElementById('BGM').play();
-
-    document.removeEventListener('touchstart',audioAutoPlay);
-}
-document.addEventListener('touchstart', audioAutoPlay);
 
 //创建audio play和audio pause的函数
 function audioPlay(id_str){

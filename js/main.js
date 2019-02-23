@@ -79,10 +79,11 @@ window.onload=function(){
     loader.setMaxConnections(100);
     // 关键！---一定要将其设置为 true, 否则不起作用。
     loader.maintainScriptOrder=true;
-    loader.installPlugin(createjs.Sound);
+    // loader.installPlugin(createjs.Sound);
     loader.loadManifest(manifest);
-    loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
     // loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
+    // loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
+
 
 };
 
@@ -90,7 +91,8 @@ window.onload=function(){
 var width = 100,
     // The PerformanceTiming interface represents timing-related performance information for the given page.
     perfData = window.performance.timing,
-    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart)+36000,
+    // EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+    EstimatedTime = -perfData.loadEventEnd,
     time = parseInt((EstimatedTime/100)%60)*100;
     console.log(time);
 // Percentage Increment Animation
@@ -116,6 +118,7 @@ function animateValue(id, start, end, duration) {
         if (current === end) {
             console.log("加载结束");
             clearInterval(timer);
+            StartPageAnimete(2000);
         }
     }, stepTime);
 }
@@ -144,6 +147,7 @@ document.addEventListener('touchstart', audioAutoPlay);
 var percent;
 function handleFileProgress(){//加载中函数
     percent=(loader.progress*10|0)+90;
+    $(".pl_head").css("opacity",percent);
     $("#loadPercent").text(percent+ "%");
     console.log(percent);
 }
@@ -154,7 +158,7 @@ var upArrow = $('.pl_upArrow');
 function handleComplete(){
     // console.log(j);
     console.log("开始调用Complete");
-    StartPageAnimete(1000);
+    StartPageAnimete(2000);
 }
 
 function StartPageAnimete(delaytime){
@@ -179,6 +183,7 @@ function audioPlay(id_str){
         audio.play();
     }, false);
 }
+
 function audioPause(id_str){
     var audio = document.getElementById(id_str);
     audio.pause();
@@ -187,20 +192,13 @@ function audioPause(id_str){
     }, false);
 }
 /*备选play如果微信不播放音乐时*/
-function Play(audio_str) {
-
-    if (window.WeixinJSBridge) {
-        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-            audio_str.play();
-        }, false);
-    } else {
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-                audio_str.play();
-            });
-        }, false);
-    }
-    audio_str.play();
+function Play(id_str){
+    var audio = document.getElementById(id_str);
+    audio.play();
+    audio.muted=true;
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
 }
 
 /*pageLoad向上滑动*/
@@ -255,6 +253,9 @@ heart.on("click",function () {
     console.log("点击触发");
     audioPlay('q1');
     audioPause('heart');
+    Play('btn');
+
+
 
     sparkTitle.animate({opacity:"1.0"},800,function () {
        pageStart.animate({top:"-800px"},800,function () {
@@ -297,6 +298,7 @@ btn.on("click",function(){
         $("#"+id_str).show();
         //音效
         audioPlay('btn');
+
 });
 
 $(".q_optionContainerKiss").on("click",function(){

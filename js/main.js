@@ -1,16 +1,21 @@
 /*预加载逻辑*/
+/*2月24日修改 删除了一些不必要的加载资源提升速度*/
 window.onload=function(){
     //预加载资源
     manifest = [
-        {src: 'assets/audio/btn.mp3', id: 'sona2'},
-        {src: 'assets/audio/bgm.mp3', id: 'sona3'},
-        {src: 'assets/audio/A.mp3', id: 'sona4'},
+        /*{src: 'assets/audio/btn.mp3', id: 'sona2'},
+        {src: 'assets/audio/bgm.mp3', id: 'sona3'},*/
+        /*{src: 'assets/audio/A.mp3', id: 'sona4'},
         {src: 'assets/audio/B.mp3', id: 'sona5'},
         {src: 'assets/audio/P1.mp3', id: 'sona6'},
         {src: 'assets/audio/q1.mp3', id: 'sona7'},
         {src: 'assets/audio/q2_step.mp3', id: 'sona8'},
         {src: 'assets/audio/q2_watch.mp3', id: 'sona9'},
-        {src: 'assets/audio/q5.mp3', id: 'sona10'},
+        {src: 'assets/audio/q5.mp3', id: 'sona10'},*/
+        {src: 'images/pl_board.png', id: 'o13'},
+        {src: 'images/pl_title.png', id: 'o12'},
+        {src: 'images/pl_flicker.png', id: 'o15'},
+        {src: 'images/logo.png', id: 'o16'},
 
         {src: 'images/g_board.png', id: 'p13'},
         {src: 'images/crystal.gif', id: 'p12'},
@@ -52,7 +57,6 @@ window.onload=function(){
         {src: 'images/result_4.jpg', id: 'p262'},
         {src: 'images/qrcode.png', id: 'p263'},
 
-
         {src: 'images/q4_play.png', id: 'p54'},
         {src: 'images/q4_pause.png', id: 'p55'},
         {src: 'images/q5.png', id: 'p56'},
@@ -61,74 +65,88 @@ window.onload=function(){
         {src: 'images/x_quiz_board.png', id: 'p166'},
         {src: 'images/x_light_board.png', id: 'p167'},
         {src: 'images/red.gif', id: 'p65'},
-
         {src: 'images/top1.png', id: 'p60'},
         {src: 'images/top2.png', id: 'p61'},
         {src: 'images/top3.png', id: 'p71'},
         {src: 'images/top4.png', id: 'p72'},
         {src: 'images/top5.png', id: 'p73'},
-
         {src: 'images/wait.png', id: 'p74'},
         {src: 'images/watch.gif', id: 'p75'},
 
-        {src: 'images/result_1.jpg', id: 'p76'},
-        {src: 'images/result_2.jpg', id: 'p1'},
-        {src: 'images/result_3.jpg', id: 'p2'},
-        {src: 'images/result_4.jpg', id: 'p3'},
-
-
     ];
+
     loader = new createjs.LoadQueue(false);
     // 关键！----设置并发数
     loader.setMaxConnections(100);
     // 关键！---一定要将其设置为 true, 否则不起作用。
     loader.maintainScriptOrder=true;
-    loader.installPlugin(createjs.Sound);
-    loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
-    loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
+    // loader.installPlugin(createjs.Sound);
     loader.loadManifest(manifest);
+    loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
+    loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
+
+
 };
 
+/*navigator 加载函数*/
+/*2月24日修改 新添加preload 逻辑*/
+var width = 100,
+    // The PerformanceTiming interface
+    perfData = window.performance.timing,
+    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+    time = parseInt((EstimatedTime/100)%60)*100;
+    console.log(time);
+// 进度增长动画
+var PercentageID = $("#loadPercent"),
+    start = 0,
+    end = 100;
 
-var i = 0;
-var timer = 0;
-/*percent 显示函数*/
-function handleFileProgress(){//加载中函数
-    var percent=loader.progress*100|0;
-    console.log(percent);
+animateValue(PercentageID, start, end, time);
+function animateValue(id, start, end, duration) {
 
-     //定时器   递归函数
-     function F(){
-         i+=1;
-         document.getElementById('loadPercent').innerHTML=percent+"%";
-         console.log("i:"+i);
-          if(i>100){
-              clearInterval(timer);
-          }
-     }
+    var range = end - start,
+        current = start,
+        increment = end > start? 1 : -1,
+        stepTime = Math.abs(Math.floor(duration / range)),
+        obj = $(id);
 
-    timer = setInterval(F(),200);//不停加
-
+    var timer = setInterval(function() {
+        current += increment;
+        var percentage=parseInt(current*0.9);
+        $(obj).text(percentage + "%");
+        $(".pl_head").css("opacity",percentage/100);
+        //obj.innerHTML = current;
+        if (current === end) {
+            console.log("加载结束");
+            clearInterval(timer);
+        }
+    }, stepTime);
 }
 
-/*加载完成*/
+/*2月24日修改 新回调*/
+/*percent call back function*/
+var percent;
 var upArrow = $('.pl_upArrow');
+var pageLoad = $('.pageLoad');
+function handleFileProgress(){//加载中函数
+    percent=(loader.progress*10|0)+90-1;
+    $(".pl_head").css("opacity",percent);
+    $("#loadPercent").text(percent+ "%");
+    console.log(percent);
+}
 
 function handleComplete(){
     // console.log(j);
-    var loadpercent=document.getElementById('loadPercent').innerHTML;
-    console.log(loadpercent);
-    if (loadpercent=="100%"){
-        setTimeout(function () {
-                $('#loadPercent').hide();
-                upArrow.show();
-            },1000);
-    }
-
+    console.log("开始调用Complete");
+    $("#loadPercent").text("100%");
+    setTimeout(function () {
+        $('.pageTest').animate({opacity:"0"},800,function () {
+            $('.pageTest').hide();
+            pageLoad.show();
+            pageLoad.animate({opacity:"1.0"},800);
+        });
+    },2000);
 }
-
-/*音乐开始播放*/
-//创建播放与停止的函数
 
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放
 document.addEventListener('DOMContentLoaded', function () {
@@ -141,7 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
     }
     audioAutoPlay();
 });
-
 //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
 function audioAutoPlay() {
     document.getElementById('BGM').play();
@@ -149,6 +166,10 @@ function audioAutoPlay() {
     document.removeEventListener('touchstart',audioAutoPlay);
 }
 document.addEventListener('touchstart', audioAutoPlay);
+
+
+/*音乐开始播放*/
+//创建播放与停止的函数
 
 //创建audio play和audio pause的函数
 function audioPlay(id_str){
@@ -166,26 +187,19 @@ function audioPause(id_str){
         audio.pause();
     }, false);
 }
-/*备选play如果微信不播放音乐时*/
-function Play(audio_str) {
 
-    if (window.WeixinJSBridge) {
-        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-            audio_str.play();
-        }, false);
-    } else {
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
-                audio_str.play();
-            });
-        }, false);
-    }
-    audio_str.play();
+/*2月24日修改 新播放*/
+function Play(id_str){
+    var audio = document.getElementById(id_str);
+    audio.play();
+    audio.muted=true;
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
 }
 
 /*pageLoad向上滑动*/
 var startY, moveY, moveSpace;
-var pageLoad=$(".pageLoad");
 var flickerBox=$(".pl_lightenBox");
 var pageStart=$(".pageStart");
 var startBoard=$(".g_board");
@@ -235,6 +249,10 @@ heart.on("click",function () {
     console.log("点击触发");
     audioPlay('q1');
     audioPause('heart');
+    /*2月24日修改 新播放*/
+    Play('btn');
+
+
 
     sparkTitle.animate({opacity:"1.0"},800,function () {
        pageStart.animate({top:"-800px"},800,function () {
@@ -265,7 +283,7 @@ function quizInScene(dom1,dom2,dom3,dom4) {
 }
 
 
-
+/*按钮全局属性*/
 btn.on("click",function(){
         hint.hide();
         //计数
@@ -276,7 +294,8 @@ btn.on("click",function(){
         console.log("id:"+id_str);
         $("#"+id_str).show();
         //音效
-        audioPlay('btn')
+        audioPlay('btn');
+
 });
 
 $(".q_optionContainerKiss").on("click",function(){
@@ -306,7 +325,7 @@ Function.prototype.bind = function(parent) {
     }
     var temp = function() {
         return f.apply(parent, args);
-    }
+    };
     return(temp);
 };
 
@@ -388,7 +407,7 @@ var optionFour=$(".q4_options");
 var musicOpt=$(".music");
 optionThree.on("click",function () {
 
-    pageThree.animate({opacity:"0"},500,function(){
+pageThree.animate({opacity:"0"},500,function(){
         /*转场音乐*/
         // document.getElementById("BGM").play();
         pageFour.show();
@@ -466,6 +485,15 @@ var submitBtn = $(".input_btn");
 var InputImg=$(".inputImg");
 var OutputImg=$("#outputImg");
 
+
+
+//2月24日 添加input虚拟按键不影响布局
+input.blur(function(){
+    document.body.addEventListener('focusout', function ( ) {
+        document.body.scrollTop = 0;
+    });
+});
+
 submitBtn.on("click",function(){
     //姓名赋值
     name=input.val();
@@ -495,16 +523,16 @@ submitBtn.on("click",function(){
 });
 
 
-
+//2月24日 添加input虚拟按键不影响布局
 function downFile() {
-    console.log(".................")
+    console.log(".................");
     var targetDom = InputImg;
-    var copyDom = targetDom.clone();
+    //var copyDom = targetDom.clone();
     var cwidth=targetDom.width();
     var cheight=targetDom.height();
     console.log(cwidth);
     console.log(cheight);
-//
+
     //要将 canvas 的宽高设置成容器宽高的 2 倍
     var canvas = document.createElement("canvas");
     canvas.width = cwidth * 2;
@@ -525,15 +553,25 @@ function downFile() {
 //           $("body").append(canvas);
             console.log(dataURL);
             OutputImg.attr('src',dataURL);
-            $(".inputImg").hide();
+            var imageData=OutputImg.attr('src');
+            if(imageData!==null){
+                console.log("传值成功");
+                //初次进入，防止海报黑屏进行延时
+                $(".inputImg").hide();
 
-            setTimeout(function () {
-                pageInput.animate({opacity:"0"},1000,function(){
-                    pageInput.hide();
-                    OutputImg.show();
-                    $(".pageCanvas").show();
-                }) ;
-            },10000);
+                setTimeout(function () {
+                    pageInput.animate({opacity:"0"},1000,function(){
+
+                        pageInput.hide();
+                        OutputImg.show();
+                        $(".pageCanvas").show();
+                    }) ;
+                },4000);
+            }else {
+                console.log("传值失败");
+                downFile();
+            }
+
 
         },
         width:cwidth*2,
@@ -541,6 +579,8 @@ function downFile() {
     })
 
 }
+
+
 function innDiv(name,id){
     var innerDiv='<img class="postBG absolute" src="images/result_'+id+'.jpg" alt="result"/>';
     innerDiv += '<p class="absolute NumType nickName">'+name+'</p>';

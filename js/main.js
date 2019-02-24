@@ -1,4 +1,5 @@
 /*预加载逻辑*/
+
 window.onload=function(){
     //预加载资源
     manifest = [
@@ -81,47 +82,12 @@ window.onload=function(){
     loader.maintainScriptOrder=true;
     // loader.installPlugin(createjs.Sound);
     loader.loadManifest(manifest);
-    // loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
-    // loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
+    loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
+    loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
 
 
 };
 
-/*preload 逻辑*/
-var width = 100,
-    // The PerformanceTiming interface represents timing-related performance information for the given page.
-    perfData = window.performance.timing,
-    // EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
-    EstimatedTime = -perfData.loadEventEnd,
-    time = parseInt((EstimatedTime/100)%60)*100;
-    console.log(time);
-// Percentage Increment Animation
-var PercentageID = $("#loadPercent"),
-    start = 0,
-    end = 100;
-
-animateValue(PercentageID, start, end, time);
-
-function animateValue(id, start, end, duration) {
-
-    var range = end - start,
-        current = start,
-        increment = end > start? 1 : -1,
-        stepTime = Math.abs(Math.floor(duration / range)),
-        obj = $(id);
-
-    var timer = setInterval(function() {
-        current += increment;
-        $(obj).text(current + "%");
-        $(".pl_head").css("opacity",current/100);
-        //obj.innerHTML = current;
-        if (current === end) {
-            console.log("加载结束");
-            clearInterval(timer);
-            StartPageAnimete(2000);
-        }
-    }, stepTime);
-}
 
 
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放
@@ -142,34 +108,66 @@ function audioAutoPlay() {
     document.removeEventListener('touchstart',audioAutoPlay);
 }
 document.addEventListener('touchstart', audioAutoPlay);
+/*navigator 加载函数*/
+/*preload 逻辑*/
+var width = 100,
+    // The PerformanceTiming interface
+    perfData = window.performance.timing,
+    EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
+    time = parseInt((EstimatedTime/100)%60)*100;
+console.log(time);
+// 进度增长动画
+var PercentageID = $("#loadPercent"),
+    start = 0,
+    end = 100;
 
-/*percent 显示函数*/
+animateValue(PercentageID, start, end, time);
+
+function animateValue(id, start, end, duration) {
+
+    var range = end - start,
+        current = start,
+        increment = end > start? 1 : -1,
+        stepTime = Math.abs(Math.floor(duration / range)),
+        obj = $(id);
+
+    var timer = setInterval(function() {
+        current += increment;
+        var percentage=parseInt(current*0.9);
+        $(obj).text(percentage + "%");
+        $(".pl_head").css("opacity",percentage/100);
+        //obj.innerHTML = current;
+        if (current === end) {
+            console.log("加载结束");
+            clearInterval(timer);
+        }
+    }, stepTime);
+}
+
+/*percent call back function*/
 var percent;
+var upArrow = $('.pl_upArrow');
+var pageLoad = $('.pageLoad');
 function handleFileProgress(){//加载中函数
-    percent=(loader.progress*10|0)+90;
+    percent=(loader.progress*10|0)+90-1;
     $(".pl_head").css("opacity",percent);
     $("#loadPercent").text(percent+ "%");
     console.log(percent);
 }
 
-/*加载完成*/
-var upArrow = $('.pl_upArrow');
-
 function handleComplete(){
     // console.log(j);
     console.log("开始调用Complete");
-    StartPageAnimete(2000);
-}
-
-function StartPageAnimete(delaytime){
+    $("#loadPercent").text("100%");
     setTimeout(function () {
         $('.pageTest').animate({opacity:"0"},800,function () {
             $('.pageTest').hide();
-            $('.pageLoad').show();
-            $('.pageLoad').animate({opacity:"1.0"},800);
+            pageLoad.show();
+            pageLoad.animate({opacity:"1.0"},800);
         });
-    },delaytime);
+    },2000);
 }
+
 
 /*音乐开始播放*/
 //创建播放与停止的函数
@@ -183,7 +181,6 @@ function audioPlay(id_str){
         audio.play();
     }, false);
 }
-
 function audioPause(id_str){
     var audio = document.getElementById(id_str);
     audio.pause();
@@ -203,7 +200,6 @@ function Play(id_str){
 
 /*pageLoad向上滑动*/
 var startY, moveY, moveSpace;
-var pageLoad=$(".pageLoad");
 var flickerBox=$(".pl_lightenBox");
 var pageStart=$(".pageStart");
 var startBoard=$(".g_board");
@@ -286,7 +282,7 @@ function quizInScene(dom1,dom2,dom3,dom4) {
 }
 
 
-
+/*按钮全局属性*/
 btn.on("click",function(){
         hint.hide();
         //计数
@@ -328,7 +324,7 @@ Function.prototype.bind = function(parent) {
     }
     var temp = function() {
         return f.apply(parent, args);
-    }
+    };
     return(temp);
 };
 
@@ -410,7 +406,7 @@ var optionFour=$(".q4_options");
 var musicOpt=$(".music");
 optionThree.on("click",function () {
 
-    pageThree.animate({opacity:"0"},500,function(){
+pageThree.animate({opacity:"0"},500,function(){
         /*转场音乐*/
         // document.getElementById("BGM").play();
         pageFour.show();
@@ -487,6 +483,15 @@ var input = $(".input_content");
 var submitBtn = $(".input_btn");
 var InputImg=$(".inputImg");
 var OutputImg=$("#outputImg");
+var h = window.innerHeight;
+
+
+
+input.blur(function(){
+    document.body.addEventListener('focusout', function ( ) {
+        document.body.scrollTop = 0;
+    });
+});
 
 submitBtn.on("click",function(){
     //姓名赋值
@@ -519,9 +524,9 @@ submitBtn.on("click",function(){
 
 
 function downFile() {
-    console.log(".................")
+    console.log(".................");
     var targetDom = InputImg;
-    var copyDom = targetDom.clone();
+    //var copyDom = targetDom.clone();
     var cwidth=targetDom.width();
     var cheight=targetDom.height();
     console.log(cwidth);
@@ -547,7 +552,11 @@ function downFile() {
 //           $("body").append(canvas);
             console.log(dataURL);
             OutputImg.attr('src',dataURL);
-            $(".inputImg").hide();
+
+            //初次进入，防止海报黑屏进行延时
+            setTimeout(function () {
+                $(".inputImg").hide();
+            },8000);
 
             setTimeout(function () {
                 pageInput.animate({opacity:"0"},1000,function(){
@@ -555,7 +564,7 @@ function downFile() {
                     OutputImg.show();
                     $(".pageCanvas").show();
                 }) ;
-            },10000);
+            },12000);
 
         },
         width:cwidth*2,

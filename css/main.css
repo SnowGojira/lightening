@@ -455,7 +455,7 @@ body,html{
     opacity: 0;
 }
 .quiz_two1{
-    margin-top: 0vw;
+    margin-top: 0;
     letter-spacing: 0.17rem;
 }
 .quiz_two2{
@@ -935,6 +935,7 @@ letter-spacing: 0.26rem;
     width: 100vw;
     height: 161vw;
     background: black;
+    position: fixed;
 }
 
 
@@ -1107,7 +1108,7 @@ letter-spacing: 0.26rem;
     .top_one{
         width: 69vw;
         left: 14.8vw;
-        top: 0vw;
+        top: 0;
     }
 
     .content {
@@ -1182,7 +1183,7 @@ letter-spacing: 0.26rem;
 
     .watch_two {
         width: 54vw;
-        padding-left: 0vw;
+        padding-left: 0;
         margin: 8.8vw auto 0 auto;
         text-align: center;
     }
@@ -1512,7 +1513,7 @@ letter-spacing: 0.26rem;
     .top_one{
         width: 69vw;
         left: 14.8vw;
-        top: 0vw;
+        top: 0;
     }
 
     .content {
@@ -1587,7 +1588,7 @@ letter-spacing: 0.26rem;
 
     .watch_two {
         width: 54vw;
-        padding-left: 0vw;
+        padding-left: 0;
         margin: 8.8vw auto 0 auto;
         text-align: center;
     }

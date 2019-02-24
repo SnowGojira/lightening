@@ -935,7 +935,7 @@ letter-spacing: 0.26rem;
     width: 100vw;
     height: 161vw;
     background: black;
-    position: fixed;
+    /*position: fixed;*/
 }
 
 

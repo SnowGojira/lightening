@@ -1,5 +1,5 @@
 /*预加载逻辑*/
-
+/*2月24日修改 删除了一些不必要的加载资源提升速度*/
 window.onload=function(){
     //预加载资源
     manifest = [
@@ -88,41 +88,20 @@ window.onload=function(){
 
 };
 
-
-
-//--创建页面监听，等待微信端页面加载完毕 触发音频播放
-document.addEventListener('DOMContentLoaded', function () {
-    console.log("自动播放");
-    function audioAutoPlay() {
-        document.getElementById('BGM').play();
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            document.getElementById('BGM').play();
-        }, false);
-    }
-    audioAutoPlay();
-});
-//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-function audioAutoPlay() {
-    document.getElementById('BGM').play();
-
-    document.removeEventListener('touchstart',audioAutoPlay);
-}
-document.addEventListener('touchstart', audioAutoPlay);
 /*navigator 加载函数*/
-/*preload 逻辑*/
+/*2月24日修改 新添加preload 逻辑*/
 var width = 100,
     // The PerformanceTiming interface
     perfData = window.performance.timing,
     EstimatedTime = -(perfData.loadEventEnd - perfData.navigationStart),
     time = parseInt((EstimatedTime/100)%60)*100;
-console.log(time);
+    console.log(time);
 // 进度增长动画
 var PercentageID = $("#loadPercent"),
     start = 0,
     end = 100;
 
 animateValue(PercentageID, start, end, time);
-
 function animateValue(id, start, end, duration) {
 
     var range = end - start,
@@ -144,6 +123,7 @@ function animateValue(id, start, end, duration) {
     }, stepTime);
 }
 
+/*2月24日修改 新回调*/
 /*percent call back function*/
 var percent;
 var upArrow = $('.pl_upArrow');
@@ -168,6 +148,25 @@ function handleComplete(){
     },2000);
 }
 
+//--创建页面监听，等待微信端页面加载完毕 触发音频播放
+document.addEventListener('DOMContentLoaded', function () {
+    console.log("自动播放");
+    function audioAutoPlay() {
+        document.getElementById('BGM').play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            document.getElementById('BGM').play();
+        }, false);
+    }
+    audioAutoPlay();
+});
+//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+function audioAutoPlay() {
+    document.getElementById('BGM').play();
+
+    document.removeEventListener('touchstart',audioAutoPlay);
+}
+document.addEventListener('touchstart', audioAutoPlay);
+
 
 /*音乐开始播放*/
 //创建播放与停止的函数
@@ -188,7 +187,8 @@ function audioPause(id_str){
         audio.pause();
     }, false);
 }
-/*备选play如果微信不播放音乐时*/
+
+/*2月24日修改 新播放*/
 function Play(id_str){
     var audio = document.getElementById(id_str);
     audio.play();
@@ -249,6 +249,7 @@ heart.on("click",function () {
     console.log("点击触发");
     audioPlay('q1');
     audioPause('heart');
+    /*2月24日修改 新播放*/
     Play('btn');
 
 
@@ -483,10 +484,10 @@ var input = $(".input_content");
 var submitBtn = $(".input_btn");
 var InputImg=$(".inputImg");
 var OutputImg=$("#outputImg");
-var h = window.innerHeight;
 
 
 
+//2月24日 添加input虚拟按键不影响布局
 input.blur(function(){
     document.body.addEventListener('focusout', function ( ) {
         document.body.scrollTop = 0;
@@ -522,7 +523,7 @@ submitBtn.on("click",function(){
 });
 
 
-
+//2月24日 添加input虚拟按键不影响布局
 function downFile() {
     console.log(".................");
     var targetDom = InputImg;
@@ -531,7 +532,7 @@ function downFile() {
     var cheight=targetDom.height();
     console.log(cwidth);
     console.log(cheight);
-//
+
     //要将 canvas 的宽高设置成容器宽高的 2 倍
     var canvas = document.createElement("canvas");
     canvas.width = cwidth * 2;
@@ -552,19 +553,25 @@ function downFile() {
 //           $("body").append(canvas);
             console.log(dataURL);
             OutputImg.attr('src',dataURL);
-
-            //初次进入，防止海报黑屏进行延时
-            setTimeout(function () {
+            var imageData=OutputImg.attr('src');
+            if(imageData!==null){
+                console.log("传值成功");
+                //初次进入，防止海报黑屏进行延时
                 $(".inputImg").hide();
-            },8000);
 
-            setTimeout(function () {
-                pageInput.animate({opacity:"0"},1000,function(){
-                    pageInput.hide();
-                    OutputImg.show();
-                    $(".pageCanvas").show();
-                }) ;
-            },12000);
+                setTimeout(function () {
+                    pageInput.animate({opacity:"0"},1000,function(){
+
+                        pageInput.hide();
+                        OutputImg.show();
+                        $(".pageCanvas").show();
+                    }) ;
+                },4000);
+            }else {
+                console.log("传值失败");
+                downFile();
+            }
+
 
         },
         width:cwidth*2,
@@ -572,6 +579,8 @@ function downFile() {
     })
 
 }
+
+
 function innDiv(name,id){
     var innerDiv='<img class="postBG absolute" src="images/result_'+id+'.jpg" alt="result"/>';
     innerDiv += '<p class="absolute NumType nickName">'+name+'</p>';

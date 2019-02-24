@@ -5,20 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/images/head.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/crystal.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/crystal.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/inputBG.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/inputBG.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/ps_decorate.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/ps_decorate.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/quiz3.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/quiz3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/result_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/result_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/result_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/images/result_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/result_4.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/watch.gif" beforeDir="false" afterPath="$PROJECT_DIR$/images/watch.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/soundjs-0.6.2.min.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -48,7 +36,7 @@
           <entry key="css" value="4885" />
           <entry key="html" value="4502" />
           <entry key="js" value="6510" />
-          <entry key="txt" value="2016" />
+          <entry key="txt" value="2030" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -56,7 +44,7 @@
           <entry key="CSS" value="4885" />
           <entry key="HTML" value="4502" />
           <entry key="JavaScript" value="6510" />
-          <entry key="PLAIN_TEXT" value="2016" />
+          <entry key="PLAIN_TEXT" value="2030" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -103,7 +91,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1164">
@@ -115,11 +103,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="579">
-              <caret line="338" lean-forward="true" selection-start-line="338" selection-end-line="338" />
+              <caret line="148" column="1" lean-forward="true" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#4060#4610#0" />
@@ -195,9 +183,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="68" />
-    <option name="y" value="37" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="16" />
+    <option name="y" value="26" />
     <option name="width" value="1740" />
     <option name="height" value="1095" />
   </component>
@@ -313,13 +301,6 @@
       <workItem from="1550820762956" duration="12122000" />
       <workItem from="1550834044492" duration="7000" />
       <workItem from="1550834170887" duration="9155000" />
-    </task>
-    <task id="LOCAL-00019" summary="finish the quiz3 static style">
-      <created>1550548509406</created>
-      <option name="number" value="00019" />
-      <option name="presentableId" value="LOCAL-00019" />
-      <option name="project" value="LOCAL" />
-      <updated>1550548509406</updated>
     </task>
     <task id="LOCAL-00020" summary="finish the quiz4 iphone4'7'' static style">
       <created>1550562179028</created>
@@ -657,11 +638,18 @@
       <option name="project" value="LOCAL" />
       <updated>1550842870210</updated>
     </task>
-    <option name="localTasksCounter" value="68" />
+    <task id="LOCAL-00068" summary="Merge branch 'preloadpage'&#10;version 1.0.0&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml">
+      <created>1550987980323</created>
+      <option name="number" value="00068" />
+      <option name="presentableId" value="LOCAL-00068" />
+      <option name="project" value="LOCAL" />
+      <updated>1550987980323</updated>
+    </task>
+    <option name="localTasksCounter" value="69" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="207936000" />
+    <option name="totallyTimeSpent" value="209494000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -714,7 +702,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="rough way" />
     <MESSAGE value="use a normal way to control audio" />
     <MESSAGE value="finish the q1_A spites" />
     <MESSAGE value="finish the q2 spites" />
@@ -739,7 +726,8 @@
     <MESSAGE value="version 0.4.0" />
     <MESSAGE value="version 0.5.0" />
     <MESSAGE value="version 0.6.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="version 0.6.0" />
+    <MESSAGE value="Merge branch 'preloadpage'&#10;version 1.0.0&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'preloadpage'&#10;version 1.0.0&#10;&#10;# Conflicts:&#10;#&#9;.idea/workspace.xml" />
   </component>
   <component name="editorHistoryManager">
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
@@ -819,16 +807,6 @@
     <entry file="file://$PROJECT_DIR$/images/result_4.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1164">
-          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding>
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="415">
@@ -845,10 +823,20 @@
     <entry file="file://$PROJECT_DIR$/js/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="579">
-          <caret line="338" lean-forward="true" selection-start-line="338" selection-end-line="338" />
+          <caret line="148" column="1" lean-forward="true" selection-start-line="148" selection-start-column="1" selection-end-line="148" selection-end-column="1" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
             <element signature="e#4060#4610#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1164">
+          <caret line="50" column="18" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
+          <folding>
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

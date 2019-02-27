@@ -3,15 +3,6 @@
 window.onload=function(){
     //预加载资源
     manifest = [
-        /*{src: 'assets/audio/btn.mp3', id: 'sona2'},
-        {src: 'assets/audio/bgm.mp3', id: 'sona3'},*/
-        /*{src: 'assets/audio/A.mp3', id: 'sona4'},
-        {src: 'assets/audio/B.mp3', id: 'sona5'},
-        {src: 'assets/audio/P1.mp3', id: 'sona6'},
-        {src: 'assets/audio/q1.mp3', id: 'sona7'},
-        {src: 'assets/audio/q2_step.mp3', id: 'sona8'},
-        {src: 'assets/audio/q2_watch.mp3', id: 'sona9'},
-        {src: 'assets/audio/q5.mp3', id: 'sona10'},*/
         {src: 'images/pl_board.png', id: 'o13'},
         {src: 'images/pl_title.png', id: 'o12'},
         {src: 'images/pl_flicker.png', id: 'o15'},
@@ -230,8 +221,6 @@ pageLoad.on("touchmove", function(e) {
         );
     }
 
-    // var heartAudio = new Audio('./assets/audio/p1.mp3');
-    // Play(heartAudio);
 });
 
 /*pageStart 点亮动画逻辑*/
@@ -345,18 +334,6 @@ optionOne.on("click",function(){
         watch.play();
     }, false);
 
-    //
-    /*var data1=0;
-    function count1(){
-        audioPlay('watch');
-        console.log("count1:",data1++);
-    }
-    setInterval(count1,2500);*/
-
-    // setTimeout(function () {
-    //     audioPlay('watch');
-    // }.bind(this),2500);
-
 
     pageOne.animate({opacity:"0"},500,function(){
 
@@ -426,11 +403,6 @@ musicA.on("click",function () {
     audioPause('BGM');
     audioPause('B');
     audioPlay('A');
-    // document.getElementById("BGM").pause();
-    // document.getElementById("A").play();
-    // document.getElementById("B").pause();
-    // var aAudio = new Audio('./assets/audio/A.mp3');
-    // Play(aAudio);
 });
 
 var musicB=$(".q4_b_music");
@@ -512,13 +484,8 @@ submitBtn.on("click",function(){
             $(".waitParent").show();
             downFile();
 
-            /*$(".waitParent").animate({opacity:"0"},1000,function () {
-                downFile();
-            });*/
 
         });
-        // $(".waitParent").show();
-        // downFile();
     }
 });
 

@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +20,7 @@
     <session id="2117484287">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="10" />
+          <entry key="project.closed" value="11" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.36" value="1" />
@@ -38,7 +37,7 @@
           <entry key="css" value="4885" />
           <entry key="html" value="4616" />
           <entry key="js" value="6510" />
-          <entry key="txt" value="2106" />
+          <entry key="txt" value="2125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -46,7 +45,7 @@
           <entry key="CSS" value="4885" />
           <entry key="HTML" value="4616" />
           <entry key="JavaScript" value="6510" />
-          <entry key="PLAIN_TEXT" value="2106" />
+          <entry key="PLAIN_TEXT" value="2125" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -308,14 +307,7 @@
       <workItem from="1550834170887" duration="9155000" />
       <workItem from="1551099171166" duration="2174000" />
       <workItem from="1551193149130" duration="186000" />
-      <workItem from="1551282437904" duration="263000" />
-    </task>
-    <task id="LOCAL-00023" summary="finish page5's static style">
-      <created>1550573966101</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1550573966101</updated>
+      <workItem from="1551282437904" duration="282000" />
     </task>
     <task id="LOCAL-00024" summary="finish pageInput's static style">
       <created>1550585965343</created>
@@ -653,15 +645,21 @@
       <option name="project" value="LOCAL" />
       <updated>1551282617115</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="clean the js code">
+      <created>1551282717125</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1551282717125</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213864000" />
+    <option name="totallyTimeSpent" value="213883000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13879709" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -710,7 +708,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="update the images" />
     <MESSAGE value="finish the q3 sprite" />
     <MESSAGE value="make less node" />
     <MESSAGE value="version 0.2.1 clean code" />
@@ -735,7 +732,8 @@
     <MESSAGE value="one of the post is wrong" />
     <MESSAGE value="not use the analysis lib" />
     <MESSAGE value="clean the index code" />
-    <option name="LAST_COMMIT_MESSAGE" value="clean the index code" />
+    <MESSAGE value="clean the js code" />
+    <option name="LAST_COMMIT_MESSAGE" value="clean the js code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

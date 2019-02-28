@@ -562,23 +562,22 @@ function getInputDiv(name) {
     if(count<60){
         console.log("黑洞");
         inner=innDiv(name,1);
-        //InputImg.innerHTML= innDiv(name,1);
 
         return inner;
     }else if(count<75 && count >=60){
         console.log("棱镜");
         inner=innDiv(name,2);
-        //InputImg.innerHTML= innDiv(name,2);
+
         return inner;
     }else if(count<90 && count >=75){
         console.log("水母");
         inner=innDiv(name,3);
-        // InputImg.innerHTML= innDiv(name,3);
+
         return inner;
     }else if(count>=90){
         console.log("太阳");
         inner=innDiv(name,4);
-        // InputImg.innerHTML= innDiv(name,4);
+
         return inner;
     }
 }

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/js/main.js" description="预加载逻辑" line="0" />
+    <bookmark url="file://$PROJECT_DIR$/js/app.js" description="预加载逻辑" line="0" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/js/engine.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,71 +19,12 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="2117484287">
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="11" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.50" value="1" />
-          <entry key="project.open.time.6" value="4" />
-          <entry key="project.open.time.7" value="2" />
-          <entry key="project.open.time.8" value="2" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="14" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="css" value="4885" />
-          <entry key="html" value="4616" />
-          <entry key="js" value="6510" />
-          <entry key="txt" value="2142" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="CSS" value="4885" />
-          <entry key="HTML" value="4616" />
-          <entry key="JavaScript" value="6510" />
-          <entry key="PLAIN_TEXT" value="2142" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="css" value="4" />
-          <entry key="gif" value="1" />
-          <entry key="html" value="5" />
-          <entry key="jpg" value="10" />
-          <entry key="js" value="13" />
-          <entry key="mp3" value="5" />
-          <entry key="png" value="3" />
-          <entry key="rnc" value="1" />
-          <entry key="ts" value="1" />
-          <entry key="ttf" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="CSS" value="4" />
-          <entry key="HTML" value="5" />
-          <entry key="Image" value="14" />
-          <entry key="JavaScript" value="13" />
-          <entry key="PLAIN_TEXT" value="11" />
-          <entry key="RNG Compact" value="1" />
-          <entry key="TypeScript" value="1" />
-        </counts>
-      </usages-collector>
-    </session>
-  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/main.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1560">
+            <state relative-caret-position="1640">
               <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
               <folding>
                 <element signature="e#267#397#0" />
@@ -92,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7137">
-              <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+            <state relative-caret-position="902">
+              <caret line="22" selection-start-line="22" selection-end-line="24" selection-end-column="8" />
               <folding>
                 <element signature="n#div#3;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -105,16 +49,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/main.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="429">
-              <caret line="579" selection-start-line="579" selection-end-line="579" />
+            <state relative-caret-position="86">
+              <caret line="142" selection-start-line="142" selection-end-line="151" selection-end-column="3" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/engine.js">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -175,20 +124,15 @@
         <option value="$PROJECT_DIR$/css/main.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/main.js" />
+        <option value="$PROJECT_DIR$/js/engine.js" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="15" />
-    <option name="y" value="25" />
-    <option name="width" value="1740" />
-    <option name="height" value="1095" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="50" />
+    <option name="y" value="23" />
+    <option name="width" value="1366" />
+    <option name="height" value="684" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -198,7 +142,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -238,19 +181,16 @@
               <item name="lightening" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lightening" type="462c0819:PsiDirectoryNode" />
-              <item name="libs" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="JavaScriptWeakerCompletionTypeGuess" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="D:/nodeJs/node" />
@@ -306,6 +246,8 @@
       <workItem from="1551193149130" duration="186000" />
       <workItem from="1551282437904" duration="282000" />
       <workItem from="1551369146254" duration="579000" />
+      <workItem from="1566203462147" duration="281000" />
+      <workItem from="1566212707447" duration="84000" />
     </task>
     <task id="LOCAL-00025" summary="finish the preload logic">
       <created>1550590829419</created>
@@ -654,13 +596,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="214462000" />
+    <option name="totallyTimeSpent" value="214827000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="50" y="23" width="1366" height="684" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13879709" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20892194" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -675,6 +617,7 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.2851064" />
+      <window_info anchor="bottom" id="GraphQL" order="12" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -702,9 +645,6 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
-  </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="make less node" />
@@ -738,7 +678,7 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/js/main.js</url>
+          <url>file://$PROJECT_DIR$/js/app.js</url>
           <line>4</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
@@ -746,13 +686,7 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="127" column="18" selection-start-line="127" selection-start-column="18" selection-end-line="127" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/common.rnc" />
     <entry file="file://$PROJECT_DIR$/js/function.js" />
     <entry file="file://$PROJECT_DIR$/images/page4.jpg" />
     <entry file="file://$PROJECT_DIR$/images/q4_b1.png" />
@@ -823,16 +757,10 @@
     <entry file="file://$PROJECT_DIR$/images/result_4.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../查看你的2019本命字.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38883">
-          <caret line="997" column="17" selection-start-line="997" selection-start-column="17" selection-end-line="997" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/../../查看你的2019本命字.html" />
     <entry file="file://$PROJECT_DIR$/css/main.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1560">
+        <state relative-caret-position="1640">
           <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
           <folding>
             <element signature="e#267#397#0" />
@@ -843,23 +771,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/engine.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7137">
-          <caret line="183" column="20" selection-start-line="183" selection-start-column="20" selection-end-line="183" selection-end-column="20" />
+        <state relative-caret-position="86">
+          <caret line="142" selection-start-line="142" selection-end-line="151" selection-end-column="3" />
           <folding>
-            <element signature="n#div#3;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" />
-            <element signature="n#style#0;n#img#0;n#div#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#!!doc" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="429">
-          <caret line="579" selection-start-line="579" selection-end-line="579" />
+        <state relative-caret-position="902">
+          <caret line="22" selection-start-line="22" selection-end-line="24" selection-end-column="8" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#div#3;n#div#3;n#div#2;n#body#0;n#html#0;n#!!top" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#div#5;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -11,6 +11,7 @@ const file_list = [
     'assets/audio/q2_step.mp3',
     'assets/audio/q2_watch.mp3',
     'assets/audio/q5.mp3',
+    'assets/font/hanzhen.ttf',
 
     'images/back_1.png',
     'images/back_2.png',

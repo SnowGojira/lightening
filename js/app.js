@@ -139,24 +139,24 @@ function handleComplete(){
     },2000);
 }
 
-//--创建页面监听，等待微信端页面加载完毕 触发音频播放
-document.addEventListener('DOMContentLoaded', function () {
-    console.log("自动播放");
-    function audioAutoPlay() {
-        document.getElementById('BGM').play();
-        document.addEventListener("WeixinJSBridgeReady", function () {
-            document.getElementById('BGM').play();
-        }, false);
-    }
-    audioAutoPlay();
-});
-//--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
-function audioAutoPlay() {
-    document.getElementById('BGM').play();
-
-    document.removeEventListener('touchstart',audioAutoPlay);
-}
-document.addEventListener('touchstart', audioAutoPlay);
+// //--创建页面监听，等待微信端页面加载完毕 触发音频播放
+// document.addEventListener('DOMContentLoaded', function () {
+//     console.log("自动播放");
+//     function audioAutoPlay() {
+//         document.getElementById('BGM').play();
+//         document.addEventListener("WeixinJSBridgeReady", function () {
+//             document.getElementById('BGM').play();
+//         }, false);
+//     }
+//     audioAutoPlay();
+// });
+// //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
+// function audioAutoPlay() {
+//     document.getElementById('BGM').play();
+//
+//     document.removeEventListener('touchstart',audioAutoPlay);
+// }
+// document.addEventListener('touchstart', audioAutoPlay);
 
 
 /*音乐开始播放*/

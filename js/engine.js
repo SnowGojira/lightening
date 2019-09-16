@@ -1,3 +1,6 @@
+/*todo:2. make an imageLoader prototype
+*  */
+
 /*todo:1. make the audio prototype
 * */
 //audio
@@ -41,4 +44,3 @@ var audio_bgm = new Sound('bgm'),
     audio_q5 = new Sound('q5'),
     audio_q1 = new Sound('q1'),
     audio_btn = new Sound('btn');
-

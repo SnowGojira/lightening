@@ -1,5 +1,3 @@
-/*todo:2. make an imageLoader prototype
-*  */
 
 /*todo:1. make the audio prototype
 * */
@@ -31,7 +29,8 @@ Sound.prototype.pause = function(){
     }, false);
 };
 
-
+/*todo:2. make a button prototype with a sound effect
+*  */
 
 
 /////////////////////////////////////Initiate objects//////////////////////////

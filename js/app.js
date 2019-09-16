@@ -1,4 +1,6 @@
 /*预加载逻辑*/
+//the tester has print out the progress, may be it can be doing fine
+//todo This part need to test on the mobile phones to make sure the final effect
 const file_list = [
     'assets/audio/A.mp3',
     'assets/audio/B.mp3',
@@ -9,96 +11,97 @@ const file_list = [
     'assets/audio/q2_step.mp3',
     'assets/audio/q2_watch.mp3',
     'assets/audio/q5.mp3',
-    'images/crystal.gif'
+
+    'images/back_1.png',
+    'images/back_2.png',
+    'images/back_3.png',
+    'images/back_4.png',
+    'images/crystal.gif',
+    'images/desc.png',
+    'images/g_board.png',
+    'images/hand.png',
+    'images/head.png',
+    'images/indicator.jpg',
+    'images/input_box.png',
+    'images/input_btn.png',
+    'images/input_title.png',
+    'images/inputBG.jpg',
+
+    'images/light_board.png',
+    'images/link_1.png',
+    'images/link_2.png',
+    'images/link_3.png',
+    'images/link_4.png',
+    'images/logo.png',
+    'images/pink.gif',
+    'images/pl_board.png',
+    'images/pl_flicker.png',
+    'images/pl_title.png',
+    'images/pl_up.png',
+    'images/ps_decorate.png',
+    'images/ps_heart.png',
+    'images/ps_title.png',
+    'images/ps_title_en.png',
+    'images/q1.png',
+    'images/q1_ap.png',
+    'images/q1_bp.png',
+    'images/q2.png',
+    'images/q3.png',
+    'images/q4.png',
+    'images/q4_pause.png',
+    'images/q4_play.png',
+    'images/q5.png',
+    'images/qrcode.png',
+    'images/quiz2.png',
+    'images/quiz3.png',
+    'images/quiz_board.png',
+    'images/red.gif',
+    'images/result_1.jpg',
+    'images/result_2.jpg',
+    'images/result_3.jpg',
+    'images/result_4.jpg',
+    'images/top1.png',
+    'images/top2.png',
+    'images/top3.png',
+    'images/top4.png',
+    'images/top5.png',
+    'images/wait.png',
+    'images/watch.gif',
+    'images/x_quiz_board.png',
+    'images/x_light_board.png'
 ];
 
 let myLoader = new html5Preloader();
     myLoader.addFiles(file_list);
+
+let timer = setInterval(function(){
+        let percent = myLoader.getProgress();
+        handlerPercent(percent);
+    },10);
+
     myLoader.on('finish', () => {
         console.log('文件加载完成');
-        console.log(myLoader.getProgress());
+        handlerPercent(1);
+        clearInterval(timer);
+        handleComplete();
     });
-    　console.log(myLoader.getProgress());
 
-/*2月24日修改 删除了一些不必要的加载资源提升速度*/
-// window.onload=function(){
-//     //预加载资源
-//     manifest = [
-//         {src: 'images/pl_board.png', id: 'o13'},
-//         {src: 'images/pl_title.png', id: 'o12'},
-//         {src: 'images/pl_flicker.png', id: 'o15'},
-//         {src: 'images/logo.png', id: 'o16'},
-//
-//         {src: 'images/g_board.png', id: 'p13'},
-//         {src: 'images/crystal.gif', id: 'p12'},
-//         {src: 'images/indicator.jpg', id: 'p15'},
-//         {src: 'images/input_box.png', id: 'p16'},
-//         {src: 'images/input_btn.png', id: 'p18'},
-//         {src: 'images/input_title.png', id: 'p19'},
-//         {src: 'images/inputBG.jpg', id: 'p20'},
-//
-//         {src: 'images/light_board.png', id: 'p21'},
-//         {src: 'images/logo.png', id: 'p22'},
-//         {src: 'images/pink.gif', id: 'p23'},
-//         {src: 'images/pl_up.png', id: 'p24'},
-//         {src: 'images/ps_decorate.png', id: 'p25'},
-//         {src: 'images/ps_heart.png', id: 'p26'},
-//         {src: 'images/ps_title.png', id: 'p30'},
-//         {src: 'images/ps_title_en.png', id: 'p31'},
-//
-//         {src: 'images/q1.png', id: 'p32'},
-//         {src: 'images/q1_ap.png', id: 'p34'},
-//         {src: 'images/q1_bp.png', id: 'p37'},
-//
-//         {src: 'images/q2.png', id: 'p38'},
-//         {src: 'images/q3.png', id: 'p43'},
-//         {src: 'images/q4.png', id: 'p50'},
-//         {src: 'images/quiz2.png', id: 'p250'},
-//         {src: 'images/quiz3.png', id: 'p264'},
-//         {src: 'images/link_1.png', id: 'p251'},
-//         {src: 'images/link_2.png', id: 'p252'},
-//         {src: 'images/link_3.png', id: 'p253'},
-//         {src: 'images/link_4.png', id: 'p254'},
-//         {src: 'images/back_1.png', id: 'p255'},
-//         {src: 'images/back_2.png', id: 'p256'},
-//         {src: 'images/back_3.png', id: 'p257'},
-//         {src: 'images/back_4.png', id: 'p258'},
-//         {src: 'images/result_1.jpg', id: 'p259'},
-//         {src: 'images/result_2.jpg', id: 'p260'},
-//         {src: 'images/result_3.jpg', id: 'p261'},
-//         {src: 'images/result_4.jpg', id: 'p262'},
-//         {src: 'images/qrcode.png', id: 'p263'},
-//
-//         {src: 'images/q4_play.png', id: 'p54'},
-//         {src: 'images/q4_pause.png', id: 'p55'},
-//         {src: 'images/q5.png', id: 'p56'},
-//
-//         {src: 'images/quiz_board.png', id: 'p64'},
-//         {src: 'images/x_quiz_board.png', id: 'p166'},
-//         {src: 'images/x_light_board.png', id: 'p167'},
-//         {src: 'images/red.gif', id: 'p65'},
-//         {src: 'images/top1.png', id: 'p60'},
-//         {src: 'images/top2.png', id: 'p61'},
-//         {src: 'images/top3.png', id: 'p71'},
-//         {src: 'images/top4.png', id: 'p72'},
-//         {src: 'images/top5.png', id: 'p73'},
-//         {src: 'images/wait.png', id: 'p74'},
-//         {src: 'images/watch.gif', id: 'p75'},
-//
-//     ];
-//
-//     loader = new createjs.LoadQueue(false);
-//     // 关键！----设置并发数
-//     loader.setMaxConnections(100);
-//     // 关键！---一定要将其设置为 true, 否则不起作用。
-//     loader.maintainScriptOrder=true;
-//     // loader.installPlugin(createjs.Sound);
-//     loader.loadManifest(manifest);
-//     loader.addEventListener('progress', handleFileProgress);//加载完成 调用handleFileProgress函数
-//     loader.addEventListener('complete', handleComplete);//加载完成 调用handleComplete函数
-//
-//
-// };
+    function handlerPercent(percent){
+        let percentage = Math.floor(percent*100);
+        $("#loadPercent").text(percentage + "%");
+        $(".pl_head").css("opacity",percent);
+        console.log(myLoader.getProgress());
+    }
+    function handleComplete(){
+
+    setTimeout(function () {
+        $('.pageTest').animate({opacity:"0"},800,function () {
+            $('.pageTest').hide();
+            pageLoad.show();
+            pageLoad.animate({opacity:"1.0"},800);
+        });
+    },2000);
+}
 
 /*navigator 加载函数*/
 /*2月24日修改 新添加preload 逻辑*/
@@ -113,53 +116,37 @@ var PercentageID = $("#loadPercent"),
     start = 0,
     end = 100;
 
-animateValue(PercentageID, start, end, time);
-function animateValue(id, start, end, duration) {
-
-    var range = end - start,
-        current = start,
-        increment = end > start? 1 : -1,
-        stepTime = Math.abs(Math.floor(duration / range)),
-        obj = $(id);
-
-    var timer = setInterval(function() {
-        current += increment;
-        var percentage=parseInt(current*0.9);
-        $(obj).text(percentage + "%");
-        $(".pl_head").css("opacity",percentage/100);
-        //obj.innerHTML = current;
-        if (current === end) {
-            console.log("导航条加在完成");
-            clearInterval(timer);
-
-        }
-    }, stepTime);
-}
+// animateValue(PercentageID, start, end, time);
+// function animateValue(id, start, end, duration) {
+//
+//     var range = end - start,
+//         current = start,
+//         increment = end > start? 1 : -1,
+//         stepTime = Math.abs(Math.floor(duration / range)),
+//         obj = $(id);
+//
+//     var timer = setInterval(function() {
+//         current += increment;
+//         var percentage=parseInt(current*0.9);
+//         $(obj).text(percentage + "%");
+//         $(".pl_head").css("opacity",percentage/100);
+//         //obj.innerHTML = current;
+//         if (current === end) {
+//             console.log("导航条加在完成");
+//             clearInterval(timer);
+//
+//         }
+//     }, stepTime);
+// }
 
 /*2月24日修改 新回调*/
 /*percent call back function*/
 var percent;
 var upArrow = $('.pl_upArrow');
 var pageLoad = $('.pageLoad');
-function handleFileProgress(){//加载中函数
-    percent=(loader.progress*10|0)+90-1;
-    $(".pl_head").css("opacity",percent);
-    $("#loadPercent").text(percent+ "%");
-    console.log(percent);
-}
 
-function handleComplete(){
-    // console.log(j);
-    console.log("开始调用Complete");
-    $("#loadPercent").text("100%");
-    setTimeout(function () {
-        $('.pageTest').animate({opacity:"0"},800,function () {
-            $('.pageTest').hide();
-            pageLoad.show();
-            pageLoad.animate({opacity:"1.0"},800);
-        });
-    },2000);
-}
+
+
 
 // //--创建页面监听，等待微信端页面加载完毕 触发音频播放
 // document.addEventListener('DOMContentLoaded', function () {

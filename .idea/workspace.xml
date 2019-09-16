@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vagrant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/preloader.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/result_4.zip" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/engine.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/engine.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -46,10 +42,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/preloader.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
+            <state relative-caret-position="-102">
               <caret line="389" column="33" selection-start-line="389" selection-start-column="27" selection-end-line="389" selection-end-column="33" />
               <folding>
                 <element signature="e#2565#2785#0" />
@@ -68,16 +64,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
+            <state relative-caret-position="545">
+              <caret line="138" selection-start-line="138" selection-end-line="138" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <element signature="e#4517#4565#0" />
                 <element signature="e#4802#4834#0" />
                 <element signature="e#8781#9010#0" />
-                <element signature="e#13635#14615#0" />
               </folding>
             </state>
           </provider>
@@ -94,7 +90,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>three</find>
       <find>option_btn_q5</find>
       <find>page1</find>
       <find>q1_a</find>
@@ -122,8 +117,9 @@
       <find>heart</find>
       <find>down</find>
       <find>finish</find>
-      <find>'BGM</find>
       <find>error</find>
+      <find>'BGM</find>
+      <find>finish</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -147,7 +143,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="159" />
     <option name="y" value="33" />
     <option name="width" value="1366" />
@@ -183,6 +179,11 @@
               <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
               <item name="lightening" type="462c0819:PsiDirectoryNode" />
               <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lightening" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lightening" type="b2602c69:ProjectViewProjectNode" />
@@ -236,6 +237,16 @@
       </list>
     </option>
   </component>
+  <component name="RunManager">
+    <configuration name="app.js" type="NodeJSConfigurationType" temporary="true" nameIsGenerated="true" path-to-js-file="app.js" working-dir="$PROJECT_DIR$/js">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Node.js.app.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SvnConfiguration">
     <configuration>C:\Users\hakuh\AppData\Roaming\Subversion</configuration>
   </component>
@@ -263,7 +274,7 @@
       <workItem from="1566203462147" duration="281000" />
       <workItem from="1566212707447" duration="84000" />
       <workItem from="1568461148383" duration="196000" />
-      <workItem from="1568619496493" duration="4545000" />
+      <workItem from="1568619496493" duration="6977000" />
     </task>
     <task id="LOCAL-00025" summary="finish the preload logic">
       <created>1550590829419</created>
@@ -612,10 +623,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219568000" />
+    <option name="totallyTimeSpent" value="222000000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-43" y="23" width="1366" height="677" extended-state="0" />
+    <frame x="0" y="23" width="1366" height="682" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20892194" />
@@ -788,22 +799,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#4802#4834#0" />
-            <element signature="e#8781#9010#0" />
-            <element signature="e#13635#14615#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/preloader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
+        <state relative-caret-position="-102">
           <caret line="389" column="33" selection-start-line="389" selection-start-column="27" selection-end-line="389" selection-end-column="33" />
           <folding>
             <element signature="e#2565#2785#0" />
@@ -817,6 +815,19 @@
             <element signature="e#9884#10017#0" />
             <element signature="e#10042#10175#0" />
             <element signature="e#11706#12415#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="138" selection-start-line="138" selection-end-line="138" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#4517#4565#0" />
+            <element signature="e#4802#4834#0" />
+            <element signature="e#8781#9010#0" />
           </folding>
         </state>
       </provider>

@@ -137,7 +137,8 @@ var count=0;
 var btn=$(".q_optionContainer");
 
 pageLoad.on("touchstart", function(e) {
-    audioPlay('heart');
+    audio_heart.play();
+    // audioPlay('heart');
     startY = e.originalEvent.touches[0].pageY;
     return startY;
 });
@@ -172,14 +173,15 @@ var quizOne=$(".quiz_one");
 var optionOne=$(".q1_options");
 var hint=$(".indicator");
 
+
 heart.on("click",function () {
     console.log("点击触发");
-    audioPlay('q1');
-    audioPause('heart');
+    audio_q1.play();
+    audio_heart.pause();
+    // audioPlay('q1');
+    // audioPause('heart');
     /*2月24日修改 新播放*/
-    Play('btn');
-
-
+    audio_btn.play();
 
     sparkTitle.animate({opacity:"1.0"},800,function () {
        pageStart.animate({top:"-800px"},800,function () {

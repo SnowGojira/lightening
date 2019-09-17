@@ -102,7 +102,17 @@ Sound.prototype.pause = function(){
 
 /*todo:2. make a button prototype with a sound effect
 *  */
+function Button(id,audio){
+    this.id = id;
+    this.audio  = audio;
+}
 
+Button.prototype.click = function (cb) {
+    $(this.id).on('click',function () {
+        this.audio.play();
+        cb();
+    })
+}
 
 /////////////////////////////////////Initiate objects//////////////////////////
 var audio_bgm = new Sound('bgm'),
@@ -117,3 +127,5 @@ var audio_bgm = new Sound('bgm'),
 
 var myLoader = new html5Preloader();
     myLoader.addFiles(file_list);
+
+const heart = new Button(".ps_heartParent",audio_btn);

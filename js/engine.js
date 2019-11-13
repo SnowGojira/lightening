@@ -128,4 +128,4 @@ var audio_bgm = new Sound('bgm'),
 var myLoader = new html5Preloader();
     myLoader.addFiles(file_list);
 
-const heart = new Button(".ps_heartParent",audio_btn);
+const btn_heart = new Button(".ps_heartParent",audio_btn);

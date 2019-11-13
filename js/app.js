@@ -1,8 +1,6 @@
-/*预加载逻辑*/
+//预加载逻辑
 //the tester has print out the progress, may be it can be doing fine
-//todo This part need to test on the mobile phones to make sure the final effect
-
-
+//todo need to test on the mobile
 let timer = setInterval(function(){
         let percent = myLoader.getProgress();
         handlerPercent(percent);
@@ -194,6 +192,7 @@ heart.on("click",function () {
 
 });
 /*动画全局属性*/
+//todo make this function as a recursion nested function
 function quizInScene(dom1,dom2,dom3,dom4) {
     dom1.addClass("mainIn");
     setTimeout(function () {
@@ -207,9 +206,9 @@ function quizInScene(dom1,dom2,dom3,dom4) {
         });
     },200);
 
-    //dom2.animate({top:"0"},1000);
-
 }
+
+
 
 
 /*按钮全局属性*/

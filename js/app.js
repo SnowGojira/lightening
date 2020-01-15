@@ -107,6 +107,33 @@ let view = {
 
         this.pageStart();
     },
+    quizInScene:function (dom1,dom2,dom3,dom4) {
+        //todo this is not the best include
+        // still some thing being abstracted
+        console.log("***quizInScene is called!!!");
+        dom1.addClass("mainIn");
+
+        function getAnimationPromise(dom){
+            return new Promise(resolve => {
+                dom.animate({opacity:"1.0"},resolve);
+            })
+        }
+
+        const animatePromise2 = getAnimationPromise(dom2),
+            animatePromise3 = getAnimationPromise(dom3),
+            animatePromise4 = getAnimationPromise(dom4);
+
+        Promise.resolve(function(){
+            setTimeout(function(){
+                dom2.show();
+            })
+        }).then(()=>animatePromise2)
+        .then(()=>animatePromise3)
+        .then(()=>animatePromise4)
+        .then(function(){
+            hint.show();
+        });
+    },
     pageStart:function () {
         let startY, moveY, moveSpace,
             flickerBox=$(".pl_lightenBox"),
@@ -138,6 +165,38 @@ let view = {
                     }
                 );
             }
+
+        });
+    },
+    pageFront:function(){
+        var heart=$(".ps_heartParent");
+        var sparkTitle=$("#startLight");
+        var quizPage=$(".quizPage");
+        var pageOne=$(".pageOne");
+        var q1Board=$(".q1_board");
+        var topOne=$(".top_one");
+        var quizOne=$(".quiz_one");
+        var optionOne=$(".q1_options");
+        var hint=$(".indicator");
+
+
+        heart.on("click",function () {
+            console.log("点击触发");
+            audio_q1.play();
+            audio_heart.pause();
+            // audioPlay('q1');
+            // audioPause('heart');
+            /*2月24日修改 新播放*/
+            audio_btn.play();
+
+            sparkTitle.animate({opacity:"1.0"},800,function () {
+                pageStart.animate({top:"-800px"},800,function () {
+                    quizPage.show();
+                    pageOne.show();
+                    view.quizInScene(q1Board,topOne,quizOne,optionOne);
+
+                })
+            });
 
         });
     }
@@ -237,7 +296,7 @@ heart.on("click",function () {
 
 });
 /*动画全局属性*/
-//todo make this function as a recursion nested function
+
 function quizInScene(dom1,dom2,dom3,dom4) {
     console.log("***quizInScene is called!!!");
     dom1.addClass("mainIn");

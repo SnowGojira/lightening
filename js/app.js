@@ -204,31 +204,6 @@ var startBoard=$(".g_board");
 var count=0;
 var btn=$(".q_optionContainer");
 
-// pageLoad.on("touchstart", function(e) {
-//     audio_heart.play();
-//     // audioPlay('heart');
-//     startY = e.originalEvent.touches[0].pageY;
-//     return startY;
-// });
-//
-// pageLoad.on("touchmove", function(e) {
-//
-//     moveY = e.originalEvent.touches[0].pageY;
-//     moveSpace = startY - moveY;
-//     if (moveSpace > 15) {
-//         // console.log("上滑之后需要执行的代码片段");
-//         $(".pl_logo").hide();
-//         upArrow.hide();
-//         flickerBox.animate({top:"-800px"}, 1000, function () {
-//                 // console.log("动画结束");
-//                 pageLoad.hide();
-//                 pageStart.show();
-//                 startBoard.animate({top:"0px"},800);
-//             }
-//         );
-//     }
-//
-// });
 
 /*pageStart 点亮动画逻辑*/
 var heart=$(".ps_heartParent");
@@ -264,18 +239,29 @@ heart.on("click",function () {
 /*动画全局属性*/
 //todo make this function as a recursion nested function
 function quizInScene(dom1,dom2,dom3,dom4) {
+    console.log("***quizInScene is called!!!");
     dom1.addClass("mainIn");
-    setTimeout(function () {
-        dom2.show();
-        dom2.animate({opacity:"1.0"},1000,function () {
-            dom3.animate({opacity:"1.0"},500,function () {
-                dom4.animate({opacity:"1.0"},500,function () {
-                    hint.show();
-                });
-            });
-        });
-    },200);
 
+    function getAnimationPromise(dom){
+        return new Promise(resolve => {
+            dom.animate({opacity:"1.0"},resolve);
+        })
+    }
+
+    const animatePromise2 = getAnimationPromise(dom2),
+          animatePromise3 = getAnimationPromise(dom3),
+          animatePromise4 = getAnimationPromise(dom4);
+
+    Promise.resolve(function(){
+        setTimeout(function(){
+            dom2.show();
+        })
+    }).then(()=>animatePromise2)
+        .then(()=>animatePromise3)
+        .then(()=>animatePromise4)
+        .then(function(){
+            hint.show();
+        });
 }
 
 

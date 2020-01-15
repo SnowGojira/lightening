@@ -71,6 +71,8 @@ const file_list = [
 ];
 ////////////////////////////////////the prototype///////////////////////
 /*todo:1. make the audio prototype
+       2. use more stable preload model
+       3. use the mvc model to manage the code
 * */
 //audio
 function Sound (id_str){

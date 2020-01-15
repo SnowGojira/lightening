@@ -72,6 +72,76 @@ var percent;
 var upArrow = $('.pl_upArrow');
 var pageLoad = $('.pageLoad');
 
+let model = {
+    sum:0,
+    answers:{
+        a:20,
+        b:10,
+        c:5
+    }
+}
+
+let octopus = {
+    init:function () {
+        view.init();
+        console.log(`总分：${this.getSum()}`)
+    },
+    getSum:function () {
+       return model.sum;
+    },
+    setSum:function (sum) {
+        model.sum = sum;
+    },
+    getAnswersValue:function(type){
+        if(type === 'a') return model.answers.a;
+        else if(type === 'b') return model.answers.b;
+        else if(type === 'c') return model.answers.c;
+    }
+}
+
+let view = {
+    init:function () {
+        this.$btnA = $(".option_a");
+        this.$btnB = $(".option_b");
+        this.$btnC = $(".option_c");
+
+        this.pageStart();
+    },
+    pageStart:function () {
+        let startY, moveY, moveSpace,
+            flickerBox=$(".pl_lightenBox"),
+            pageStart=$(".pageStart"),
+            startBoard=$(".g_board"),
+            upArrow = $('.pl_upArrow'),
+            pageLoad = $('.pageLoad');
+
+        pageLoad.on("touchstart", function(e) {
+            audio_heart.play();
+            // audioPlay('heart');
+            startY = e.originalEvent.touches[0].pageY;
+            return startY;
+        });
+
+        pageLoad.on("touchmove", function(e) {
+
+            moveY = e.originalEvent.touches[0].pageY;
+            moveSpace = startY - moveY;
+            if (moveSpace > 15) {
+                // console.log("上滑之后需要执行的代码片段");
+                $(".pl_logo").hide();
+                upArrow.hide();
+                flickerBox.animate({top:"-800px"}, 1000, function () {
+                        // console.log("动画结束");
+                        pageLoad.hide();
+                        pageStart.show();
+                        startBoard.animate({top:"0px"},800);
+                    }
+                );
+            }
+
+        });
+    }
+}
 
 
 
@@ -134,31 +204,31 @@ var startBoard=$(".g_board");
 var count=0;
 var btn=$(".q_optionContainer");
 
-pageLoad.on("touchstart", function(e) {
-    audio_heart.play();
-    // audioPlay('heart');
-    startY = e.originalEvent.touches[0].pageY;
-    return startY;
-});
-
-pageLoad.on("touchmove", function(e) {
-
-    moveY = e.originalEvent.touches[0].pageY;
-    moveSpace = startY - moveY;
-    if (moveSpace > 15) {
-        // console.log("上滑之后需要执行的代码片段");
-        $(".pl_logo").hide();
-        upArrow.hide();
-        flickerBox.animate({top:"-800px"}, 1000, function () {
-                // console.log("动画结束");
-                pageLoad.hide();
-                pageStart.show();
-                startBoard.animate({top:"0px"},800);
-            }
-        );
-    }
-
-});
+// pageLoad.on("touchstart", function(e) {
+//     audio_heart.play();
+//     // audioPlay('heart');
+//     startY = e.originalEvent.touches[0].pageY;
+//     return startY;
+// });
+//
+// pageLoad.on("touchmove", function(e) {
+//
+//     moveY = e.originalEvent.touches[0].pageY;
+//     moveSpace = startY - moveY;
+//     if (moveSpace > 15) {
+//         // console.log("上滑之后需要执行的代码片段");
+//         $(".pl_logo").hide();
+//         upArrow.hide();
+//         flickerBox.animate({top:"-800px"}, 1000, function () {
+//                 // console.log("动画结束");
+//                 pageLoad.hide();
+//                 pageStart.show();
+//                 startBoard.animate({top:"0px"},800);
+//             }
+//         );
+//     }
+//
+// });
 
 /*pageStart 点亮动画逻辑*/
 var heart=$(".ps_heartParent");
@@ -532,3 +602,5 @@ var reload=$(".back");
 reload.on("click",function () {
     window.location.reload();
 });
+
+octopus.init();

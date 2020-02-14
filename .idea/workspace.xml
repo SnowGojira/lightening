@@ -4,9 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/js/app.js" description="预加载逻辑" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
-    </list>
+    <list default="true" id="1c0278b6-6e53-4914-ae22-fff737c6eceb" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -274,7 +272,7 @@
       <workItem from="1573617660088" duration="2703000" />
       <workItem from="1575708762603" duration="345000" />
       <workItem from="1575793560893" duration="370000" />
-      <workItem from="1579083940749" duration="4553000" />
+      <workItem from="1579083940749" duration="4944000" />
     </task>
     <task id="LOCAL-00025" summary="finish the preload logic">
       <created>1550590829419</created>
@@ -623,7 +621,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="234114000" />
+    <option name="totallyTimeSpent" value="234505000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1366" height="682" extended-state="0" />

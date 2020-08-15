@@ -4,5 +4,8 @@
   "main": "index.js",
   "repository": "https://github.com/SnowGojira/lightening.git",
   "author": "SirSnow <hakuhal.snow@gmail.com>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
 }

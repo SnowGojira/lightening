@@ -4486,6 +4486,11 @@ posthtml@^0.13.1:
     posthtml-parser "^0.4.2"
     posthtml-render "^1.2.3"
 
+preload-it@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/preload-it/-/preload-it-1.4.0.tgz#39dd789e136e33b23ffd8421e23f55bebb6cdeef"
+  integrity sha512-eajVQ5/peLtsUU4TjYz3xmL/hDnMVs5BMjl3Pv6/d9uDy8ztpCE8iI3yNjXxmIR+8y2YJGaOvrpIadUdVxFzsg==
+
 prelude-ls@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/prelude-ls/-/prelude-ls-1.2.1.tgz#debc6489d7a6e6b0e7611888cec880337d316396"

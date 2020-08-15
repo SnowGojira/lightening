@@ -15,5 +15,8 @@
     "eslint-plugin-import": "^2.22.0",
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.0.5"
+  },
+  "dependencies": {
+    "preload-it": "^1.4.0"
   }
 }

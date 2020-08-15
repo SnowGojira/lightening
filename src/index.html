@@ -1,304 +1,498 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0"
+    />
     <!-- iphone设备中的safari私有meta标签，它表示：允许全屏模式浏览 -->
-    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="yes" name="apple-mobile-web-app-capable" />
     <!-- iphone的私有标签，它指定的iphone中safari顶端的状态条的样式 -->
-    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style" />
     <!-- ipone的私有标签，忽略将页面中的数字识别为电话号码 -->
-    <meta content="telephone=no" name="format-detection">
+    <meta content="telephone=no" name="format-detection" />
     <!-- 禁止Android自动识别页面中的邮件地址   -->
-    <meta content="email=no" name="format-detection">
-    <meta name="format-detection" content="telephone=no">
-    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta content="email=no" name="format-detection" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>测测你是哪种发光体质？</title>
-    <link rel="stylesheet" href="css/normalize.css" type="text/css">
-    <link rel="stylesheet" href="css/main.css" type="text/css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/normalize.css" type="text/css" />
+    <link rel="stylesheet" href="css/main.css" type="text/css" />
+  </head>
+  <body>
+    <!--<audio preload autoplay loop id="BGM">-->
+    <!--    <source src="assets/audio/bgm.mp3" type="audio/mpeg">-->
+    <!--</audio>-->
+    <audio preload autoplay muted id="btn">
+      <source src="assets/audio/btn.mp3" type="audio/mpeg" />
+    </audio>
+    <audio preload id="A">
+      <source src="assets/audio/A.mp3" type="audio/mpeg" />
+    </audio>
+    <audio preload id="B">
+      <source src="assets/audio/B.mp3" type="audio/mpeg" />
+    </audio>
+    <audio preload loop id="heart">
+      <source src="assets/audio/P1.mp3" type="audio/mpeg" />
+    </audio>
+    <audio preload id="q1">
+      <source src="assets/audio/q1.mp3" type="audio/mpeg" />
+    </audio>
+    <audio preload id="step">
+      <source src="assets/audio/q2_step.mp3" type="audio/mpeg" />
+    </audio>
+    <audio preload id="q5">
+      <source src="assets/audio/q5.mp3" type="audio/mpeg" />
+    </audio>
+    <audio preload loop autoplay muted id="watch">
+      <source src="assets/audio/q2_watch.mp3" type="audio/mpeg" />
+    </audio>
 
-<!--<audio preload autoplay loop id="BGM">-->
-<!--    <source src="assets/audio/bgm.mp3" type="audio/mpeg">-->
-<!--</audio>-->
-<audio preload autoplay muted id="btn">
-  <source src="assets/audio/btn.mp3" type="audio/mpeg">
-</audio>
-<audio preload id="A">
-    <source src="assets/audio/A.mp3" type="audio/mpeg">
-</audio>
-<audio preload id="B">
-    <source src="assets/audio/B.mp3" type="audio/mpeg">
-</audio>
-<audio preload loop id="heart">
-    <source src="assets/audio/P1.mp3" type="audio/mpeg">
-</audio>
-<audio preload id="q1">
-    <source src="assets/audio/q1.mp3" type="audio/mpeg">
-</audio>
-<audio preload id="step">
-    <source src="assets/audio/q2_step.mp3" type="audio/mpeg">
-</audio>
-<audio preload id="q5">
-    <source src="assets/audio/q5.mp3" type="audio/mpeg">
-</audio>
-<audio preload loop autoplay muted id="watch">
-    <source src="assets/audio/q2_watch.mp3" type="audio/mpeg">
-</audio>
-
-<!--lock_screen-->
-<div class="lock" >
-    <div class="lock-bg"></div>
-    <p class="WrtType lock-txt">请在手机上看</p>
-</div>
-
-<div class="inputImg absolute" id="InputImg">
-</div>
-
-<div class="page pageBox ">
-    <div class="page pageTest">
-        <img class="pl_head" src="images/head.png" alt="头像"/>
-        <p class="pl_percent WrtType" id="loadPercent">0%</p>
+    <!--lock_screen-->
+    <div class="lock">
+      <div class="lock-bg"></div>
+      <p class="WrtType lock-txt">请在手机上看</p>
     </div>
-    <!--pageLoad-->
-    <div  class="page pageLoad none">
+
+    <div class="inputImg absolute" id="InputImg"></div>
+
+    <div class="page pageBox">
+      <div class="page pageTest">
+        <img class="pl_head" src="images/head.png" alt="头像" />
+        <p class="pl_percent WrtType" id="loadPercent">0%</p>
+      </div>
+      <!--pageLoad-->
+      <div class="page pageLoad none">
         <div class="quiz1_opt_a absolute"></div>
         <div class="pl_lightenBox absolute">
-            <img class="pl_logo absolute" src="images/logo.png" alt="logo"/>
-            <img class="pl_flicker absolute" src="images/pl_flicker.png" alt="flicker"/>
-            <img class="pl_board absolute" src="images/pl_board.png" alt="board"/>
-            <!--发光体动画-->
-            <div class="pl_fontParent absolute">
-                 <div class="pl_font"></div>
-            </div>
+          <img class="pl_logo absolute" src="images/logo.png" alt="logo" />
+          <img
+            class="pl_flicker absolute"
+            src="images/pl_flicker.png"
+            alt="flicker"
+          />
+          <img
+            class="pl_board absolute"
+            src="images/pl_board.png"
+            alt="board"
+          />
+          <!--发光体动画-->
+          <div class="pl_fontParent absolute">
+            <div class="pl_font"></div>
+          </div>
         </div>
-        <img class="pl_upArrow absolute" src="images/pl_up.png" alt="upArrow"/>
-    </div>
-    <!--pageStart-->
-    <div  class="page pageStart none" >
+        <img class="pl_upArrow absolute" src="images/pl_up.png" alt="upArrow" />
+      </div>
+      <!--pageStart-->
+      <div class="page pageStart none">
         <div class="g_board absolute">
-            <img class="g_bg absolute" src="images/g_board.png" alt="gBoard"/>
-            <img class="ps_decorate absolute " src="images/ps_decorate.png" alt="decorate"/>
-            <img class="ps_title absolute " src="images/ps_title.png" alt="title"/>
-            <img class="ps_title absolute" id="startLight" src="images/ps_title_en.png" alt="title"/>
-            <!--心性动画-->
-            <div class="ps_heartParent button">
-                <div class="ps_heart"></div>
-            </div>
+          <img class="g_bg absolute" src="images/g_board.png" alt="gBoard" />
+          <img
+            class="ps_decorate absolute"
+            src="images/ps_decorate.png"
+            alt="decorate"
+          />
+          <img
+            class="ps_title absolute"
+            src="images/ps_title.png"
+            alt="title"
+          />
+          <img
+            class="ps_title absolute"
+            id="startLight"
+            src="images/ps_title_en.png"
+            alt="title"
+          />
+          <!--心性动画-->
+          <div class="ps_heartParent button">
+            <div class="ps_heart"></div>
+          </div>
         </div>
-    </div>
-    <!--答题页面-->
-    <div class="page quizPage none">
+      </div>
+      <!--答题页面-->
+      <div class="page quizPage none">
         <!--page1-->
-        <div  class="quiz pageOne none" >
-            <div class="quiz_board absolute q1_board"></div>
-            <img class="absolute top_one" src="images/top1.png" alt="top1"/>
-            <!--灯型边框动画-->
-            <div class="q1_lightParent q1_board">
-                <div class="q1_light"></div>
+        <div class="quiz pageOne none">
+          <div class="quiz_board absolute q1_board"></div>
+          <img class="absolute top_one" src="images/top1.png" alt="top1" />
+          <!--灯型边框动画-->
+          <div class="q1_lightParent q1_board">
+            <div class="q1_light"></div>
+          </div>
+          <div class="content absolute q1_content">
+            <p class="WrtType quiz_one question">
+              晚上9点,加完班后,你突然收到一个神秘人的派对邀请,你会希望派对在哪个房间举办？
+            </p>
+            <!--选项A-->
+            <div
+              class="q_optionContainer option_a q1_options q1_a flex"
+              data-value="20"
+              data-opt="q1_a1_btn"
+            >
+              <div class="q1_btn_a">
+                <div
+                  class="option_btn absolute quiz1_opt_a"
+                  id="q1_a_btn"
+                ></div>
+                <div
+                  class="option_btn absolute quiz1_opt_a1 none"
+                  id="q1_a1_btn"
+                ></div>
+              </div>
+              <img class="q1_a_p" src="images/q1_ap.png" alt="q1_a_p" />
             </div>
-            <div class="content absolute q1_content">
-                <p class="WrtType quiz_one question">晚上9点,加完班后,你突然收到一个神秘人的派对邀请,你会希望派对在哪个房间举办？</p>
-                <!--选项A-->
-                <div class="q_optionContainer option_a q1_options q1_a flex" data-value="20" data-opt="q1_a1_btn">
-                    <div class="q1_btn_a">
-                        <div class="option_btn absolute quiz1_opt_a" id="q1_a_btn"></div>
-                        <div class="option_btn absolute quiz1_opt_a1 none" id="q1_a1_btn"></div>
-                    </div>
-                    <img class="q1_a_p" src="images/q1_ap.png" alt="q1_a_p"/>
-                </div>
-                <!--选项B-->
-                <div class="q_optionContainer option_b q1_options q1_b flex" data-value="10" data-opt="q1_b1_btn">
-                    <div class="q1_btn_b">
-                        <div class="option_btn absolute quiz1_opt_b" id="q1_b_btn"></div>
-                        <div class="option_btn absolute quiz1_opt_b1 none" id="q1_b1_btn"></div>
-                    </div>
-                    <img class="q1_b_p" src="images/q1_bp.png" alt="q1_b_p"/>
-                </div>
+            <!--选项B-->
+            <div
+              class="q_optionContainer option_b q1_options q1_b flex"
+              data-value="10"
+              data-opt="q1_b1_btn"
+            >
+              <div class="q1_btn_b">
+                <div
+                  class="option_btn absolute quiz1_opt_b"
+                  id="q1_b_btn"
+                ></div>
+                <div
+                  class="option_btn absolute quiz1_opt_b1 none"
+                  id="q1_b1_btn"
+                ></div>
+              </div>
+              <img class="q1_b_p" src="images/q1_bp.png" alt="q1_b_p" />
             </div>
+          </div>
         </div>
         <!--page2-->
-        <div  class="quiz pageTwo none" >
-            <div class="quiz_board absolute q2_board"></div>
-            <img class="absolute top_two" src="images/top2.png" alt="top2"/>
-            <!--灯型边框动画-->
-            <div class="q1_lightParent q2_board">
-                <div class="q1_light"></div>
-            </div>
-            <div class="content absolute">
-                <img class="quiz_two question_2" src="images/quiz2.png"/>
+        <div class="quiz pageTwo none">
+          <div class="quiz_board absolute q2_board"></div>
+          <img class="absolute top_two" src="images/top2.png" alt="top2" />
+          <!--灯型边框动画-->
+          <div class="q1_lightParent q2_board">
+            <div class="q1_light"></div>
+          </div>
+          <div class="content absolute">
+            <img class="quiz_two question_2" src="images/quiz2.png" />
 
-                <!--插入gif-->
-                <div class="q2_watchContainer watch_two quiz_two">
-                    <img class="q2_watch" src="images/watch.gif" alt="watch"/>
-                </div>
-
-                <!--选项A-->
-                <div class="q_optionContainer q2_options q2_a" data-value="20" data-opt="q2_a1_btn">
-                    <div class="q2_btn_a">
-                        <div class="option_btn_q2 absolute quiz2_opt_a" id="q2_a_btn"></div>
-                        <div class="option_btn_q2 absolute quiz2_opt_a1 none" id="q2_a1_btn"></div>
-                    </div>
-                </div>
-                <!--选项B-->
-                <div class="q_optionContainer q2_options q2_b " data-value="10" data-opt="q2_b1_btn">
-                    <div class="q2_btn_b">
-                        <div class="option_btn_q2 absolute quiz2_opt_b" id="q2_b_btn"></div>
-                        <div class="option_btn_q2 absolute quiz2_opt_b1 none" id="q2_b1_btn"></div>
-                    </div>
-                </div>
+            <!--插入gif-->
+            <div class="q2_watchContainer watch_two quiz_two">
+              <img class="q2_watch" src="images/watch.gif" alt="watch" />
             </div>
+
+            <!--选项A-->
+            <div
+              class="q_optionContainer q2_options q2_a"
+              data-value="20"
+              data-opt="q2_a1_btn"
+            >
+              <div class="q2_btn_a">
+                <div
+                  class="option_btn_q2 absolute quiz2_opt_a"
+                  id="q2_a_btn"
+                ></div>
+                <div
+                  class="option_btn_q2 absolute quiz2_opt_a1 none"
+                  id="q2_a1_btn"
+                ></div>
+              </div>
+            </div>
+            <!--选项B-->
+            <div
+              class="q_optionContainer q2_options q2_b"
+              data-value="10"
+              data-opt="q2_b1_btn"
+            >
+              <div class="q2_btn_b">
+                <div
+                  class="option_btn_q2 absolute quiz2_opt_b"
+                  id="q2_b_btn"
+                ></div>
+                <div
+                  class="option_btn_q2 absolute quiz2_opt_b1 none"
+                  id="q2_b1_btn"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
         <!--page3-->
-        <div  class="quiz pageThree none" >
-            <div class="quiz_board absolute q3_board"></div>
-            <img class="absolute top_three" src="images/top3.png" alt="top3"/>
-            <!--灯型边框动画-->
-            <div class="q1_lightParent q3_board">
-                <div class="q1_light"></div>
+        <div class="quiz pageThree none">
+          <div class="quiz_board absolute q3_board"></div>
+          <img class="absolute top_three" src="images/top3.png" alt="top3" />
+          <!--灯型边框动画-->
+          <div class="q1_lightParent q3_board">
+            <div class="q1_light"></div>
+          </div>
+          <div class="content absolute">
+            <div class="quizContent">
+              <img class="quiz_three question_3" src="images/quiz3.png" />
             </div>
-            <div class="content absolute">
-                <div class="quizContent">
-                    <img class="quiz_three question_3" src="images/quiz3.png"/>
-                </div>
 
-                <!--插入gif-->
-                <div class="q3_crystalContainer watch_three quiz_three">
-                    <img class="q3_crystal" src="images/crystal.gif" alt="crystal"/>
-                </div>
-
-                <!--选项A-->
-                <div class="q_optionContainer q3_options q3_a" data-value="20" data-opt="q3_a1_btn">
-                    <div class="q3_btn_a ">
-                        <div class="option_btn_q3 absolute quiz3_opt_a" id="q3_a_btn"></div>
-                        <div class="option_btn_q3 absolute quiz3_opt_a1 none" id="q3_a1_btn"></div>
-                    </div>
-                </div>
-                <!--选项B-->
-                <div class="q_optionContainer q3_options q3_b " data-value="10" data-opt="q3_b1_btn">
-                    <div class="q3_btn_b">
-                        <div class="option_btn_q3 absolute quiz3_opt_b" id="q3_b_btn"></div>
-                        <div class="option_btn_q3 absolute quiz3_opt_b1 none" id="q3_b1_btn"></div>
-                    </div>
-                </div>
-                <!--选项C-->
-                <div class="q_optionContainer q3_options q3_c " data-value="5" data-opt="q3_c1_btn">
-                    <div class="q3_btn_c">
-                        <div class="option_btn_q3 absolute quiz3_opt_c" id="q3_c_btn"></div>
-                        <div class="option_btn_q3 absolute quiz3_opt_c1 none" id="q3_c1_btn"></div>
-                    </div>
-                </div>
+            <!--插入gif-->
+            <div class="q3_crystalContainer watch_three quiz_three">
+              <img class="q3_crystal" src="images/crystal.gif" alt="crystal" />
             </div>
+
+            <!--选项A-->
+            <div
+              class="q_optionContainer q3_options q3_a"
+              data-value="20"
+              data-opt="q3_a1_btn"
+            >
+              <div class="q3_btn_a">
+                <div
+                  class="option_btn_q3 absolute quiz3_opt_a"
+                  id="q3_a_btn"
+                ></div>
+                <div
+                  class="option_btn_q3 absolute quiz3_opt_a1 none"
+                  id="q3_a1_btn"
+                ></div>
+              </div>
+            </div>
+            <!--选项B-->
+            <div
+              class="q_optionContainer q3_options q3_b"
+              data-value="10"
+              data-opt="q3_b1_btn"
+            >
+              <div class="q3_btn_b">
+                <div
+                  class="option_btn_q3 absolute quiz3_opt_b"
+                  id="q3_b_btn"
+                ></div>
+                <div
+                  class="option_btn_q3 absolute quiz3_opt_b1 none"
+                  id="q3_b1_btn"
+                ></div>
+              </div>
+            </div>
+            <!--选项C-->
+            <div
+              class="q_optionContainer q3_options q3_c"
+              data-value="5"
+              data-opt="q3_c1_btn"
+            >
+              <div class="q3_btn_c">
+                <div
+                  class="option_btn_q3 absolute quiz3_opt_c"
+                  id="q3_c_btn"
+                ></div>
+                <div
+                  class="option_btn_q3 absolute quiz3_opt_c1 none"
+                  id="q3_c1_btn"
+                ></div>
+              </div>
+            </div>
+          </div>
         </div>
         <!--page4-->
-        <div  class="quiz pageFour none" >
-            <div class="quiz_board absolute q4_board"></div>
-            <img class="absolute top_four" src="images/top4.png" alt="top4"/>
-            <!--灯型边框动画-->
-            <div class="q1_lightParent q4_board">
-                <div class="q1_light"></div>
-            </div>
-            <div class="content absolute">
-                <p class="WrtType quiz_four question">你独自回到家中,回想着这奇妙的一晚,你会选择下面哪首旋律陪伴你入睡</p>
+        <div class="quiz pageFour none">
+          <div class="quiz_board absolute q4_board"></div>
+          <img class="absolute top_four" src="images/top4.png" alt="top4" />
+          <!--灯型边框动画-->
+          <div class="q1_lightParent q4_board">
+            <div class="q1_light"></div>
+          </div>
+          <div class="content absolute">
+            <p class="WrtType quiz_four question">
+              你独自回到家中,回想着这奇妙的一晚,你会选择下面哪首旋律陪伴你入睡
+            </p>
 
-                <!--选项A-->
-                <div class="q_optionContainer q4_options q4_a" data-value="20" data-opt="q4_a1_btn">
-                    <div class="q4_btn_a">
-                        <div class="option_btn_q4 absolute quiz4_opt_a" id="q4_a_btn"></div>
-                        <div class="option_btn_q4 absolute quiz4_opt_a1 none" id="q4_a1_btn"></div>
-                    </div>
-                </div>
-                <div class="q4_a_music music">
-                    <img class="option_btn_musicA absolute" id="q4_a_play" src="images/q4_play.png" alt="q4_a"/>
-                    <img class="option_btn_musicA absolute none" id="q4_a_pause" src="images/q4_pause.png" alt="q4_a"/>
-                </div>
-                <!--选项B-->
-                <div class="q_optionContainer q4_options q4_b" data-value="10" data-opt="q4_b1_btn">
-                    <div class="q4_btn_b">
-                        <div class="option_btn_q4 absolute quiz4_opt_b" id="q4_b_btn"></div>
-                        <div class="option_btn_q4 absolute quiz4_opt_b1 none" id="q4_b1_btn"></div>
-                    </div>
-                </div>
-                <div class="q4_b_music music">
-                    <img class="option_btn_musicB absolute" id="q4_b_play" src="images/q4_play.png" alt="q4_b"/>
-                    <img class="option_btn_musicB absolute none" id="q4_b1_pause" src="images/q4_pause.png" alt="q4_b"/>
-                </div>
+            <!--选项A-->
+            <div
+              class="q_optionContainer q4_options q4_a"
+              data-value="20"
+              data-opt="q4_a1_btn"
+            >
+              <div class="q4_btn_a">
+                <div
+                  class="option_btn_q4 absolute quiz4_opt_a"
+                  id="q4_a_btn"
+                ></div>
+                <div
+                  class="option_btn_q4 absolute quiz4_opt_a1 none"
+                  id="q4_a1_btn"
+                ></div>
+              </div>
             </div>
+            <div class="q4_a_music music">
+              <img
+                class="option_btn_musicA absolute"
+                id="q4_a_play"
+                src="images/q4_play.png"
+                alt="q4_a"
+              />
+              <img
+                class="option_btn_musicA absolute none"
+                id="q4_a_pause"
+                src="images/q4_pause.png"
+                alt="q4_a"
+              />
+            </div>
+            <!--选项B-->
+            <div
+              class="q_optionContainer q4_options q4_b"
+              data-value="10"
+              data-opt="q4_b1_btn"
+            >
+              <div class="q4_btn_b">
+                <div
+                  class="option_btn_q4 absolute quiz4_opt_b"
+                  id="q4_b_btn"
+                ></div>
+                <div
+                  class="option_btn_q4 absolute quiz4_opt_b1 none"
+                  id="q4_b1_btn"
+                ></div>
+              </div>
+            </div>
+            <div class="q4_b_music music">
+              <img
+                class="option_btn_musicB absolute"
+                id="q4_b_play"
+                src="images/q4_play.png"
+                alt="q4_b"
+              />
+              <img
+                class="option_btn_musicB absolute none"
+                id="q4_b1_pause"
+                src="images/q4_pause.png"
+                alt="q4_b"
+              />
+            </div>
+          </div>
         </div>
         <!--page5-->
-        <div  class="quiz pageFive none" >
-            <div class="quiz_board absolute q5_board"></div>
-            <img class="absolute top_five" src="images/top5.png" alt="top2"/>
-            <!--灯型边框动画-->
-            <div class="q1_lightParent q5_board">
-                <div class="q1_light"></div>
+        <div class="quiz pageFive none">
+          <div class="quiz_board absolute q5_board"></div>
+          <img class="absolute top_five" src="images/top5.png" alt="top2" />
+          <!--灯型边框动画-->
+          <div class="q1_lightParent q5_board">
+            <div class="q1_light"></div>
+          </div>
+          <div class="content absolute">
+            <p class="WrtType quiz_five question">
+              睡梦中,天使给了你两支口红,涂上红色，你会有一个大胆冒险的人生；粉色则会让你一生安稳平凡，你会选择：
+            </p>
+            <img
+              class="option_lipstick pink absolute q_optionContainerKiss q5_options"
+              data-value="20"
+              data-opt="q5_a1_btn"
+              src="images/pink.gif"
+              alt="lipstick_a"
+            />
+            <img
+              class="option_lipstick red absolute q_optionContainerKiss q5_options"
+              data-value="10"
+              data-opt="q5_b1_btn"
+              src="images/red.gif"
+              alt="lipstick_b"
+            />
+            <!--选项A-->
+            <div
+              class="q_optionContainerKiss q5_a q5_options"
+              data-value="20"
+              data-opt="q5_a1_btn"
+            >
+              <div class="q5_btn_a">
+                <div
+                  class="option_btn_q5 absolute quiz5_opt_a"
+                  id="q5_a_btn"
+                ></div>
+                <div
+                  class="option_btn_q5 absolute quiz5_opt_a1 none"
+                  id="q5_a1_btn"
+                ></div>
+              </div>
             </div>
-            <div class="content absolute">
-                <p class="WrtType quiz_five question">睡梦中,天使给了你两支口红,涂上红色，你会有一个大胆冒险的人生；粉色则会让你一生安稳平凡，你会选择：</p>
-                <img class="option_lipstick pink absolute  q_optionContainerKiss q5_options" data-value="20" data-opt="q5_a1_btn" src="images/pink.gif" alt="lipstick_a"/>
-                <img class="option_lipstick red absolute  q_optionContainerKiss q5_options" data-value="10" data-opt="q5_b1_btn" src="images/red.gif" alt="lipstick_b"/>
-                <!--选项A-->
-                <div class="q_optionContainerKiss q5_a q5_options" data-value="20" data-opt="q5_a1_btn">
-                    <div class="q5_btn_a">
-                        <div class="option_btn_q5 absolute quiz5_opt_a" id="q5_a_btn"></div>
-                        <div class="option_btn_q5 absolute quiz5_opt_a1 none" id="q5_a1_btn"></div>
-                    </div>
-
-                </div>
-                <!--选项B-->
-                <div class="q_optionContainerKiss q5_b q5_options" data-value="10" data-opt="q5_b1_btn">
-                    <div class="q5_btn_b">
-                        <div class="option_btn_q5 absolute quiz5_opt_b" id="q5_b_btn"></div>
-                        <div class="option_btn_q5 absolute quiz5_opt_b1 none" id="q5_b1_btn"></div>
-                    </div>
-                </div>
+            <!--选项B-->
+            <div
+              class="q_optionContainerKiss q5_b q5_options"
+              data-value="10"
+              data-opt="q5_b1_btn"
+            >
+              <div class="q5_btn_b">
+                <div
+                  class="option_btn_q5 absolute quiz5_opt_b"
+                  id="q5_b_btn"
+                ></div>
+                <div
+                  class="option_btn_q5 absolute quiz5_opt_b1 none"
+                  id="q5_b1_btn"
+                ></div>
+              </div>
             </div>
+          </div>
         </div>
-        <img class="indicator absolute none" src="images/indicator.jpg" alt="indicator"/>
-    </div>
+        <img
+          class="indicator absolute none"
+          src="images/indicator.jpg"
+          alt="indicator"
+        />
+      </div>
 
-    <!--输入姓名-->
-    <div  class="page pageInput none" >
+      <!--输入姓名-->
+      <div class="page pageInput none">
         <div class="input_board absolute">
-            <img class="input_bg absolute " src="images/inputBG.jpg" alt="gBoard"/>
+          <img
+            class="input_bg absolute"
+            src="images/inputBG.jpg"
+            alt="gBoard"
+          />
         </div>
         <div class="input_name">
-            <img class="input_title absolute " src="images/input_title.png" alt="inputTitle"/>
-            <img class="input_box absolute " src="images/input_box.png" alt="inputBox"/>
-            <img class="input_btn absolute " id="input_submit" src="images/input_btn.png" alt="inputBtn"/>
-            <input class="input_content absolute" type="text" maxlength = "9" placeholder="请输入你的名字"/>
+          <img
+            class="input_title absolute"
+            src="images/input_title.png"
+            alt="inputTitle"
+          />
+          <img
+            class="input_box absolute"
+            src="images/input_box.png"
+            alt="inputBox"
+          />
+          <img
+            class="input_btn absolute"
+            id="input_submit"
+            src="images/input_btn.png"
+            alt="inputBtn"
+          />
+          <input
+            class="input_content absolute"
+            type="text"
+            maxlength="9"
+            placeholder="请输入你的名字"
+          />
         </div>
         <!--等待生成图片Gif图-->
         <div class="waitParent none">
-            <div class="wait"></div>
+          <div class="wait"></div>
         </div>
+      </div>
 
+      <!--画报-->
+      <div class="page pageCanvas none">
+        <div class="absolute resultImg">
+          <img
+            class="absolute"
+            id="outputImg"
+            src=""
+            style="width: 100vw; height: 161vw;"
+          />
+        </div>
+        <img class="desc absolute" src="images/desc.png" />
+        <img class="link absolute" src="images/link_1.png" />
+        <img class="hand absolute" src="images/hand.png" />
+        <img class="back absolute" src="images/back_1.png" />
+      </div>
     </div>
 
-    <!--画报-->
-    <div  class="page pageCanvas none" >
-
-        <div class="absolute resultImg" >
-            <img class="absolute" id="outputImg" src="" style="width: 100vw;height: 161vw;"/>
-        </div>
-        <img class="desc absolute" src="images/desc.png"/>
-        <img class="link absolute " src="images/link_1.png"/>
-        <img class="hand absolute " src="images/hand.png"/>
-        <img class="back absolute" src="images/back_1.png"/>
-    </div>
-
-
-</div>
-
-
-<!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
-<!-- <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script> -->
-<!-- <script src="libs/jweixin-1.0.0.js"></script> -->
-<script src="js/preloader.js"></script>
-<script src="js/engine.js"></script>
-<script src="js/init.js"></script>
-
-</body>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+    <!-- <script src="https://cdn.bootcss.com/html2canvas/0.5.0-beta4/html2canvas.js"></script> -->
+    <!-- <script src="libs/jweixin-1.0.0.js"></script> -->
+    <!-- <script src="js/preloader.js"></script> -->
+    <!-- <script src="js/engine.js"></script> -->
+    <script src="js/init.js"></script>
+  </body>
 </html>

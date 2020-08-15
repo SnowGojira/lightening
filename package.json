@@ -2,6 +2,10 @@
   "name": "lightening",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "parcel src/index.html"
+  },
   "repository": "https://github.com/SnowGojira/lightening.git",
   "author": "SirSnow <hakuhal.snow@gmail.com>",
   "license": "MIT",

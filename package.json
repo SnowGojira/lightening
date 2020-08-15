@@ -1,0 +1,8 @@
+{
+  "name": "lightening",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/SnowGojira/lightening.git",
+  "author": "SirSnow <hakuhal.snow@gmail.com>",
+  "license": "MIT"
+}

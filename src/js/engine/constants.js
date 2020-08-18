@@ -1,9 +1,12 @@
-export const RESOURCE_TO_PRELOAD = [
-  "images/pl_board.png",
-  "images/pl_title.png",
-  "images/pl_flicker.png",
-  "images/logo.png",
+const imageURL =
+  "https://haku-1252507164.cos.ap-nanjing.myqcloud.com/lightening/images/";
+const audioURL =
+  "https://haku-1252507164.cos.ap-nanjing.myqcloud.com/lightening/assets/audio/";
 
+export const RESOURCE_TO_PRELOAD = [
+  `${imageURL}back_1.png`,
+
+  `${audioURL}bgm.mp3`,
   // {src: 'images/g_board.png', id: 'p13'},
   // {src: 'images/crystal.gif', id: 'p12'},
   // {src: 'images/indicator.jpg', id: 'p15'},

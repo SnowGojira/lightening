@@ -3,10 +3,7 @@ import { RESOURCE_TO_PRELOAD } from "./constants";
 const preloader = Preload();
 
 function preloadFunc() {
-  this.fetch(RESOURCE_TO_PRELOAD).then((items) => {
-    // use either a promise or 'oncomplete'
-    console.log(items);
-  });
+  this.fetch(RESOURCE_TO_PRELOAD);
 
   this.oncomplete = (items) => {
     console.log(items);

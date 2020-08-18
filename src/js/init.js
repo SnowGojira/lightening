@@ -4,7 +4,7 @@ import { preloadHandler } from "./engine/preload";
 /*预加载逻辑*/
 /*2月24日修改 删除了一些不必要的加载资源提升速度*/
 window.onload = function () {
-  //预加载资源
+  //执行加载逻辑
   preloadHandler();
   const manifest = [
     { src: "images/pl_board.png", id: "o13" },

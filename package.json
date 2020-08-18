@@ -17,6 +17,7 @@
     "prettier": "^2.0.5"
   },
   "dependencies": {
+    "jquery": "^3.5.1",
     "preload-it": "^1.4.0"
   }
 }

@@ -1,24 +1,17 @@
 // import * as createjs from "createjs-module"
 import { preloadHandler } from "./engine/preload";
+import gameState from "./engine/gameState";
 
 /*预加载逻辑*/
 /*2月24日修改 删除了一些不必要的加载资源提升速度*/
 window.onload = function () {
-  //执行加载逻辑
-  preloadHandler();
+  init();
 };
 
-function handleComplete() {
-  // console.log(j);
-  console.log("开始调用Complete");
-  $("#loadPercent").text("100%");
-  setTimeout(function () {
-    $(".pageTest").animate({ opacity: "0" }, 800, function () {
-      $(".pageTest").hide();
-      pageLoad.show();
-      pageLoad.animate({ opacity: "1.0" }, 800);
-    });
-  }, 2000);
+function init() {
+  //预加载
+  preloadHandler();
+  gameState.init();
 }
 
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放
@@ -85,37 +78,6 @@ function Play(id_str) {
     false
   );
 }
-
-/*pageLoad向上滑动*/
-var startY, moveY, moveSpace;
-var flickerBox = $(".pl_lightenBox");
-var pageStart = $(".pageStart");
-var startBoard = $(".g_board");
-//点击按钮的通识属性
-var count = 0;
-var btn = $(".q_optionContainer");
-
-pageLoad.on("touchstart", function (e) {
-  audioPlay("heart");
-  startY = e.originalEvent.touches[0].pageY;
-  return startY;
-});
-
-pageLoad.on("touchmove", function (e) {
-  moveY = e.originalEvent.touches[0].pageY;
-  moveSpace = startY - moveY;
-  if (moveSpace > 15) {
-    // console.log("上滑之后需要执行的代码片段");
-    $(".pl_logo").hide();
-    upArrow.hide();
-    flickerBox.animate({ top: "-800px" }, 1000, function () {
-      // console.log("动画结束");
-      pageLoad.hide();
-      pageStart.show();
-      startBoard.animate({ top: "0px" }, 800);
-    });
-  }
-});
 
 /*pageStart 点亮动画逻辑*/
 var heart = $(".ps_heartParent");

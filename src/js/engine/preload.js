@@ -1,5 +1,6 @@
 import Preload from "preload-it";
 import { RESOURCE_TO_PRELOAD } from "./constants";
+import { prelaodAnimation, preloadAnimation } from "../ui/ui";
 const preloader = Preload();
 
 function preloadFunc() {
@@ -10,11 +11,7 @@ function preloadFunc() {
   };
 
   this.onprogress = (event) => {
-    console.log(event.progress + "%");
-  };
-
-  this.onfetched = (item) => {
-    console.log(item);
+    preloadAnimation(event.progress);
   };
 
   this.onerror = (item) => {

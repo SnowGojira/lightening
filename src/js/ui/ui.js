@@ -7,7 +7,7 @@ export const preloadAnimation = (percentage) => {
   $(".pl_head").css("opacity", percentage / 100);
 };
 
-const pageShoworHide = (pagehide, pageshow, cb) => {
+function pageHideShow(pagehide, pageshow, cb) {
   return function inner() {
     pagehide.hide();
     pageshow.show();
@@ -15,17 +15,19 @@ const pageShoworHide = (pagehide, pageshow, cb) => {
       cb();
     }
   };
-};
+}
 
 export const onCompleteHandler = () => {
   $("#loadPercent").text("100%");
   setTimeout(function () {
-    pageTest.animate({ opacity: "0" }, 800, function () {
-      pageTest.hide();
-      pageLoad.show();
-      pageLoad.animate({ opacity: "1.0" }, 800);
-    });
-  }, 2000);
+    pageTest.animate(
+      { opacity: "0" },
+      800,
+      pageHideShow(pageTest, pageLoad, function () {
+        pageLoad.animate({ opacity: "1.0" }, 800);
+      })
+    );
+  }, 1000);
 };
 
 /*pageLoad向上滑动*/

@@ -5,14 +5,8 @@ import gameState from "./engine/gameState";
 /*预加载逻辑*/
 /*2月24日修改 删除了一些不必要的加载资源提升速度*/
 window.onload = function () {
-  init();
+  gameState.controller();
 };
-
-function init() {
-  //预加载
-  preloadHandler();
-  gameState.init();
-}
 
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
       false
     );
   }
-  audioAutoPlay();
+  //audioAutoPlay();
 });
 //--创建触摸监听，当浏览器打开页面时，触摸屏幕触发事件，进行音频播放
 function audioAutoPlay() {

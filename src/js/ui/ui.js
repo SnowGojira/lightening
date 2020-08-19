@@ -1,4 +1,6 @@
 import $ from "jquery";
+import gameState from "../engine/gameState";
+
 const pageLoad = $(".pageLoad");
 const pageTest = $(".pageTest");
 
@@ -7,23 +9,26 @@ export const preloadAnimation = (percentage) => {
   $(".pl_head").css("opacity", percentage / 100);
 };
 
-function pageHideShow(pagehide, pageshow, cb) {
+function pageHideShow(pagehide, pageshow, state, cb) {
   return function inner() {
     pagehide.hide();
     pageshow.show();
+    //页面切换的时候也包含着gameState的变换
+    gameState.current = state;
+    //如果有回调就执行回调
     if (cb) {
       cb();
     }
   };
 }
 
-export const onCompleteHandler = () => {
+export const modPreload = () => {
   $("#loadPercent").text("100%");
   setTimeout(function () {
     pageTest.animate(
       { opacity: "0" },
       800,
-      pageHideShow(pageTest, pageLoad, function () {
+      pageHideShow(pageTest, pageLoad, "INIT", function () {
         pageLoad.animate({ opacity: "1.0" }, 800);
       })
     );

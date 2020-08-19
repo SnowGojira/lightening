@@ -1,14 +1,13 @@
 import Preload from "preload-it";
 import { RESOURCE_TO_PRELOAD } from "./constants";
-import { preloadAnimation, onCompleteHandler } from "../ui/ui";
+import { preloadAnimation } from "../ui/ui";
 const preloader = Preload();
 
-function preloadFunc() {
+function preloadFunc(onCompleteCb) {
   this.fetch(RESOURCE_TO_PRELOAD);
 
-  this.oncomplete = (items) => {
-    // console.log(items);
-    onCompleteHandler();
+  this.oncomplete = () => {
+    onCompleteCb();
   };
 
   this.onprogress = (event) => {

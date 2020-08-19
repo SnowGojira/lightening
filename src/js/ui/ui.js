@@ -1,5 +1,6 @@
 import $ from "jquery";
 import animationEnd from "./animation";
+import { FADE_IN_800, FADE_OUT_800, FADE_TOP_OUT } from "../engine/constants";
 
 const pageLoad = $(".pageLoad");
 const pageTest = $(".pageTest");
@@ -9,23 +10,11 @@ export const preloadAnimation = (percentage) => {
   $(".pl_head").css("opacity", percentage / 100);
 };
 
-function pageHideShow(pagehide, pageshow, cb) {
-  return function inner() {
-    pagehide.hide();
-    pageshow.show();
-    //如果有回调就执行回调
-    if (cb) {
-      cb();
-    }
-  };
-}
-
 async function animationPageTestToLoad() {
-  await animationEnd(pageTest[0], "fadeOut 0.8s ease-in");
+  await animationEnd(pageTest[0], FADE_OUT_800);
   pageTest.hide();
   pageLoad.show();
-  pageLoad[0].style.animation = "fadeIn 0.8s ease-out";
-  //await animationEnd(pageLoad[0], "fadeIn 0.8s ease-out");
+  pageLoad[0].style.animation = FADE_IN_800;
 }
 
 export const modPreload = () => {
@@ -38,6 +27,12 @@ var startY, moveY, moveSpace;
 const flickerBox = $(".pl_lightenBox");
 const pageStart = $(".pageStart");
 const startBoard = $(".g_board");
+async function animationFlicker() {
+  await animationEnd(flickerBox[0], FADE_TOP_OUT);
+  pageLoad.hide();
+  pageStart.show();
+  startBoard.animate({ top: "0px" }, 800);
+}
 
 export const modUpFlipper = function () {
   pageLoad.on("touchstart", function (e) {
@@ -53,18 +48,19 @@ export const modUpFlipper = function () {
       // console.log("上滑之后需要执行的代码片段");
       $(".pl_logo").hide();
       $(".pl_upArrow").hide();
-      flickerBox.animate(
-        { top: "-800px" },
-        1000,
-        pageHideShow(
-          // console.log("动画结束");
-          pageLoad,
-          pageStart,
-          function () {
-            startBoard.animate({ top: "0px" }, 800);
-          }
-        )
-      );
+      animationFlicker();
+      // flickerBox.animate(
+      //   { top: "-800px" },
+      //   1000,
+      //   pageHideShow(
+      //     // console.log("动画结束");
+      //     pageLoad,
+      //     pageStart,
+      //     function () {
+      //       startBoard.animate({ top: "0px" }, 800);
+      //     }
+      //   )
+      // );
     }
   });
 };

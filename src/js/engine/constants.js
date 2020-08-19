@@ -87,3 +87,7 @@ function audioArray() {
 }
 
 export const RESOURCE_TO_PRELOAD = audioArray().concat(imageArray());
+
+export const FADE_IN_800 = "fadeIn 0.8s ease-in";
+export const FADE_OUT_800 = "fadeOut 0.8s ease-out";
+export const FADE_TOP_OUT = "fadeTopOut 1s linear";

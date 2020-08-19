@@ -1,4 +1,5 @@
 import $ from "jquery";
+import animationEnd from "./animation";
 
 const pageLoad = $(".pageLoad");
 const pageTest = $(".pageTest");
@@ -19,17 +20,17 @@ function pageHideShow(pagehide, pageshow, cb) {
   };
 }
 
+async function animationPageTestToLoad() {
+  await animationEnd(pageTest[0], "fadeOut 0.8s ease-in");
+  pageTest.hide();
+  pageLoad.show();
+  pageLoad[0].style.animation = "fadeIn 0.8s ease-out";
+  //await animationEnd(pageLoad[0], "fadeIn 0.8s ease-out");
+}
+
 export const modPreload = () => {
   $("#loadPercent").text("100%");
-  setTimeout(function () {
-    pageTest.animate(
-      { opacity: "0" },
-      800,
-      pageHideShow(pageTest, pageLoad, function () {
-        pageLoad.animate({ opacity: "1.0" }, 800);
-      })
-    );
-  }, 1000);
+  setTimeout(animationPageTestToLoad, 1000);
 };
 
 /*pageLoad向上滑动*/
@@ -99,7 +100,7 @@ export const modHeartStart = () => {
 };
 
 /*动画全局属性*/
-function quizInScene(dom1, dom2, dom3, dom4) {
+async function quizInScene(dom1, dom2, dom3, dom4) {
   console.log(dom1[0]);
   dom1[0].addEventListener("animationend", () => {
     console.log("dom1 finished");

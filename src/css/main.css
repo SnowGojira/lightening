@@ -126,7 +126,7 @@ html {
   /* background: url(https://haku-1252507164.cos.ap-nanjing.myqcloud.com/lightening/images/pageload.jpg) no-repeat fixed top;
     background-position: center center;
     background-size: cover;*/
-  opacity: 0;
+  /* opacity: 0; */
 }
 
 .absolute {
@@ -1094,6 +1094,23 @@ html {
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*淡入*/
 .mainIn {
   display: block;

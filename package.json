@@ -19,5 +19,8 @@
   "dependencies": {
     "jquery": "^3.5.1",
     "preload-it": "^1.4.0"
-  }
+  },
+  "browserslist": [
+    "last 2 Firefox versions"
+  ]
 }

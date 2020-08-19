@@ -8,8 +8,21 @@ const gameState = {
     //this.current = "INIT";
     console.log("init");
   },
-  userActionsHandler(icon) {
-    console.log(icon);
+  userActionsHandler(el) {
+    console.log(el.classList);
+
+    //有计数逻辑
+    gameState.count += parseInt(el.attr("data-value"));
+    console.log("count:" + gameState.count);
+
+    let domList = el[0].classList;
+
+    if (domList.contains("q1_options")) {
+      //音效
+      //audioPlay("btn");
+      //转场
+      console.log("p1->p2");
+    }
   },
 };
 

@@ -84,6 +84,7 @@ export const modHeartStart = () => {
 async function animationToPageOne() {
   //标题逐渐变亮度
   await animationEnd(sparkTitle[0], FADE_IN_800);
+  sparkTitle[0].style.opacity = 1;
   //pageStart向上退场
   await animationEnd(pageStart[0], FADE_TOP_OUT);
   //显示答题页面
@@ -107,24 +108,3 @@ async function animationToPageOne() {
   $(".q1_b")[0].style.opacity = 1;
   hint.show();
 }
-
-/*动画全局属性*/
-// function quizInScene(dom1, dom2, dom3, dom4) {
-//   // console.log(dom1[0]);
-//   // dom1[0].addEventListener("animationend", () => {
-//   //   console.log("dom1 finished");
-//   // });
-//   return async function inner() {
-//     dom1.show();
-//     await animationEnd(dom1[0], FADE_IN_1000);
-//     pageStart.hide();
-//     dom1[0].style.opacity = 1;
-//     await animationEnd(dom2[0], FADE_IN_500);
-//     dom2[0].style.opacity = 1;
-//     await animationEnd(dom3[0], FADE_IN_500);
-//     dom3[0].style.opacity = 1;
-//     await animationEnd(dom4[0], FADE_IN_500);
-//     dom4[0].style.opacity = 1;
-//     hint.show();
-//   };
-// }

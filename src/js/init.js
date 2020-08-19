@@ -1,7 +1,7 @@
 // import * as createjs from "createjs-module"
 import { preloadHandler } from "./engine/preload";
 import gameState from "./engine/gameState";
-import { modPreload, modFlipperToStart } from "./ui/ui";
+import { modPreload, modUpFlipper, modHeartStart } from "./ui/ui";
 
 /*预加载逻辑*/
 /*2月24日修改 删除了一些不必要的加载资源提升速度*/
@@ -9,7 +9,9 @@ window.onload = function () {
   //预加载
   preloadHandler(modPreload);
   //滑动翻页
-  modFlipperToStart();
+  modUpFlipper();
+  //点击小心心开始
+  modHeartStart();
 };
 
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放
@@ -77,48 +79,46 @@ function Play(id_str) {
   );
 }
 
-/*pageStart 点亮动画逻辑*/
-var heart = $(".ps_heartParent");
-var sparkTitle = $("#startLight");
-var quizPage = $(".quizPage");
-var pageOne = $(".pageOne");
-var q1Board = $(".q1_board");
-var topOne = $(".top_one");
-var quizOne = $(".quiz_one");
-var optionOne = $(".q1_options");
-var hint = $(".indicator");
+// /*pageStart 点亮动画逻辑*/
+// var heart = $(".ps_heartParent");
+// var sparkTitle = $("#startLight");
+// var quizPage = $(".quizPage");
+// var pageOne = $(".pageOne");
+// var q1Board = $(".q1_board");
+// var topOne = $(".top_one");
+// var quizOne = $(".quiz_one");
+// var optionOne = $(".q1_options");
+// var hint = $(".indicator");
 
-heart.on("click", function () {
-  console.log("点击触发");
-  audioPlay("q1");
-  audioPause("heart");
-  /*2月24日修改 新播放*/
-  Play("btn");
+// heart.on("click", function () {
+//   console.log("点击触发");
+//   audioPlay("q1");
+//   audioPause("heart");
+//   /*2月24日修改 新播放*/
+//   Play("btn");
 
-  sparkTitle.animate({ opacity: "1.0" }, 800, function () {
-    pageStart.animate({ top: "-800px" }, 800, function () {
-      quizPage.show();
-      pageOne.show();
-      quizInScene(q1Board, topOne, quizOne, optionOne);
-    });
-  });
-});
-/*动画全局属性*/
-function quizInScene(dom1, dom2, dom3, dom4) {
-  dom1.addClass("mainIn");
-  setTimeout(function () {
-    dom2.show();
-    dom2.animate({ opacity: "1.0" }, 1000, function () {
-      dom3.animate({ opacity: "1.0" }, 500, function () {
-        dom4.animate({ opacity: "1.0" }, 500, function () {
-          hint.show();
-        });
-      });
-    });
-  }, 200);
-
-  //dom2.animate({top:"0"},1000);
-}
+//   sparkTitle.animate({ opacity: "1.0" }, 800, function () {
+//     pageStart.animate({ top: "-800px" }, 800, function () {
+//       quizPage.show();
+//       pageOne.show();
+//       quizInScene(q1Board, topOne, quizOne, optionOne);
+//     });
+//   });
+// });
+// /*动画全局属性*/
+// function quizInScene(dom1, dom2, dom3, dom4) {
+//   dom1.addClass("mainIn");
+//   setTimeout(function () {
+//     dom2.show();
+//     dom2.animate({ opacity: "1.0" }, 1000, function () {
+//       dom3.animate({ opacity: "1.0" }, 500, function () {
+//         dom4.animate({ opacity: "1.0" }, 500, function () {
+//           hint.show();
+//         });
+//       });
+//     });
+//   }, 200);
+// }
 
 /*按钮全局属性*/
 btn.on("click", function () {

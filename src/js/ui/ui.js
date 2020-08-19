@@ -38,7 +38,7 @@ const flickerBox = $(".pl_lightenBox");
 const pageStart = $(".pageStart");
 const startBoard = $(".g_board");
 
-export const modFlipperToStart = function () {
+export const modUpFlipper = function () {
   pageLoad.on("touchstart", function (e) {
     //audioPlay("heart");
     startY = e.originalEvent.touches[0].pageY;
@@ -67,3 +67,47 @@ export const modFlipperToStart = function () {
     }
   });
 };
+
+/*pageStart 点亮动画逻辑*/
+var heart = $(".ps_heartParent");
+var sparkTitle = $("#startLight");
+var quizPage = $(".quizPage");
+var pageOne = $(".pageOne");
+var q1Board = $(".q1_board");
+var topOne = $(".top_one");
+var quizOne = $(".quiz_one");
+var optionOne = $(".q1_options");
+var hint = $(".indicator");
+
+export const modHeartStart = () => {
+  heart.on("click", function () {
+    console.log("点击触发");
+    //audioPlay("q1");
+    //audioPause("heart");
+    /*2月24日修改 新播放*/
+    //Play("btn");
+
+    sparkTitle.animate({ opacity: "1.0" }, 800, function () {
+      pageStart.animate({ top: "-800px" }, 800, function () {
+        quizPage.show();
+        pageOne.show();
+        quizInScene(q1Board, topOne, quizOne, optionOne);
+      });
+    });
+  });
+};
+
+/*动画全局属性*/
+function quizInScene(dom1, dom2, dom3, dom4) {
+  dom1.addClass("mainIn");
+  setTimeout(function () {
+    dom2.show();
+    dom2.animate({ opacity: "1.0" }, 1000, function () {
+      dom3.animate({ opacity: "1.0" }, 500, function () {
+        dom4.animate({ opacity: "1.0" }, 500, function () {
+          hint.show();
+        });
+      });
+    });
+  }, 200);
+}

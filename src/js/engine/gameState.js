@@ -1,16 +1,7 @@
-//["INIT","START","QUIZ1","QUIZ2","QUIZ3","QUIZ4","QUIZ5","result"]
-import { preloadHandler } from "./preload";
 import { modPreload } from "../ui/ui";
 const gameState = {
-  current: "PRELOAD",
   count: 0,
-  quiz1() {
-    //this.current = "INIT";
-    console.log("init");
-  },
   userActionsHandler(el) {
-    console.log(el.classList);
-
     //有计数逻辑
     gameState.count += parseInt(el.attr("data-value"));
     console.log("count:" + gameState.count);
@@ -22,6 +13,26 @@ const gameState = {
       //audioPlay("btn");
       //转场
       console.log("p1->p2");
+    } else if (domList.contains("q2_options")) {
+      //音效
+      //audioPlay("btn");
+      //转场
+      console.log("p2->p3");
+    } else if (domList.contains("q3_options")) {
+      //音效
+      //audioPlay("btn");
+      //转场
+      console.log("p3->p4");
+    } else if (domList.contains("q4_options")) {
+      //音效
+      //audioPlay("btn");
+      //转场
+      console.log("p4->p5");
+    } else if (domList.contains("q5_options")) {
+      //音效
+      //audioPlay("kiss");
+      //转场
+      console.log("p5->result");
     }
   },
 };

@@ -2,6 +2,7 @@
 import { preloadHandler } from "./engine/preload";
 import gameState from "./engine/gameState";
 import { modPreload, modUpFlipper, modHeartStart } from "./ui/ui";
+import initButtons from "./ui/buttons";
 
 /*预加载逻辑*/
 /*2月24日修改 删除了一些不必要的加载资源提升速度*/
@@ -13,6 +14,7 @@ window.onload = function () {
   //点击小心心开始
   modHeartStart();
   //进入第一题答题页
+  initButtons();
 };
 
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放

@@ -6,7 +6,6 @@ import {
   FADE_IN_500,
   FADE_OUT_800,
   FADE_TOP_OUT,
-  MAIN_IN,
 } from "../engine/constants";
 
 const pageLoad = $(".pageLoad");
@@ -103,6 +102,7 @@ async function animationToPageOne() {
   quizOne[0].style.opacity = 1;
   await animationEnd($(".q1_a")[0], FADE_IN_500);
   $(".q1_a")[0].style.opacity = 1;
+  hint;
   await animationEnd($(".q1_b")[0], FADE_IN_500);
   $(".q1_b")[0].style.opacity = 1;
   hint.show();

@@ -94,3 +94,5 @@ export const FADE_IN_500 = "fadeIn 0.5s ease-in";
 export const FADE_OUT_800 = "fadeOut 0.8s ease-out";
 export const FADE_TOP_OUT = "fadeTopOut 1s linear";
 export const MAIN_IN = "mainIn 1s 0.2s ease both";
+
+export var count = 0;

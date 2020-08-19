@@ -1,4 +1,6 @@
 import { modPreload } from "../ui/ui";
+import gameAudio from "./audio";
+
 const gameState = {
   count: 0,
   userActionsHandler(el) {
@@ -10,27 +12,27 @@ const gameState = {
 
     if (domList.contains("q1_options")) {
       //音效
-      //audioPlay("btn");
+      gameAudio.play("btn");
       //转场
       console.log("p1->p2");
     } else if (domList.contains("q2_options")) {
       //音效
-      //audioPlay("btn");
+      gameAudio.play("btn");
       //转场
       console.log("p2->p3");
     } else if (domList.contains("q3_options")) {
       //音效
-      //audioPlay("btn");
+      gameAudio.play("btn");
       //转场
       console.log("p3->p4");
     } else if (domList.contains("q4_options")) {
       //音效
-      //audioPlay("btn");
+      gameAudio.play("btn");
       //转场
       console.log("p4->p5");
     } else if (domList.contains("q5_options")) {
       //音效
-      //audioPlay("kiss");
+      gameAudio.play("q5");
       //转场
       console.log("p5->result");
     }

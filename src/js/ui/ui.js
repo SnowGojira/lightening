@@ -1,6 +1,13 @@
 import $ from "jquery";
 import animationEnd from "./animation";
-import { FADE_IN_800, FADE_OUT_800, FADE_TOP_OUT } from "../engine/constants";
+import {
+  FADE_IN_800,
+  FADE_IN_1000,
+  FADE_IN_500,
+  FADE_OUT_800,
+  FADE_TOP_OUT,
+  MAIN_IN,
+} from "../engine/constants";
 
 const pageLoad = $(".pageLoad");
 const pageTest = $(".pageTest");
@@ -49,18 +56,6 @@ export const modUpFlipper = function () {
       $(".pl_logo").hide();
       $(".pl_upArrow").hide();
       animationFlicker();
-      // flickerBox.animate(
-      //   { top: "-800px" },
-      //   1000,
-      //   pageHideShow(
-      //     // console.log("动画结束");
-      //     pageLoad,
-      //     pageStart,
-      //     function () {
-      //       startBoard.animate({ top: "0px" }, 800);
-      //     }
-      //   )
-      // );
     }
   });
 };
@@ -71,10 +66,9 @@ var sparkTitle = $("#startLight");
 var quizPage = $(".quizPage");
 var pageOne = $(".pageOne");
 var q1Board = $(".q1_board");
-// var q1Board = document.getElementsByClassName("q1_board");
 var topOne = $(".top_one");
 var quizOne = $(".quiz_one");
-var optionOne = $(".q1_options");
+// var optionOne = $(".q1_options");
 var hint = $(".indicator");
 
 export const modHeartStart = () => {
@@ -84,34 +78,53 @@ export const modHeartStart = () => {
     //audioPause("heart");
     /*2月24日修改 新播放*/
     //Play("btn");
-
-    sparkTitle.animate({ opacity: "1.0" }, 800, function () {
-      pageStart.animate({ top: "-800px" }, 800, function () {
-        quizPage.show();
-        pageOne.show();
-        quizInScene(q1Board, topOne, quizOne, optionOne);
-      });
-    });
+    animationToPageOne();
   });
 };
 
-/*动画全局属性*/
-async function quizInScene(dom1, dom2, dom3, dom4) {
-  console.log(dom1[0]);
-  dom1[0].addEventListener("animationend", () => {
-    console.log("dom1 finished");
-  });
-  dom1[0].style.animation = "mainIn 1s 0.2s ease both";
+async function animationToPageOne() {
+  //标题逐渐变亮度
+  await animationEnd(sparkTitle[0], FADE_IN_800);
+  //pageStart向上退场
+  await animationEnd(pageStart[0], FADE_TOP_OUT);
+  //显示答题页面
+  quizPage.show();
+  pageOne.show();
+  //答题页内容一次出现
+  q1Board.addClass("mainIn");
+  topOne.show();
+  await animationEnd(topOne[0], FADE_IN_1000);
+  //因为用的是以前的css样式，造成奇葩的bug
+  //需要隐藏一次pageStart
+  pageStart.hide();
 
-  //dom1.addClass("mainIn");
-  setTimeout(function () {
-    dom2.show();
-    dom2.animate({ opacity: "1.0" }, 1000, function () {
-      dom3.animate({ opacity: "1.0" }, 500, function () {
-        dom4.animate({ opacity: "1.0" }, 500, function () {
-          hint.show();
-        });
-      });
-    });
-  }, 200);
+  topOne[0].style.opacity = 1;
+  await animationEnd(quizOne[0], FADE_IN_500);
+  quizOne[0].style.opacity = 1;
+  await animationEnd($(".q1_a")[0], FADE_IN_500);
+  $(".q1_a")[0].style.opacity = 1;
+  await animationEnd($(".q1_b")[0], FADE_IN_500);
+  $(".q1_b")[0].style.opacity = 1;
+  hint.show();
 }
+
+/*动画全局属性*/
+// function quizInScene(dom1, dom2, dom3, dom4) {
+//   // console.log(dom1[0]);
+//   // dom1[0].addEventListener("animationend", () => {
+//   //   console.log("dom1 finished");
+//   // });
+//   return async function inner() {
+//     dom1.show();
+//     await animationEnd(dom1[0], FADE_IN_1000);
+//     pageStart.hide();
+//     dom1[0].style.opacity = 1;
+//     await animationEnd(dom2[0], FADE_IN_500);
+//     dom2[0].style.opacity = 1;
+//     await animationEnd(dom3[0], FADE_IN_500);
+//     dom3[0].style.opacity = 1;
+//     await animationEnd(dom4[0], FADE_IN_500);
+//     dom4[0].style.opacity = 1;
+//     hint.show();
+//   };
+// }

@@ -12,6 +12,7 @@ window.onload = function () {
   modUpFlipper();
   //点击小心心开始
   modHeartStart();
+  //进入第一题答题页
 };
 
 //--创建页面监听，等待微信端页面加载完毕 触发音频播放

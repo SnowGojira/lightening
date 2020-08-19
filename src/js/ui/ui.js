@@ -74,6 +74,7 @@ var sparkTitle = $("#startLight");
 var quizPage = $(".quizPage");
 var pageOne = $(".pageOne");
 var q1Board = $(".q1_board");
+// var q1Board = document.getElementsByClassName("q1_board");
 var topOne = $(".top_one");
 var quizOne = $(".quiz_one");
 var optionOne = $(".q1_options");
@@ -99,7 +100,13 @@ export const modHeartStart = () => {
 
 /*动画全局属性*/
 function quizInScene(dom1, dom2, dom3, dom4) {
-  dom1.addClass("mainIn");
+  console.log(dom1[0]);
+  dom1[0].addEventListener("animationend", () => {
+    console.log("dom1 finished");
+  });
+  dom1[0].style.animation = "mainIn 1s 0.2s ease both";
+
+  //dom1.addClass("mainIn");
   setTimeout(function () {
     dom2.show();
     dom2.animate({ opacity: "1.0" }, 1000, function () {

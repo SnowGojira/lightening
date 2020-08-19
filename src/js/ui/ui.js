@@ -1,5 +1,4 @@
 import $ from "jquery";
-import gameState from "../engine/gameState";
 
 const pageLoad = $(".pageLoad");
 const pageTest = $(".pageTest");
@@ -13,8 +12,6 @@ function pageHideShow(pagehide, pageshow, cb) {
   return function inner() {
     pagehide.hide();
     pageshow.show();
-    //页面切换的时候也包含着gameState的变换
-    // gameState.current = state;
     //如果有回调就执行回调
     if (cb) {
       cb();
@@ -41,7 +38,7 @@ const flickerBox = $(".pl_lightenBox");
 const pageStart = $(".pageStart");
 const startBoard = $(".g_board");
 
-export const modFlipper = function () {
+export const modFlipperToStart = function () {
   pageLoad.on("touchstart", function (e) {
     //audioPlay("heart");
     startY = e.originalEvent.touches[0].pageY;
@@ -54,13 +51,19 @@ export const modFlipper = function () {
     if (moveSpace > 15) {
       // console.log("上滑之后需要执行的代码片段");
       $(".pl_logo").hide();
-      upArrow.hide();
-      flickerBox.animate({ top: "-800px" }, 1000, function () {
-        // console.log("动画结束");
-        pageLoad.hide();
-        pageStart.show();
-        startBoard.animate({ top: "0px" }, 800);
-      });
+      $(".pl_upArrow").hide();
+      flickerBox.animate(
+        { top: "-800px" },
+        1000,
+        pageHideShow(
+          // console.log("动画结束");
+          pageLoad,
+          pageStart,
+          function () {
+            startBoard.animate({ top: "0px" }, 800);
+          }
+        )
+      );
     }
   });
 };

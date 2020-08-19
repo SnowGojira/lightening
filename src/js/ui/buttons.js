@@ -7,7 +7,7 @@ const hint = $(".indicator");
 export default function initButtons() {
   //点击
   buttons.on("click", function ({ target }) {
-    console.log(target.classList.contains("q1_options"));
+    console.log(target.classList.contains("quiz_1"));
     //有UI逻辑
     hint.hide();
     //变色反馈

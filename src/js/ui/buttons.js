@@ -2,14 +2,12 @@ import $ from "jquery";
 import gameState from "../engine/gameState";
 
 const buttons = $(".q_optionContainer");
-const hint = $(".indicator");
 
 export default function initButtons() {
   //点击
-  buttons.on("click", function ({ target }) {
-    console.log(target.classList.contains("quiz_1"));
-    //有UI逻辑
-    hint.hide();
+  buttons.on("click", function () {
+    console.log($(this)[0].classList);
+
     //变色反馈
     var id_str = $(this).attr("data-opt");
     console.log("id:" + id_str);

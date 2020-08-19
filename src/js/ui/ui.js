@@ -9,12 +9,12 @@ export const preloadAnimation = (percentage) => {
   $(".pl_head").css("opacity", percentage / 100);
 };
 
-function pageHideShow(pagehide, pageshow, state, cb) {
+function pageHideShow(pagehide, pageshow, cb) {
   return function inner() {
     pagehide.hide();
     pageshow.show();
     //页面切换的时候也包含着gameState的变换
-    gameState.current = state;
+    // gameState.current = state;
     //如果有回调就执行回调
     if (cb) {
       cb();
@@ -28,7 +28,7 @@ export const modPreload = () => {
     pageTest.animate(
       { opacity: "0" },
       800,
-      pageHideShow(pageTest, pageLoad, "INIT", function () {
+      pageHideShow(pageTest, pageLoad, function () {
         pageLoad.animate({ opacity: "1.0" }, 800);
       })
     );

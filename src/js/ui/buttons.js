@@ -13,6 +13,7 @@ function selectOptions(el) {
 export default function initButtons(userActionHandler) {
   //点击
   buttons.on("click", function () {
+    $(".indicator").hide();
     selectOptions($(this));
     userActionHandler($(this));
   });

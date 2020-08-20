@@ -1,4 +1,4 @@
-import { modPreload } from "../ui/ui";
+import { modPreload, animationToPageTwo } from "../ui/ui";
 import gameAudio from "./audio";
 
 const gameState = {
@@ -15,6 +15,7 @@ const gameState = {
       gameAudio.play("btn");
       //转场
       console.log("p1->p2");
+      animationToPageTwo();
     } else if (domList.contains("q2_options")) {
       //音效
       gameAudio.play("btn");

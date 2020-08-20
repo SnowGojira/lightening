@@ -6,6 +6,7 @@ import {
   FADE_IN_1000,
   FADE_IN_500,
   FADE_OUT_800,
+  FADE_OUT_500,
   FADE_TOP_OUT,
 } from "../engine/constants";
 
@@ -112,39 +113,63 @@ async function animationToPageOne() {
 var pageTwo = $(".pageTwo");
 var q2Board = $(".q2_board");
 var topTwo = $(".top_two");
-var quizTwo = $(".quiz_two");
+var quizTwo = $(".question_2");
+var watch = $(".watch_two");
 var optionTwo = $(".q2_options");
-var watch = document.getElementById("watch");
+// var watch = document.getElementById("watch");
+
 export function modPageoneToPagetwo() {
-  optionOne.on("click", function () {
-    /*转场音乐1*/
-    //audioPlay("step");
+  // optionOne.on("click", function () {
+  //   /*转场音乐1*/
+  //   //audioPlay("step");
+  //   watch.play();
+  //   document.addEventListener(
+  //     "WeixinJSBridgeReady",
+  //     function () {
+  //       watch.play();
+  //     },
+  //     false
+  //   );
+  //   pageOne.animate({ opacity: "0" }, 500, function () {
+  //     // audioPlay('watch');
+  //     pageTwo.show();
+  //     q2Board.addClass("mainIn");
+  //     setTimeout(function () {
+  //       topTwo.show();
+  //       topTwo.animate({ opacity: "1.0" }, 1500, function () {
+  //         quizTwo.animate({ opacity: "1.0" }, 500, function () {
+  //           optionTwo.animate({ opacity: "1.0" }, 500, function () {
+  //             hint.show();
+  //             watch.muted = false;
+  //           });
+  //         });
+  //       });
+  //     }, 200);
+  //   });
+  // });
+}
 
-    watch.play();
-    document.addEventListener(
-      "WeixinJSBridgeReady",
-      function () {
-        watch.play();
-      },
-      false
-    );
+export async function animationToPageTwo() {
+  //pageOne-->pageTwo
+  await animationEnd(pageOne[0], FADE_OUT_500);
+  pageOne[0].style.opacity = 0;
+  pageTwo.show();
+  q2Board.addClass("mainIn");
+  topTwo.show();
 
-    pageOne.animate({ opacity: "0" }, 500, function () {
-      // audioPlay('watch');
+  await animationEnd(topTwo[0], FADE_IN_1000);
+  topTwo[0].style.opacity = 1;
+  // pageOne.hide();
+  gameAudio.play("watch");
+  await animationEnd(quizTwo[0], FADE_IN_500);
+  quizTwo[0].style.opacity = 1;
+  await animationEnd(watch[0], FADE_IN_500);
+  watch[0].style.opacity = 1;
 
-      pageTwo.show();
-      q2Board.addClass("mainIn");
-      setTimeout(function () {
-        topTwo.show();
-        topTwo.animate({ opacity: "1.0" }, 1500, function () {
-          quizTwo.animate({ opacity: "1.0" }, 500, function () {
-            optionTwo.animate({ opacity: "1.0" }, 500, function () {
-              hint.show();
-              watch.muted = false;
-            });
-          });
-        });
-      }, 200);
-    });
-  });
+  await animationEnd($(".q2_a")[0], FADE_IN_500);
+  $(".q2_a")[0].style.opacity = 1;
+  await animationEnd($(".q2_b")[0], FADE_IN_500);
+  $(".q2_b")[0].style.opacity = 1;
+  hint.show();
+  gameAudio.pause("watch");
 }

@@ -29,11 +29,11 @@ export default function canvasEnd() {
   return html2canvas($(".inputImg")[0], {
     // $(".myImg")是你要复制生成canvas的区域，可以自己选
     allowTaint: true,
-    // taintTest: true,
-    foreignObjectRendering: true,
+    taintTest: true,
+    // foreignObjectRendering: true,
     canvas: canvas,
     imageTimeout: 4000,
-    useCORS: true,
+    // useCORS: true,
     // onclone(canvas) {
     //   let dataURL = canvas.toDataURL("image/png");
     //   console.log(dataURL);

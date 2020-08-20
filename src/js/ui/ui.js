@@ -4,6 +4,7 @@ import animationEnd from "./animation";
 import canvasEnd from "./canvas";
 import gameAudio from "../engine/audio";
 import gameState from "../engine/gameState";
+
 import {
   FADE_IN_800,
   FADE_IN_1000,
@@ -12,6 +13,22 @@ import {
   FADE_OUT_500,
   FADE_TOP_OUT,
 } from "../engine/constants";
+
+import qrUrl from "../../images/qrcode.png";
+import result_1 from "../../images/result_1.jpg";
+import result_2 from "../../images/result_2.jpg";
+import result_3 from "../../images/result_3.jpg";
+import result_4 from "../../images/result_4.jpg";
+
+import link_1 from "../../images/link_1.png";
+import link_2 from "../../images/link_2.png";
+import link_3 from "../../images/link_3.png";
+import link_4 from "../../images/link_4.png";
+
+import back_1 from "../../images/back_1.png";
+import back_2 from "../../images/back_2.png";
+import back_3 from "../../images/back_3.png";
+import back_4 from "../../images/back_4.png";
 
 const pageLoad = $(".pageLoad");
 const pageTest = $(".pageTest");
@@ -253,12 +270,41 @@ export async function animationToPageResult() {
   $(".pageCanvas").show();
 }
 
-export function innDiv(name, id) {
-  var innerDiv = `<img class="postBG absolute" src="${imageURL}result_${id}.jpg" alt="result"/>`;
-  innerDiv += `<p class="absolute NumType nickName">${name}</p>`;
-  innerDiv += `<img class="absolute QRcode" src="${imageURL}qrcode.png" alt="qrcode"/>`;
+// export function innDiv(name, id) {
+//   var innerDiv = `<img class="postBG absolute" src="${imageURL}result_${id}.jpg" alt="result"/>`;
+//   innerDiv += `<p class="absolute NumType nickName">${name}</p>`;
+//   innerDiv += `<img class="absolute QRcode" src="${imageURL}qrcode.png" alt="qrcode"/>`;
 
-  $(".link").attr("src", `${imageURL}link_${id}.png`);
-  $(".back").attr("src", `${imageURL}back_${id}.png`);
+//   $(".link").attr("src", `${imageURL}link_${id}.png`);
+//   $(".back").attr("src", `${imageURL}back_${id}.png`);
+//   return innerDiv;
+// }
+
+export function innDiv(name, id) {
+  let result, back, link;
+  if (id == 1) {
+    result = result_1;
+    back = back_1;
+    link = link_1;
+  } else if (id == 2) {
+    result = result_2;
+    back = back_2;
+    link = link_2;
+  } else if (id == 3) {
+    result = result_3;
+    back = back_3;
+    link = link_3;
+  } else if (id == 4) {
+    result = result_4;
+    back = back_4;
+    link = link_4;
+  }
+
+  var innerDiv = `<img class="postBG absolute" src=${result} alt="result"/>`;
+  innerDiv += `<p class="absolute NumType nickName">${name}</p>`;
+  innerDiv += `<img class="absolute QRcode" src=${qrUrl} alt="qrcode"/>`;
+
+  $(".link").attr("src", link);
+  $(".back").attr("src", back);
   return innerDiv;
 }

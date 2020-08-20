@@ -10,7 +10,6 @@ import {
   innDiv,
 } from "../ui/ui";
 import gameAudio from "./audio";
-import animationEnd from "../ui/animation";
 
 const gameState = {
   count: 0,

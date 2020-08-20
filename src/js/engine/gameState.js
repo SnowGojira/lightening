@@ -3,6 +3,7 @@ import {
   animationToPageTwo,
   animationToPageThree,
   animationToPageFour,
+  musicOptionsPlayer,
 } from "../ui/ui";
 import gameAudio from "./audio";
 import animationEnd from "../ui/animation";
@@ -34,6 +35,7 @@ const gameState = {
       //转场
       console.log("p3->p4");
       animationToPageFour();
+      musicOptionsPlayer();
     } else if (domList.contains("q4_options")) {
       //音效
       gameAudio.play("btn");

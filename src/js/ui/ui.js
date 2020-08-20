@@ -207,3 +207,22 @@ export async function animationToPageFour() {
   $(".q4_b_music")[0].style.opacity = 1;
   hint.show();
 }
+
+export function musicOptionsPlayer() {
+  /*关于page4的音乐播放逻辑*/
+  var musicA = $(".q4_a_music");
+  musicA.on("click", function () {
+    gameAudio.pause("BGM");
+    gameAudio.pause("B");
+    gameAudio.play("A");
+  });
+
+  var musicB = $(".q4_b_music");
+  musicB.on("click", function () {
+    gameAudio.pause("BGM");
+    gameAudio.pause("A");
+    gameAudio.play("B");
+    // document.getElementById("B").play();
+    // document.getElementById("A").pause();
+  });
+}

@@ -6,6 +6,7 @@ import {
   animationToPageFive,
   musicOptionsPlayer,
   animationToPageInput,
+  submit,
 } from "../ui/ui";
 import gameAudio from "./audio";
 import animationEnd from "../ui/animation";
@@ -56,6 +57,7 @@ const gameState = {
   getResult() {
     //转场
     animationToPageInput();
+    submit();
     // console.log(gameState.name);
   },
 };

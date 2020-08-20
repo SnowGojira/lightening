@@ -227,9 +227,9 @@ export function submit() {
     //姓名赋值
     gameState.name = input.val();
 
-    if (name) {
+    if (gameState.name) {
       $(".input_name").animate({ opacity: "0" }, 1000, function () {
-        console.log("姓名" + name);
+        console.log("姓名" + gameState.name);
         $(".input_name").hide();
         //InputImg.innerHTML=getInputDiv(name);
         // InputImg.append(getInputDiv(name));
@@ -238,4 +238,11 @@ export function submit() {
       });
     }
   });
+}
+
+export async function animationToPageResult() {
+  await animationEnd(pageInput, FADE_OUT_800, 0);
+  pageInput.hide();
+  OutputImg.show();
+  $(".pageCanvas").show();
 }

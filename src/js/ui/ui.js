@@ -104,7 +104,6 @@ async function animationToPageOne() {
   gameAudio.play("q1");
   await animationEnd($(".q1_a")[0], FADE_IN_500);
   $(".q1_a")[0].style.opacity = 1;
-  hint;
   await animationEnd($(".q1_b")[0], FADE_IN_500);
   $(".q1_b")[0].style.opacity = 1;
   hint.show();
@@ -115,39 +114,6 @@ var q2Board = $(".q2_board");
 var topTwo = $(".top_two");
 var quizTwo = $(".question_2");
 var watch = $(".watch_two");
-var optionTwo = $(".q2_options");
-// var watch = document.getElementById("watch");
-
-export function modPageoneToPagetwo() {
-  // optionOne.on("click", function () {
-  //   /*转场音乐1*/
-  //   //audioPlay("step");
-  //   watch.play();
-  //   document.addEventListener(
-  //     "WeixinJSBridgeReady",
-  //     function () {
-  //       watch.play();
-  //     },
-  //     false
-  //   );
-  //   pageOne.animate({ opacity: "0" }, 500, function () {
-  //     // audioPlay('watch');
-  //     pageTwo.show();
-  //     q2Board.addClass("mainIn");
-  //     setTimeout(function () {
-  //       topTwo.show();
-  //       topTwo.animate({ opacity: "1.0" }, 1500, function () {
-  //         quizTwo.animate({ opacity: "1.0" }, 500, function () {
-  //           optionTwo.animate({ opacity: "1.0" }, 500, function () {
-  //             hint.show();
-  //             watch.muted = false;
-  //           });
-  //         });
-  //       });
-  //     }, 200);
-  //   });
-  // });
-}
 
 export async function animationToPageTwo() {
   //pageOne-->pageTwo
@@ -173,3 +139,41 @@ export async function animationToPageTwo() {
   hint.show();
   gameAudio.pause("watch");
 }
+
+/*page2即将结束，进入page3*/
+var pageThree = $(".pageThree");
+var q3Board = $(".q3_board");
+var topThree = $(".top_three");
+var quizThree = $(".question_3");
+var crystal = $(".q3_crystalContainer");
+var optionThree = $(".q3_options");
+
+export async function animationToPageThree() {
+  await animationEnd(pageTwo[0], FADE_OUT_500);
+  pageTwo[0].style.opacity = 0;
+
+  pageThree.show();
+  q3Board.addClass("mainIn");
+
+  topThree.show();
+  await animationEnd(topThree[0], FADE_IN_1000);
+  topThree[0].style.opacity = 1;
+  await animationEnd(quizThree[0], FADE_IN_500);
+  quizThree[0].style.opacity = 1;
+  await animationEnd(crystal[0], FADE_IN_500);
+  crystal[0].style.opacity = 1;
+
+  await animationEnd($(".q3_a")[0], FADE_IN_500);
+  $(".q3_a")[0].style.opacity = 1;
+  await animationEnd($(".q3_b")[0], FADE_IN_500);
+  $(".q3_b")[0].style.opacity = 1;
+  hint.show();
+}
+// optionTwo.on("click", function () {
+//   /*音乐*/
+//   audioPause("watch");
+//   pageTwo.animate({ opacity: "0" }, 500, function () {
+//     pageThree.show();
+//     quizInScene(q3Board, topThree, quizThree, optionThree);
+//   });
+// });

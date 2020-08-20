@@ -1,5 +1,6 @@
-import { modPreload, animationToPageTwo } from "../ui/ui";
+import { modPreload, animationToPageTwo, animationToPageThree } from "../ui/ui";
 import gameAudio from "./audio";
+import animationEnd from "../ui/animation";
 
 const gameState = {
   count: 0,
@@ -21,6 +22,7 @@ const gameState = {
       gameAudio.play("btn");
       //转场
       console.log("p2->p3");
+      animationToPageThree();
     } else if (domList.contains("q3_options")) {
       //音效
       gameAudio.play("btn");

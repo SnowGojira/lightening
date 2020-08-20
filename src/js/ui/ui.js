@@ -146,7 +146,6 @@ var q3Board = $(".q3_board");
 var topThree = $(".top_three");
 var quizThree = $(".question_3");
 var crystal = $(".q3_crystalContainer");
-var optionThree = $(".q3_options");
 
 export async function animationToPageThree() {
   await animationEnd(pageTwo[0], FADE_OUT_500);
@@ -177,3 +176,34 @@ export async function animationToPageThree() {
 //     quizInScene(q3Board, topThree, quizThree, optionThree);
 //   });
 // });
+
+var pageFour = $(".pageFour");
+var q4Board = $(".q4_board");
+var topFour = $(".top_four");
+var quizFour = $(".quiz_four");
+var optionFour = $(".q4_options");
+var musicOpt = $(".music");
+
+export async function animationToPageFour() {
+  await animationEnd(pageThree[0], FADE_OUT_500);
+  pageThree[0].style.opacity = 0;
+  pageFour.show();
+  q4Board.addClass("mainIn");
+
+  await animationEnd(topFour[0], FADE_IN_1000);
+  topFour[0].style.opacity = 1;
+  await animationEnd(quizFour[0], FADE_IN_500);
+  quizFour[0].style.opacity = 1;
+  // await animationEnd(crystal[0], FADE_IN_500);
+  // crystal[0].style.opacity = 1;
+
+  await animationEnd($(".q4_a")[0], FADE_IN_500);
+  $(".q4_a")[0].style.opacity = 1;
+  await animationEnd($(".q4_a_music")[0], FADE_IN_500);
+  $(".q4_a_music")[0].style.opacity = 1;
+  await animationEnd($(".q4_b")[0], FADE_IN_500);
+  $(".q4_b")[0].style.opacity = 1;
+  await animationEnd($(".q4_b_music")[0], FADE_IN_500);
+  $(".q4_b_music")[0].style.opacity = 1;
+  hint.show();
+}

@@ -29,21 +29,30 @@ export default function canvasEnd() {
   return html2canvas($(".inputImg")[0], {
     // $(".myImg")是你要复制生成canvas的区域，可以自己选
     allowTaint: true,
-    taintTest: true,
+    // taintTest: true,
+    foreignObjectRendering: true,
     canvas: canvas,
-    onrendered(canvas) {
-      let dataURL = canvas.toDataURL("image/png");
-      console.log(dataURL);
-      OutputImg.attr("src", dataURL);
-      InputImg.hide();
-      animationToPageResult();
-    },
+    imageTimeout: 4000,
+    useCORS: true,
+    // onclone(canvas) {
+    //   let dataURL = canvas.toDataURL("image/png");
+    //   console.log(dataURL);
+    //   // OutputImg.attr("src", dataURL);
+    //   // InputImg.hide();
+    //   // animationToPageResult();
+    // },
     width: cwidth * 2,
     height: cheight * 2,
   }).then(function (canvas) {
+    $(".pageCanvas").prepend(canvas);
+    // document.body.appendChild(canvas);
+    // console.log(canvas);
     // let dataURL = canvas.toDataURL("image/png");
     // console.log(dataURL);
     // OutputImg.attr("src", dataURL);
+    // if (OutputImg.complete) {
+    //   console.log("finish result");
+    // }
     // InputImg.hide();
     // animationToPageResult();
   });

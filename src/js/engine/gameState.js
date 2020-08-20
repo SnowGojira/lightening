@@ -76,7 +76,7 @@ const gameState = {
       // console.log("太阳");
       inner = innDiv(this.name, 4);
     }
-
+    console.log(inner);
     return inner;
   },
 };

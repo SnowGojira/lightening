@@ -124,18 +124,18 @@ function Play(id_str) {
 // }
 
 /*按钮全局属性*/
-btn.on("click", function () {
-  hint.hide();
-  //计数
-  count += parseInt($(this).attr("data-value"));
-  console.log("count:" + count);
-  //变色反馈
-  var id_str = $(this).attr("data-opt");
-  console.log("id:" + id_str);
-  $("#" + id_str).show();
-  //音效
-  audioPlay("btn");
-});
+// btn.on("click", function () {
+//   hint.hide();
+//   //计数
+//   count += parseInt($(this).attr("data-value"));
+//   console.log("count:" + count);
+//   //变色反馈
+//   var id_str = $(this).attr("data-opt");
+//   console.log("id:" + id_str);
+//   $("#" + id_str).show();
+//   //音效
+//   audioPlay("btn");
+// });
 
 $(".q_optionContainerKiss").on("click", function () {
   hint.hide();

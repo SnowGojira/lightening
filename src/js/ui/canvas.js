@@ -2,12 +2,16 @@ import html2canvas from "html2canvas";
 import $ from "jquery";
 import { animationToPageResult } from "./ui";
 
-export default function canvasEnd(targetDom, outputDom) {
+var InputImg = $(".inputImg");
+var OutputImg = $("#outputImg");
+
+export default function canvasEnd() {
   console.log(".................");
-  // var targetDom = InputImg;
-  //var copyDom = targetDom.clone();
-  var cwidth = targetDom.width();
-  var cheight = targetDom.height();
+  // var InputImg = InputImg;
+  //var copyDom = InputImg.clone();
+
+  var cwidth = InputImg.width();
+  var cheight = InputImg.height();
   console.log(cwidth);
   console.log(cheight);
 
@@ -22,30 +26,36 @@ export default function canvasEnd(targetDom, outputDom) {
   context.scale(2, 2);
 
   //return new Promise((resolve) => {
-  return html2canvas(targetDom, {
+  return html2canvas($(".inputImg")[0], {
     // $(".myImg")是你要复制生成canvas的区域，可以自己选
     allowTaint: true,
     taintTest: true,
     canvas: canvas,
+    onrendered(canvas) {
+      let dataURL = canvas.toDataURL("image/png");
+      console.log(dataURL);
+      OutputImg.attr("src", dataURL);
+      InputImg.hide();
+      animationToPageResult();
+    },
     width: cwidth * 2,
     height: cheight * 2,
   }).then(function (canvas) {
-    let dataURL = canvas.toDataURL("image/png");
-    console.log(dataURL);
-    outputDom.attr("src", dataURL);
-    // let imageData = outputDom.attr("src");
-    targetDom.hide();
-    animationToPageResult();
+    // let dataURL = canvas.toDataURL("image/png");
+    // console.log(dataURL);
+    // OutputImg.attr("src", dataURL);
+    // InputImg.hide();
+    // animationToPageResult();
   });
   //});
 }
 
 function downFile() {
   console.log(".................");
-  var targetDom = InputImg;
-  //var copyDom = targetDom.clone();
-  var cwidth = targetDom.width();
-  var cheight = targetDom.height();
+  var InputImg = InputImg;
+  //var copyDom = InputImg.clone();
+  var cwidth = InputImg.width();
+  var cheight = InputImg.height();
   console.log(cwidth);
   console.log(cheight);
 

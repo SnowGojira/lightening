@@ -238,14 +238,14 @@ async function animationCalculte() {
   await animationEnd($(".input_name")[0], FADE_OUT_800, 0);
   InputImg.append(gameState.divHandler());
   $(".waitParent").show();
-  await getCanvas();
+  canvasEnd();
   // InputImg.append(getInputDiv(name));
   // $(".waitParent").show();
   // downFile();
 }
-async function getCanvas() {
-  canvasEnd(OutputImg[0], InputImg[0]);
-}
+// async function getCanvas() {
+
+// }
 export async function animationToPageResult() {
   await animationEnd(pageInput, FADE_OUT_800, 0);
   pageInput.hide();

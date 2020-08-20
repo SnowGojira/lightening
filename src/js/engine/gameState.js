@@ -3,6 +3,7 @@ import {
   animationToPageTwo,
   animationToPageThree,
   animationToPageFour,
+  animationToPageFive,
   musicOptionsPlayer,
 } from "../ui/ui";
 import gameAudio from "./audio";
@@ -41,13 +42,16 @@ const gameState = {
       gameAudio.play("btn");
       //转场
       console.log("p4->p5");
+      animationToPageFive();
     } else if (domList.contains("q5_options")) {
       //音效
       gameAudio.play("q5");
       //转场
       console.log("p5->result");
+      gameState.getResult();
     }
   },
+  getResult() {},
 };
 
 export default gameState;

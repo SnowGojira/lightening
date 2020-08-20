@@ -151,57 +151,45 @@ $(".q_optionContainerKiss").on("click", function () {
 });
 
 /*page1即将结束，进入page2*/
-Function.prototype.bind = function (parent) {
-  var f = this;
-  var args = [];
 
-  for (var a = 1; a < arguments.length; a++) {
-    args[args.length] = arguments[a];
-  }
-  var temp = function () {
-    return f.apply(parent, args);
-  };
-  return temp;
-};
+// var pageTwo = $(".pageTwo");
+// var q2Board = $(".q2_board");
+// var topTwo = $(".top_two");
+// var quizTwo = $(".quiz_two");
+// var optionTwo = $(".q2_options");
+// var watch = document.getElementById("watch");
 
-var pageTwo = $(".pageTwo");
-var q2Board = $(".q2_board");
-var topTwo = $(".top_two");
-var quizTwo = $(".quiz_two");
-var optionTwo = $(".q2_options");
-var watch = document.getElementById("watch");
+// optionOne.on("click", function () {
+//   /*转场音乐1*/
+//   audioPlay("step");
+//   // audioPlay('watch');
+//   watch.play();
+//   document.addEventListener(
+//     "WeixinJSBridgeReady",
+//     function () {
+//       watch.play();
+//     },
+//     false
+//   );
 
-optionOne.on("click", function () {
-  /*转场音乐1*/
-  audioPlay("step");
-  // audioPlay('watch');
-  watch.play();
-  document.addEventListener(
-    "WeixinJSBridgeReady",
-    function () {
-      watch.play();
-    },
-    false
-  );
+//   pageOne.animate({ opacity: "0" }, 500, function () {
+//     // audioPlay('watch');
 
-  pageOne.animate({ opacity: "0" }, 500, function () {
-    // audioPlay('watch');
-
-    pageTwo.show();
-    q2Board.addClass("mainIn");
-    setTimeout(function () {
-      topTwo.show();
-      topTwo.animate({ opacity: "1.0" }, 1500, function () {
-        quizTwo.animate({ opacity: "1.0" }, 500, function () {
-          optionTwo.animate({ opacity: "1.0" }, 500, function () {
-            hint.show();
-            watch.muted = false;
-          });
-        });
-      });
-    }, 200);
-  });
-});
+//     pageTwo.show();
+//     q2Board.addClass("mainIn");
+//     setTimeout(function () {
+//       topTwo.show();
+//       topTwo.animate({ opacity: "1.0" }, 1500, function () {
+//         quizTwo.animate({ opacity: "1.0" }, 500, function () {
+//           optionTwo.animate({ opacity: "1.0" }, 500, function () {
+//             hint.show();
+//             watch.muted = false;
+//           });
+//         });
+//       });
+//     }, 200);
+//   });
+// });
 
 /*page2即将结束，进入page3*/
 var pageThree = $(".pageThree");
@@ -220,23 +208,7 @@ optionTwo.on("click", function () {
 });
 
 /*page3即将结束，进入page4*/
-var pageFour = $(".pageFour");
-var q4Board = $(".q4_board");
-var topFour = $(".top_four");
-var quizFour = $(".quiz_four");
-var optionFour = $(".q4_options");
-var musicOpt = $(".music");
-optionThree.on("click", function () {
-  pageThree.animate({ opacity: "0" }, 500, function () {
-    /*转场音乐*/
-    // document.getElementById("BGM").play();
-    pageFour.show();
-    quizInScene(q4Board, topFour, quizFour, optionFour);
-    setTimeout(function () {
-      musicOpt.animate({ opacity: "1.0" }, 500);
-    }, 2000);
-  });
-});
+S;
 
 /*关于page4的音乐播放逻辑*/
 var musicA = $(".q4_a_music");

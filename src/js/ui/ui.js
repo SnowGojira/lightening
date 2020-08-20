@@ -1,6 +1,7 @@
 import $ from "jquery";
 import animationEnd from "./animation";
 import gameAudio from "../engine/audio";
+import gameState from "../engine/gameState";
 import {
   FADE_IN_800,
   FADE_IN_1000,
@@ -195,5 +196,46 @@ export async function animationToPageFive() {
     await animationEnd($(".pink")[0], FADE_IN_500, 1);
     await animationEnd($(".q5_b")[0], FADE_IN_500, 1);
     await animationEnd($(".red")[0], FADE_IN_500, 1);
+  });
+}
+
+var pageInput = $(".pageInput");
+
+export async function animationToPageInput() {
+  await animationEnd(pageFive[0], FADE_OUT_500, 0);
+  quizPage.hide();
+  pageInput.show();
+  await animationEnd(pageInput[0], FADE_IN_500, 1);
+}
+
+/*input的逻辑*/
+// var name;
+var input = $(".input_content");
+var submitBtn = $(".input_btn");
+var InputImg = $(".inputImg");
+var OutputImg = $("#outputImg");
+
+//2月24日 添加input虚拟按键不影响布局
+input.blur(function () {
+  document.body.addEventListener("focusout", function () {
+    document.body.scrollTop = 0;
+  });
+});
+
+export function submit() {
+  submitBtn.on("click", function () {
+    //姓名赋值
+    gameState.name = input.val();
+
+    if (name) {
+      $(".input_name").animate({ opacity: "0" }, 1000, function () {
+        console.log("姓名" + name);
+        $(".input_name").hide();
+        //InputImg.innerHTML=getInputDiv(name);
+        // InputImg.append(getInputDiv(name));
+        // $(".waitParent").show();
+        // downFile();
+      });
+    }
   });
 }

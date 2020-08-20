@@ -5,12 +5,14 @@ import {
   animationToPageFour,
   animationToPageFive,
   musicOptionsPlayer,
+  animationToPageInput,
 } from "../ui/ui";
 import gameAudio from "./audio";
 import animationEnd from "../ui/animation";
 
 const gameState = {
   count: 0,
+  name: "",
   userActionsHandler(el) {
     //有计数逻辑
     gameState.count += parseInt(el.attr("data-value"));
@@ -51,7 +53,11 @@ const gameState = {
       gameState.getResult();
     }
   },
-  getResult() {},
+  getResult() {
+    //转场
+    animationToPageInput();
+    // console.log(gameState.name);
+  },
 };
 
 export default gameState;

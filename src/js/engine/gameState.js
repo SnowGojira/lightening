@@ -7,6 +7,7 @@ import {
   musicOptionsPlayer,
   animationToPageInput,
   submit,
+  innDiv,
 } from "../ui/ui";
 import gameAudio from "./audio";
 import animationEnd from "../ui/animation";
@@ -59,6 +60,24 @@ const gameState = {
     animationToPageInput();
     submit();
     // console.log(gameState.name);
+  },
+  divHandler() {
+    let inner;
+    if (this.count < 60) {
+      // console.log("黑洞");
+      inner = innDiv(this.name, 1);
+    } else if (this.count < 75 && this.count >= 60) {
+      // console.log("棱镜");
+      inner = innDiv(this.name, 2);
+    } else if (this.count < 90 && this.count >= 75) {
+      // console.log("水母");
+      inner = innDiv(this.name, 3);
+    } else if (this.count >= 90) {
+      // console.log("太阳");
+      inner = innDiv(this.name, 4);
+    }
+
+    return inner;
   },
 };
 

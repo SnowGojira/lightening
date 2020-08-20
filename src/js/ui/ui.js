@@ -1,5 +1,7 @@
 import $ from "jquery";
+import { imageURL } from "../engine/constants";
 import animationEnd from "./animation";
+import canvasEnd from "./canvas";
 import gameAudio from "../engine/audio";
 import gameState from "../engine/gameState";
 import {
@@ -226,23 +228,37 @@ export function submit() {
   submitBtn.on("click", function () {
     //姓名赋值
     gameState.name = input.val();
-
     if (gameState.name) {
-      $(".input_name").animate({ opacity: "0" }, 1000, function () {
-        console.log("姓名" + gameState.name);
-        $(".input_name").hide();
-        //InputImg.innerHTML=getInputDiv(name);
-        // InputImg.append(getInputDiv(name));
-        // $(".waitParent").show();
-        // downFile();
-      });
+      animationCalculte();
     }
   });
 }
 
+async function animationCalculte() {
+  await animationEnd($(".input_name")[0], FADE_OUT_800, 0);
+  InputImg.append(gameState.divHandler());
+  $(".waitParent").show();
+  await getCanvas();
+  // InputImg.append(getInputDiv(name));
+  // $(".waitParent").show();
+  // downFile();
+}
+async function getCanvas() {
+  canvasEnd(OutputImg[0], InputImg[0]);
+}
 export async function animationToPageResult() {
   await animationEnd(pageInput, FADE_OUT_800, 0);
   pageInput.hide();
   OutputImg.show();
   $(".pageCanvas").show();
+}
+
+export function innDiv(name, id) {
+  var innerDiv = `<img class="postBG absolute" src="${imageURL}result_${id}.jpg" alt="result"/>`;
+  innerDiv += `<p class="absolute NumType nickName">${name}</p>`;
+  innerDiv += `<img class="absolute QRcode" src="images/qrcode.png" alt="qrcode"/>`;
+
+  $(".link").attr("src", `${imageURL}link_${id}.png`);
+  $(".back").attr("src", `${imageURL}back_${id}.png`);
+  return innerDiv;
 }

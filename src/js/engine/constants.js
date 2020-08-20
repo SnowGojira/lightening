@@ -1,4 +1,4 @@
-const imageURL =
+export const imageURL =
   "https://haku-1252507164.cos.ap-nanjing.myqcloud.com/lightening/images/";
 const audioURL =
   "https://haku-1252507164.cos.ap-nanjing.myqcloud.com/lightening/assets/audio/";

@@ -1,5 +1,4 @@
 import $ from "jquery";
-import { imageURL } from "../engine/constants";
 import animationEnd from "./animation";
 import canvasEnd from "./canvas";
 import gameAudio from "../engine/audio";
@@ -270,16 +269,6 @@ export async function animationToPageResult() {
   $(".pageCanvas").show();
 }
 
-// export function innDiv(name, id) {
-//   var innerDiv = `<img class="postBG absolute" src="${imageURL}result_${id}.jpg" alt="result"/>`;
-//   innerDiv += `<p class="absolute NumType nickName">${name}</p>`;
-//   innerDiv += `<img class="absolute QRcode" src="${imageURL}qrcode.png" alt="qrcode"/>`;
-
-//   $(".link").attr("src", `${imageURL}link_${id}.png`);
-//   $(".back").attr("src", `${imageURL}back_${id}.png`);
-//   return innerDiv;
-// }
-
 export function innDiv(name, id) {
   let result, back, link;
   if (id == 1) {
@@ -307,4 +296,20 @@ export function innDiv(name, id) {
   $(".link").attr("src", link);
   $(".back").attr("src", back);
   return innerDiv;
+}
+
+var link_url = "http://www.17xpw.com/2019/index.php/index/?uid=uqYNHhyTo";
+var link = $(".link");
+export function router() {
+  link.on("click", function () {
+    window.location.href = link_url;
+  });
+}
+
+//重新加载
+var reload = $(".back");
+export function restart() {
+  reload.on("click", function () {
+    window.location.reload();
+  });
 }

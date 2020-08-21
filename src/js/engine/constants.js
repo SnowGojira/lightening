@@ -96,4 +96,4 @@ export const FADE_OUT_500 = "fadeOut 0.5s ease-out";
 export const FADE_TOP_OUT = "fadeTopOut 1s linear";
 export const MAIN_IN = "mainIn 1s 0.2s ease both";
 
-export var count = 0;
+// export var count = 0;

@@ -264,7 +264,7 @@ async function animationCalculte() {
 
 // }
 export async function animationToPageResult() {
-  await animationEnd(pageInput, FADE_OUT_800, 0);
+  await animationEnd(pageInput[0], FADE_OUT_800, 0);
   pageInput.hide();
   OutputImg.show();
   $(".pageCanvas").show();
